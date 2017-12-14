@@ -1,0 +1,30 @@
+.header{
+    margin: 0 auto;
+    width: 1170px;
+    &__wrap{
+        display: flex;
+        &__img{
+            display: block;
+            margin-top: 22px;
+            max-width: 174px;
+            width: 100%;
+            height: 82px;
+            &-prev{
+                width: 100%;
+            }
+        }
+        &-group{
+            display: flex;
+            margin-left: 20px;
+            align-items: center;
+            width: 100%;
+            height: 53px;
+            &:first-child{
+                border-bottom: 1px solid #d4dede;
+            }
+            &:nth-child(2){
+                height: 70px;
+            }
+        }
+    }
+}
