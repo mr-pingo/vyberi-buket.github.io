@@ -1,0 +1,38 @@
+.block-comment{
+    text-align: center;
+    &__name_user{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        color: #000;
+    }
+    &__name{
+        margin-top: 20px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+        color: #96a3a3;
+    }
+    &__text{
+        margin: 0px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 500;
+        font-size: 13px;
+        color: #000;
+    }
+    &__rating{
+        margin-top: 13px;
+        margin-bottom: 19px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__date{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 500;
+        font-size: 13px;
+        color: #96a3a3;
+    }
+}

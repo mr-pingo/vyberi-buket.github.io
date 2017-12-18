@@ -1,0 +1,32 @@
+.content{
+    flex-grow: 1;
+    margin: 0 auto;
+    width: 1170px;
+}
+.info-block{
+    &__name{
+        margin-top: 35px;
+        margin-bottom: 18px;
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: lighter;
+        font-size: 28px;
+        color: #000;
+    }
+}
+.info-block_2{
+    &__name{
+        margin-bottom: 25px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: lighter;
+        font-size: 28px;
+        color: #000;
+    }
+    &__text{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: lighter;
+        font-size: 16px;
+        line-height: 22px;
+        color: #000;
+    }
+}

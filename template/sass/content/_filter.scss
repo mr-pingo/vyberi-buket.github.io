@@ -1,0 +1,149 @@
+.filter{
+    margin-bottom: 5px;
+    &__name{
+        margin-top: 51px;
+        margin-bottom: 34px;
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: lighter;
+        font-size: 36px;
+        color: #000;
+    }
+    &__wrap{
+        height: 58px;
+        border: 1px solid #a9a8ba;
+        border-radius: 4px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        &__list{
+            position: relative;
+            list-style: none;
+            &:last-child{
+                .ik_select .ik_select_link{
+                    border-right: 0px;
+                }
+            }
+            &-name{
+                top: 22px;
+                left: 20px;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: bold;
+                font-size: 13px;
+                color: #5b5a8b;
+                position: absolute;
+            }
+        }
+    }
+}
+
+.ik_select {
+	width: 234px!important;
+}
+	.ik_select_link {
+        display: flex;
+        align-items: center;
+        height: 58px;
+		border-right: 1px solid #a9a8ba;
+        box-sizing: border-box;
+        cursor: pointer;
+        &:before{
+            content: '';
+            position: absolute;
+            width: 11px;
+            height: 7px;
+            background: url(../../images/sprite.png) no-repeat;
+            background-position: -11px -57px;
+            right: 19px;
+        }
+	}
+	.ik_select_link_focus {
+        border-bottom: none;
+		box-shadow: 0px 10px 17.82px 4.18px rgba(0, 0, 0, 0.17);
+	}
+	.ik_select_link_disabled {
+		/* Disabled state of the fake select */
+	}
+		.ik_select_link_text {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: bold;
+            font-size: 13px;
+            color: #000;
+            margin-left: 20px;
+            margin-top: 30px;
+		}
+
+	.ik_select_dropdown {
+        width: auto!important;
+        left: -1px;
+		background: #fff;
+        border: 1px solid #a9a8ba;
+        box-sizing: border-box;
+        box-shadow: 0px 10px 17.82px 4.18px rgba(0, 0, 0, 0.17);
+	}
+		.ik_select_list {
+             width: 233px;
+            .ik_select_list_inner{
+                ul{
+                    padding: 20px 60px;
+                    margin: 0;
+                    li{
+                        position: relative;
+                        list-style: none;
+                        &:after{
+                            content: '.';
+                            position: absolute;
+                            font-size: 20px;
+                            top: 0;
+                            color: #8282a3;
+                        }
+                    }
+                }
+            }
+		}
+			.ik_select_optgroup {
+				/* Optgroup */
+			}
+				.ik_select_optgroup_label {
+					/* Optgroup label */
+				}
+				.ik_select_option {
+                    cursor: pointer;
+                    &:last-child{
+                        .ik_select_option_label{
+                            border-bottom: none;
+                        }
+                    }
+				}
+					.ik_select_option_label {
+                        padding-left: 9px;
+                        font-family: Arial;
+						font-size: 13px;
+                        color: #5b5a8b;
+                        height: 35px;
+                        display: flex;
+                        align-items: center;
+                        border-bottom: 1px solid #a9a8ba;
+                        &:hover{
+                            color: #000;
+                        }
+					}
+				.ik_select_hover {
+					/* The hovered state of an option */
+				}
+				.ik_select_active {
+					/* The active state of an option */
+				}
+
+		.ik_select_filter_wrap {
+			/* Wrapper for the filter input */
+		}
+		.ik_select_filter {
+			/* Filter input */
+		}
+		.ik_nothing_found {
+			/* Block that's shown when there's nothing found. */
+		}

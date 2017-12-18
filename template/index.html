@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
     <meta name="description" content="">
     <meta name="Keywords" content="">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/gridlex.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/mobile.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic-ext" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/main.js" ></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script type="text/javascript" src="js/jquery.ikSelect.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
     <title>Главная</title>
 </head>
+
 <body>
-    
+
     <header class="header">
         <div class="header__wrap">
             <a class="header__wrap__img" href="/">
@@ -49,9 +55,9 @@
                     </div>
                     <div class="header-line"></div>
                     <div class="group-info">
-                       <span class="group-info__text">Город доставки</span>
-                       <i class="group-info__icon"></i>
-                       <span class="group-info__link">Loremipsum-LoremipsumLor</span>
+                        <span class="group-info__text">Город доставки</span>
+                        <i class="group-info__icon"></i>
+                        <span class="group-info__link">Loremipsum-LoremipsumLor</span>
                     </div>
                 </div>
                 <div class="header__wrap-group">
@@ -94,26 +100,831 @@
                     </div>
                     <div class="group-info_5">
                         <div class="group-info_5__elements">
-                            <i>10</i>
+                            <i class="group-info_5__elements-icons">10</i>
                             <div class="group-info_5__elements-group">
-                                <span class="group-info_5__elements-text"></span>
-                                <span class="group-info_5__elements-count"></span>
+                                <span class="group-info_5__elements-text">Корзина</span>
+                                <span class="group-info_5__elements-count">22 500 <i>&#8381;</i></span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="header__menu">
-            
+        <div class="main-menu">
+            <ul class="main-menu__wrap">
+                <li class="main-menu__wrap__list">
+                    <a class="main-menu__wrap__list-link" href="">Осень</a>
+                </li>
+                <li class="main-menu__wrap__list">
+                    <a class="main-menu__wrap__list-link" href="">День рождения</a>
+                </li>
+                <li class="main-menu__wrap__list">
+                    <a class="main-menu__wrap__list-link" href="">Букеты</a>
+                </li>
+                <li class="main-menu__wrap__list">
+                    <a class="main-menu__wrap__list-link" href="">Розы</a>
+                </li>
+                <li class="main-menu__wrap__list">
+                    <a class="main-menu__wrap__list-link" href="">Премиум</a>
+                </li>
+                <li class="main-menu__wrap__list">
+                    <a class="main-menu__wrap__list-link" href="">Композиции</a>
+                </li>
+                <li class="main-menu__wrap__list">
+                    <a class="main-menu__wrap__list-link" href="">Подарки</a>
+                </li>
+                <li class="main-menu__wrap__list">
+                    <a class="main-menu__wrap__list-link" href="">Свадебные букеты</a>
+                </li>
+            </ul>
+            <form class="search" action="url">
+                <input class="search__poly" type="text" placeholder="Поиск">
+                <div class="search__wrap">
+                    <input class="search__wrap-button" type="submit" value="">
+                </div>
+            </form>
+        </div>
+        <div class="slider">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./images/slide.png" alt="">
+                        <div class="slider-info">
+                            <div class="slider-info__name">Lorem ipsum</div>
+                            <div class="slider-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, ipsum.</div>
+                            <a class="slider-info__button" href="">Узнать подробнее</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/slide.png" alt="">
+                        <div class="slider-info">
+                            <div class="slider-info__name">Lorem ipsum</div>
+                            <div class="slider-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, ipsum.</div>
+                            <a class="slider-info__button" href="">Узнать подробнее</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/slide.png" alt="">
+                        <div class="slider-info">
+                            <div class="slider-info__name">Lorem ipsum</div>
+                            <div class="slider-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, ipsum.</div>
+                            <a class="slider-info__button" href="">Узнать подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
         </div>
     </header>
-    
+
     <div class="content">
-        <section></section>
+        <div class="filter">
+           <h2 class="filter__name">Доставка цветов по России</h2>
+           <form action="url">
+                <ul class="filter__wrap">
+                    <li class="filter__wrap__list">
+                        <span class="filter__wrap__list-name">Цена</span>
+                        <select name="" id="">
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </li>
+                    <li class="filter__wrap__list">
+                        <span class="filter__wrap__list-name">Цветы</span>
+                        <select name="" id="">
+                            <option value="Все">Все</option>
+                            <option value="Розами">Розами</option>
+                            <option value="Герберами">Герберами</option>
+                            <option value="Лилиями">Лилиями</option>
+                            <option value="Хризантемами">Хризантемами</option>
+                            <option value="Тюльпанами">Тюльпанами</option>
+                            <option value="Орхидеями">Орхидеями</option>
+                            <option value="Альстромериями">Альстромериями</option>
+                            <option value="Ирисами">Ирисами</option>
+                            <option value="Гвоздиками">Гвоздиками</option>
+                            <option value="Лизиантусами">Лизиантусами</option>
+                            <option value="Пионами">Пионами</option>
+                            <option value="Ромашкой">Ромашкой</option>
+                            <option value="Экзотическими цветами">Экзотическими цветами</option>
+                            <option value="Подсолнухами">Подсолнухами</option>
+                        </select>
+                    </li>
+                    <li class="filter__wrap__list">
+                        <span class="filter__wrap__list-name">Кому</span>
+                        <select name="" id="">
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </li>
+                    <li class="filter__wrap__list">
+                        <span class="filter__wrap__list-name">По случаю</span>
+                        <select name="" id="">
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </li>
+                    <li class="filter__wrap__list">
+                        <span class="filter__wrap__list-name">Стиль</span>
+                        <select name="" id="">
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </li>
+                </ul>
+            </form>
+        </div>
+        <div class="info-block">
+            <h3 class="info-block__name">Популярные букеты</h3>
+            <div class="grid-4">
+                <div class="col">
+                    <div class="block-product">
+                       <div class="block-product__img">
+                           <div class="block-product__img__sticker">
+                               <span class="block-product__img__sticker-hit">хит</span>
+                           </div>
+                           <div class="block-product__img__info">
+                               <span class="block-product__img__info-text">60x30</span>
+                               <span class="block-product__img__info-text">см</span>
+                           </div>
+                           <img class="block-product__img-prev" src="./images/infoblock-img/byket.png" alt="">
+                       </div>
+                       <div class="block-product__info">
+                           <span class="block-product__info-name">Букет</span>
+                           <div class="block-product__info__price">
+                               <span class="block-product__info__price-current">1500 Р</span>
+                           </div>
+                           <div class="block-product__info__button">
+                               <span class="block-product__info__button-buy">Заказать</span>
+                               <span class="block-product__info__button-order_one_click">Купить в 1 клик</span>
+                           </div>
+                       </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="block-product">
+                       <div class="block-product__img">
+                           <div class="block-product__img__sticker">
+                               <span class="block-product__img__sticker-hit">хит</span>
+                           </div>
+                           <div class="block-product__img__info">
+                               <span class="block-product__img__info-text">60x30</span>
+                               <span class="block-product__img__info-text">см</span>
+                           </div>
+                           <img class="block-product__img-prev" src="./images/infoblock-img/byket.png" alt="">
+                       </div>
+                       <div class="block-product__info">
+                           <span class="block-product__info-name">Букет</span>
+                           <div class="block-product__info__price">
+                               <span class="block-product__info__price-current">1500 Р</span>
+                           </div>
+                           <div class="block-product__info__button">
+                               <span class="block-product__info__button-buy">Заказать</span>
+                               <span class="block-product__info__button-order_one_click">Купить в 1 клик</span>
+                           </div>
+                       </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="block-product">
+                       <div class="block-product__img">
+                           <div class="block-product__img__sticker">
+                               <span class="block-product__img__sticker-hit">хит</span>
+                           </div>
+                           <div class="block-product__img__info">
+                               <span class="block-product__img__info-text">60x30</span>
+                               <span class="block-product__img__info-text">см</span>
+                           </div>
+                           <img class="block-product__img-prev" src="./images/infoblock-img/byket.png" alt="">
+                       </div>
+                       <div class="block-product__info">
+                           <span class="block-product__info-name">Букет</span>
+                           <div class="block-product__info__price">
+                               <span class="block-product__info__price-current">1500 Р</span>
+                           </div>
+                           <div class="block-product__info__button">
+                               <span class="block-product__info__button-buy">Заказать</span>
+                               <span class="block-product__info__button-order_one_click">Купить в 1 клик</span>
+                           </div>
+                       </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="block-product">
+                       <div class="block-product__img">
+                           <div class="block-product__img__sticker">
+                               <span class="block-product__img__sticker-hit">хит</span>
+                           </div>
+                           <div class="block-product__img__info">
+                               <span class="block-product__img__info-text">60x30</span>
+                               <span class="block-product__img__info-text">см</span>
+                           </div>
+                           <img class="block-product__img-prev" src="./images/infoblock-img/byket.png" alt="">
+                       </div>
+                       <div class="block-product__info">
+                           <span class="block-product__info-name">Букет</span>
+                           <div class="block-product__info__price">
+                               <span class="block-product__info__price-current">1500 Р</span>
+                           </div>
+                           <div class="block-product__info__button">
+                               <span class="block-product__info__button-buy">Заказать</span>
+                               <span class="block-product__info__button-order_one_click">Купить в 1 клик</span>
+                           </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <div class="show-more">
+                <div class="show-more__line"></div>
+                <span class="show-more__button">Показать ещё</span>
+                <div class="show-more__line"></div>
+            </div>
+        </div>
+        <div class="info-block">
+            <h3 class="info-block__name">Недорогие букеты</h3>
+            <div class="grid-4">
+                <div class="col">
+                    <div class="block-product">
+                       <div class="block-product__img">
+                           <div class="block-product__img__sticker">
+                           </div>
+                           <div class="block-product__img__info">
+                               <span class="block-product__img__info-text">60x30</span>
+                               <span class="block-product__img__info-text">см</span>
+                           </div>
+                           <img class="block-product__img-prev" src="./images/infoblock-img/byket.png" alt="">
+                       </div>
+                       <div class="block-product__info">
+                           <span class="block-product__info-name">Букет</span>
+                           <div class="block-product__info__price">
+                               <span class="block-product__info__price-old">9 990 Р</span>
+                               <span class="block-product__info__price-current">1500 Р</span>
+                           </div>
+                           <div class="block-product__info__button">
+                               <span class="block-product__info__button-buy">Заказать</span>
+                               <span class="block-product__info__button-order_one_click">Купить в 1 клик</span>
+                           </div>
+                       </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="block-product">
+                       <div class="block-product__img">
+                           <div class="block-product__img__sticker">
+                           </div>
+                           <div class="block-product__img__info">
+                               <span class="block-product__img__info-text">60x30</span>
+                               <span class="block-product__img__info-text">см</span>
+                           </div>
+                           <img class="block-product__img-prev" src="./images/infoblock-img/byket.png" alt="">
+                       </div>
+                       <div class="block-product__info">
+                           <span class="block-product__info-name">Букет</span>
+                           <div class="block-product__info__price">
+                               <span class="block-product__info__price-old">9 990 Р</span>
+                               <span class="block-product__info__price-current">1500 Р</span>
+                           </div>
+                           <div class="block-product__info__button">
+                               <span class="block-product__info__button-buy">Заказать</span>
+                               <span class="block-product__info__button-order_one_click">Купить в 1 клик</span>
+                           </div>
+                       </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="block-product">
+                       <div class="block-product__img">
+                           <div class="block-product__img__sticker">
+                           </div>
+                           <div class="block-product__img__info">
+                               <span class="block-product__img__info-text">60x30</span>
+                               <span class="block-product__img__info-text">см</span>
+                           </div>
+                           <img class="block-product__img-prev" src="./images/infoblock-img/byket.png" alt="">
+                       </div>
+                       <div class="block-product__info">
+                           <span class="block-product__info-name">Букет</span>
+                           <div class="block-product__info__price">
+                               <span class="block-product__info__price-old">9 990 Р</span>
+                               <span class="block-product__info__price-current">1500 Р</span>
+                           </div>
+                           <div class="block-product__info__button">
+                               <span class="block-product__info__button-buy">Заказать</span>
+                               <span class="block-product__info__button-order_one_click">Купить в 1 клик</span>
+                           </div>
+                       </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="block-product">
+                       <div class="block-product__img">
+                           <div class="block-product__img__sticker">
+                           </div>
+                           <div class="block-product__img__info">
+                               <span class="block-product__img__info-text">60x30</span>
+                               <span class="block-product__img__info-text">см</span>
+                           </div>
+                           <img class="block-product__img-prev" src="./images/infoblock-img/byket.png" alt="">
+                       </div>
+                       <div class="block-product__info">
+                           <span class="block-product__info-name">Букет</span>
+                           <div class="block-product__info__price">
+                               <span class="block-product__info__price-old">9 990 Р</span>
+                               <span class="block-product__info__price-current">1500 Р</span>
+                           </div>
+                           <div class="block-product__info__button">
+                               <span class="block-product__info__button-buy">Заказать</span>
+                               <span class="block-product__info__button-order_one_click">Купить в 1 клик</span>
+                           </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <div class="show-more">
+                <div class="show-more__line"></div>
+                <span class="show-more__button">Показать ещё</span>
+                <div class="show-more__line"></div>
+            </div>
+        </div>
+        <div class="info-block">
+            <h3 class="info-block__name">Цветы по акции</h3>
+            <div class="grid-4">
+                <div class="col">
+                    <div class="block-product">
+                       <div class="block-product__img">
+                           <div class="block-product__img__sticker">
+                               <span class="block-product__img__sticker-sale">скидка</span>
+                           </div>
+                           <div class="block-product__img__info">
+                               <span class="block-product__img__info-text">60x30</span>
+                               <span class="block-product__img__info-text">см</span>
+                           </div>
+                           <img class="block-product__img-prev" src="./images/infoblock-img/byket.png" alt="">
+                       </div>
+                       <div class="block-product__info">
+                           <span class="block-product__info-name">Букет</span>
+                           <div class="block-product__info__price">
+                               <span class="block-product__info__price-old">9 990 Р</span>
+                               <span class="block-product__info__price-current">1500 Р</span>
+                           </div>
+                           <div class="block-product__info__button">
+                               <span class="block-product__info__button-buy">Заказать</span>
+                               <span class="block-product__info__button-order_one_click">Купить в 1 клик</span>
+                           </div>
+                       </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="block-product">
+                       <div class="block-product__img">
+                           <div class="block-product__img__sticker">
+                               <span class="block-product__img__sticker-sale">скидка</span>
+                           </div>
+                           <div class="block-product__img__info">
+                               <span class="block-product__img__info-text">60x30</span>
+                               <span class="block-product__img__info-text">см</span>
+                           </div>
+                           <img class="block-product__img-prev" src="./images/infoblock-img/byket.png" alt="">
+                       </div>
+                       <div class="block-product__info">
+                           <span class="block-product__info-name">Букет</span>
+                           <div class="block-product__info__price">
+                               <span class="block-product__info__price-old">9 990 Р</span>
+                               <span class="block-product__info__price-current">1500 Р</span>
+                           </div>
+                           <div class="block-product__info__button">
+                               <span class="block-product__info__button-buy">Заказать</span>
+                               <span class="block-product__info__button-order_one_click">Купить в 1 клик</span>
+                           </div>
+                       </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="block-product">
+                       <div class="block-product__img">
+                           <div class="block-product__img__sticker">
+                               <span class="block-product__img__sticker-sale">скидка</span>
+                           </div>
+                           <div class="block-product__img__info">
+                               <span class="block-product__img__info-text">60x30</span>
+                               <span class="block-product__img__info-text">см</span>
+                           </div>
+                           <img class="block-product__img-prev" src="./images/infoblock-img/byket.png" alt="">
+                       </div>
+                       <div class="block-product__info">
+                           <span class="block-product__info-name">Букет</span>
+                           <div class="block-product__info__price">
+                               <span class="block-product__info__price-old">9 990 Р</span>
+                               <span class="block-product__info__price-current">1500 Р</span>
+                           </div>
+                           <div class="block-product__info__button">
+                               <span class="block-product__info__button-buy">Заказать</span>
+                               <span class="block-product__info__button-order_one_click">Купить в 1 клик</span>
+                           </div>
+                       </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="block-product">
+                       <div class="block-product__img">
+                           <div class="block-product__img__sticker">
+                               <span class="block-product__img__sticker-sale">скидка</span>
+                           </div>
+                           <div class="block-product__img__info">
+                               <span class="block-product__img__info-text">60x30</span>
+                               <span class="block-product__img__info-text">см</span>
+                           </div>
+                           <img class="block-product__img-prev" src="./images/infoblock-img/byket.png" alt="">
+                       </div>
+                       <div class="block-product__info">
+                           <span class="block-product__info-name">Букет</span>
+                           <div class="block-product__info__price">
+                               <span class="block-product__info__price-old">9 990 Р</span>
+                               <span class="block-product__info__price-current">1500 Р</span>
+                           </div>
+                           <div class="block-product__info__button">
+                               <span class="block-product__info__button-buy">Заказать</span>
+                               <span class="block-product__info__button-order_one_click">Купить в 1 клик</span>
+                           </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <div class="show-more">
+                <div class="show-more__line"></div>
+                <span class="show-more__button">Показать ещё</span>
+                <div class="show-more__line"></div>
+            </div>
+        </div>
+        <div class="info-block">
+            <h3 class="info-block__name">Премиум букеты</h3>
+            <div class="grid-4">
+                <div class="col">
+                    <div class="block-product">
+                       <div class="block-product__img">
+                           <div class="block-product__img__sticker">
+                           </div>
+                           <div class="block-product__img__info">
+                               <span class="block-product__img__info-text">60x30</span>
+                               <span class="block-product__img__info-text">см</span>
+                           </div>
+                           <img class="block-product__img-prev" src="./images/infoblock-img/byket.png" alt="">
+                       </div>
+                       <div class="block-product__info">
+                           <span class="block-product__info-name">Букет</span>
+                           <div class="block-product__info__price">
+                               <span class="block-product__info__price-current">1500 Р</span>
+                           </div>
+                           <div class="block-product__info__button">
+                               <span class="block-product__info__button-buy">Заказать</span>
+                               <span class="block-product__info__button-order_one_click">Купить в 1 клик</span>
+                           </div>
+                       </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="block-product">
+                       <div class="block-product__img">
+                           <div class="block-product__img__sticker">
+                           </div>
+                           <div class="block-product__img__info">
+                               <span class="block-product__img__info-text">60x30</span>
+                               <span class="block-product__img__info-text">см</span>
+                           </div>
+                           <img class="block-product__img-prev" src="./images/infoblock-img/byket.png" alt="">
+                       </div>
+                       <div class="block-product__info">
+                           <span class="block-product__info-name">Букет</span>
+                           <div class="block-product__info__price">
+                               <span class="block-product__info__price-current">1500 Р</span>
+                           </div>
+                           <div class="block-product__info__button">
+                               <span class="block-product__info__button-buy">Заказать</span>
+                               <span class="block-product__info__button-order_one_click">Купить в 1 клик</span>
+                           </div>
+                       </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="block-product">
+                       <div class="block-product__img">
+                           <div class="block-product__img__sticker">
+                           </div>
+                           <div class="block-product__img__info">
+                               <span class="block-product__img__info-text">60x30</span>
+                               <span class="block-product__img__info-text">см</span>
+                           </div>
+                           <img class="block-product__img-prev" src="./images/infoblock-img/byket.png" alt="">
+                       </div>
+                       <div class="block-product__info">
+                           <span class="block-product__info-name">Букет</span>
+                           <div class="block-product__info__price">
+                               <span class="block-product__info__price-current">1500 Р</span>
+                           </div>
+                           <div class="block-product__info__button">
+                               <span class="block-product__info__button-buy">Заказать</span>
+                               <span class="block-product__info__button-order_one_click">Купить в 1 клик</span>
+                           </div>
+                       </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="block-product">
+                       <div class="block-product__img">
+                           <div class="block-product__img__sticker">
+                           </div>
+                           <div class="block-product__img__info">
+                               <span class="block-product__img__info-text">60x30</span>
+                               <span class="block-product__img__info-text">см</span>
+                           </div>
+                           <img class="block-product__img-prev" src="./images/infoblock-img/byket.png" alt="">
+                       </div>
+                       <div class="block-product__info">
+                           <span class="block-product__info-name">Букет</span>
+                           <div class="block-product__info__price">
+                               <span class="block-product__info__price-current">1500 Р</span>
+                           </div>
+                           <div class="block-product__info__button">
+                               <span class="block-product__info__button-buy">Заказать</span>
+                               <span class="block-product__info__button-order_one_click">Купить в 1 клик</span>
+                           </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <div class="show-more">
+                <div class="show-more__line"></div>
+                <span class="show-more__button">Показать ещё</span>
+                <div class="show-more__line"></div>
+            </div>
+        </div>
+        <div class="info-block">
+            <h3 class="info-block__name">Новые букеты</h3>
+            <div class="grid-4">
+                <div class="col">
+                    <div class="block-product">
+                       <div class="block-product__img">
+                           <div class="block-product__img__sticker">
+                               <span class="block-product__img__sticker-new">новинка</span>
+                           </div>
+                           <div class="block-product__img__info">
+                               <span class="block-product__img__info-text">60x30</span>
+                               <span class="block-product__img__info-text">см</span>
+                           </div>
+                           <img class="block-product__img-prev" src="./images/infoblock-img/byket.png" alt="">
+                       </div>
+                       <div class="block-product__info">
+                           <span class="block-product__info-name">Букет</span>
+                           <div class="block-product__info__price">
+                               <span class="block-product__info__price-current">1500 Р</span>
+                           </div>
+                           <div class="block-product__info__button">
+                               <span class="block-product__info__button-buy">Заказать</span>
+                               <span class="block-product__info__button-order_one_click">Купить в 1 клик</span>
+                           </div>
+                       </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="block-product">
+                       <div class="block-product__img">
+                           <div class="block-product__img__sticker">
+                               <span class="block-product__img__sticker-new">новинка</span>
+                           </div>
+                           <div class="block-product__img__info">
+                               <span class="block-product__img__info-text">60x30</span>
+                               <span class="block-product__img__info-text">см</span>
+                           </div>
+                           <img class="block-product__img-prev" src="./images/infoblock-img/byket.png" alt="">
+                       </div>
+                       <div class="block-product__info">
+                           <span class="block-product__info-name">Букет</span>
+                           <div class="block-product__info__price">
+                               <span class="block-product__info__price-current">1500 Р</span>
+                           </div>
+                           <div class="block-product__info__button">
+                               <span class="block-product__info__button-buy">Заказать</span>
+                               <span class="block-product__info__button-order_one_click">Купить в 1 клик</span>
+                           </div>
+                       </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="block-product">
+                       <div class="block-product__img">
+                           <div class="block-product__img__sticker">
+                               <span class="block-product__img__sticker-new">новинка</span>
+                           </div>
+                           <div class="block-product__img__info">
+                               <span class="block-product__img__info-text">60x30</span>
+                               <span class="block-product__img__info-text">см</span>
+                           </div>
+                           <img class="block-product__img-prev" src="./images/infoblock-img/byket.png" alt="">
+                       </div>
+                       <div class="block-product__info">
+                           <span class="block-product__info-name">Букет</span>
+                           <div class="block-product__info__price">
+                               <span class="block-product__info__price-current">1500 Р</span>
+                           </div>
+                           <div class="block-product__info__button">
+                               <span class="block-product__info__button-buy">Заказать</span>
+                               <span class="block-product__info__button-order_one_click">Купить в 1 клик</span>
+                           </div>
+                       </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="block-product">
+                       <div class="block-product__img">
+                           <div class="block-product__img__sticker">
+                               <span class="block-product__img__sticker-new">новинка</span>
+                           </div>
+                           <div class="block-product__img__info">
+                               <span class="block-product__img__info-text">60x30</span>
+                               <span class="block-product__img__info-text">см</span>
+                           </div>
+                           <img class="block-product__img-prev" src="./images/infoblock-img/byket.png" alt="">
+                       </div>
+                       <div class="block-product__info">
+                           <span class="block-product__info-name">Букет</span>
+                           <div class="block-product__info__price">
+                               <span class="block-product__info__price-current">1500 Р</span>
+                           </div>
+                           <div class="block-product__info__button">
+                               <span class="block-product__info__button-buy">Заказать</span>
+                               <span class="block-product__info__button-order_one_click">Купить в 1 клик</span>
+                           </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <div class="show-more">
+                <div class="show-more__line"></div>
+                <span class="show-more__button">Показать ещё</span>
+                <div class="show-more__line"></div>
+            </div>
+        </div>
+        <div class="info-block">
+            <h3 class="info-block__name">Отзовы клиентов</h3>
+            <div class="grid-3">
+                <div class="col">
+                    <div class="block-comment">
+                        <span class="block-comment__name_user">Иванов Иван</span>
+                        <h4 class="block-comment__name">Заголовок отзыва</h4>
+                        <p class="block-comment__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, delectus vitae eaque possimus, tenetur ex voluptatem!</p>
+                        <div class="block-comment__rating">
+                            <img src="./images/rate.png" alt="">
+                        </div>
+                        <span class="block-comment__date">27/10/2017</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="block-comment">
+                        <span class="block-comment__name_user">Иванов Иван</span>
+                        <h4 class="block-comment__name">Заголовок отзыва</h4>
+                        <p class="block-comment__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, delectus vitae eaque possimus, tenetur ex voluptatem!</p>
+                        <div class="block-comment__rating">
+                            <img src="./images/rate.png" alt="">
+                        </div>
+                        <span class="block-comment__date">27/10/2017</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="block-comment">
+                        <span class="block-comment__name_user">Иванов Иван</span>
+                        <h4 class="block-comment__name">Заголовок отзыва</h4>
+                        <p class="block-comment__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, delectus vitae eaque possimus, tenetur ex voluptatem!</p>
+                        <div class="block-comment__rating">
+                            <img src="./images/rate.png" alt="">
+                        </div>
+                        <span class="block-comment__date">27/10/2017</span>
+                    </div>
+                </div>
+            </div>
+            <div class="show-more_2">
+                <div class="show-more_2__line"></div>
+                <span class="show-more_2__button">Все отзывы</span>
+                <div class="show-more_2__line"></div>
+            </div>
+        </div>
+        <div class="info-block_2">
+            <h2 class="info-block_2__name">Lorem ipsum dolor sit.</h2>
+            <p class="info-block_2__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, iusto, odio! Officiis nihil voluptates pariatur possimus, delectus cupiditate tempora, facilis sed porro corrupti, est voluptate repellat maxime recusandae ex dolorum veritatis quis inventore molestias non alias. Tempora vitae cum officia, quas impedit corporis, aperiam cumque! Dolor, odio. Aliquid qui molestiae quidem nam. Voluptas quas animi sint, minima corporis consequatur amet necessitatibus repellat velit! Dolore commodi fuga ipsum, id est ipsa quo consequatur. Numquam dolore facilis repellat fugiat alias maiores neque assumenda sit debitis earum, eaque, quibusdam sint magnam, officiis est.</p>
+        </div>
     </div>
-    
-    <footer></footer>
-    
+
+    <footer class="footer">
+        <div class="menu-footer">
+            <ul class="menu-footer__wrap">
+                <li class="menu-footer__wrap__list">
+                    <a class="menu-footer__wrap__list-link" href="">Осень</a>
+                </li>
+                <li class="menu-footer__wrap__list">
+                    <a class="menu-footer__wrap__list-link" href="">День рождения</a>
+                </li>
+                <li class="menu-footer__wrap__list">
+                    <a class="menu-footer__wrap__list-link" href="">Букеты</a>
+                </li>
+                <li class="menu-footer__wrap__list">
+                    <a class="menu-footer__wrap__list-link" href="">Розы</a>
+                </li>
+                <li class="menu-footer__wrap__list">
+                    <a class="menu-footer__wrap__list-link" href="">Премиум</a>
+                </li>
+                <li class="menu-footer__wrap__list">
+                    <a class="menu-footer__wrap__list-link" href="">Композиции</a>
+                </li>
+                <li class="menu-footer__wrap__list">
+                    <a class="menu-footer__wrap__list-link" href="">Подарки</a>
+                </li>
+                <li class="menu-footer__wrap__list">
+                    <a class="menu-footer__wrap__list-link" href="">Свадебные букеты</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer__wrap">
+            <div class="footer__wrap__elements">
+                <a class="footer-logo" href="">
+                    <img class="footer-logo__prev" src="./images/logo.png" alt="">
+                </a>
+                <div class="footer-copyright">© 2017. Все права защищены</div>
+            </div>
+            <div class="footer__wrap__elements">
+                <div class="group">
+                    <div class="bottom-menu__group">
+                        <ul class="bottom-menu">
+                            <li class="bottom-menu__list">
+                                <a class="bottom-menu__list-link" href="">О магазине</a>
+                            </li>
+                            <li class="bottom-menu__list">
+                                <a class="bottom-menu__list-link" href="">Доставка</a>
+                            </li>
+                            <li class="bottom-menu__list">
+                                <a class="bottom-menu__list-link" href="">Оплата</a>
+                            </li>
+                            <li class="bottom-menu__list">
+                                <a class="bottom-menu__list-link" href="">Партнерская программа</a>
+                            </li>
+                            <li class="bottom-menu__list">
+                                <a class="bottom-menu__list-link" href="">Гарантии</a>
+                            </li>
+                            <li class="bottom-menu__list">
+                                <a class="bottom-menu__list-link" href="">Карта городов </a>
+                            </li>
+                        </ul>
+                        <ul class="bottom-menu">
+                            <li class="bottom-menu__list">
+                                <a class="bottom-menu__list-link" href="">Личный кабинет</a>
+                            </li>
+                            <li class="bottom-menu__list">
+                                <a class="bottom-menu__list-link" href="">Статьи о цветах</a>
+                            </li>
+                            <li class="bottom-menu__list">
+                                <a class="bottom-menu__list-link" href="">Статус заказа</a>
+                            </li>
+                            <li class="bottom-menu__list">
+                                <a class="bottom-menu__list-link" href="">Вопрос-ответ</a>
+                            </li>
+                            <li class="bottom-menu__list">
+                                <a class="bottom-menu__list-link" href="">Карта сайта</a>
+                            </li>
+                            <li class="bottom-menu__list">
+                                <a class="bottom-menu__list-link" href="">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__wrap__elements">
+                <div class="footer__info">
+                    <div class="footer-address">
+                        <a class="footer-address__phone" href="tel:8-000-000-0000">8-000-000-0000</a>, Ежедневно: с 10<sup>00</sup> до 20<sup>00</sup> г. Москва, ул. Московская, д.0.<br>
+                        <a class="footer-address__mail" href="mail:namecompany@mail.ru">namecompany@mail.ru</a>
+                    </div>
+                    <div class="socials">
+                        <a class="socials__link" href=""><i class="fa fa-vk" aria-hidden="true"></i></a>
+                        <a class="socials__link" href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a class="socials__link" href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a class="socials__link" href=""><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a>
+                        <a class="socials__link" href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__wrap__elements">
+                <div class="footer-images">
+                    <img src="./images/visa.png" alt="">
+                    <img src="./images/mastercard.png" alt="">
+                    <img src="./images/yandex.png" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+
 </body>
+
 </html>

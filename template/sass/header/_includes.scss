@@ -10,12 +10,12 @@
         font-family: 'Open Sans', sans-serif;
         font-size: 13px;
         color: #000;
-        margin: 0 10px;
+        margin: 0 7px;
         &:first-child{
-            margin-left: 20px;
+            margin-left: 16px;
         }
         &:last-child{
-            margin-right: 20px;
+            margin-right: 16px;
         }
         &:after{
             content: '';
@@ -28,18 +28,21 @@
     }
 }
 .group-info{
-    max-width: 319px;
-    width: 100%;
     display: flex;
     justify-content: space-between;
+    &:last-child{
+        justify-content: flex-end;
+        flex-grow: 1;
+    }
     &__text{
         position: relative;
-        margin: 0px 15px 0px 15px;
+        margin: 4px 0px 0px 22px;
         font-family: Arial, sans-serif;
         font-size: 12px;
         color: #708484;
     }
     &__icon{
+        margin: 0px 13px;
         width: 14px;
         height: 17px;
         background: url(../../images/sprite.png) no-repeat;
@@ -117,7 +120,7 @@
     }
 }
 .group-info_4{
-    margin-top: 10px;
+    margin-top: 4px;
     &__elements{
         display: flex;
         justify-content: center;
@@ -140,5 +143,46 @@
     }
 }
 .group-info_5{
-    
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+    &__elements{
+        display: flex;
+        &-icons{
+            width: 33px;
+            height: 40px;
+            background: url(../../images/sprite.png) no-repeat;
+            background-position: 0px -17px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            color: #4ab1ae;
+            padding-top: 10px;
+            margin-right: 13px;
+            box-sizing: border-box;
+        }
+        &-group{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        &-text{
+            font-family: 'Open Sans', sans-serif;
+            font-size: 13px;
+            color: #708484;
+        }
+        &-count{
+            font-family: 'Open Sans', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #000;
+            i{
+                font-weight: 500;
+                font-style: normal;
+            }
+        }
+    }
 }
