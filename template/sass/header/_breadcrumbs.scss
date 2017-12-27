@@ -1,0 +1,27 @@
+.breadcrumbs{
+    display: flex;
+    align-items: center;
+    margin:30px auto;
+    width: 1170px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    span{
+        margin: 0px 7px;
+        color: #000;
+        border-bottom: none;
+        &:hover{
+            color: #000;
+            border-bottom: none;
+        }
+    }
+    &__link{
+        margin: 0!important;
+        text-decoration: none;
+        color: #4ab1ae;
+        border-bottom: 1px solid #4ab1ae;
+        &:hover{
+            color: #000;
+            border-bottom: 1px solid #000;
+        }
+    }
+}

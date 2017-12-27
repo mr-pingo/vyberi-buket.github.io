@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="">
+    <meta name="Keywords" content="">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/gridlex.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper.css">
+    <link rel="stylesheet" type="text/css" href="css/themes/simple.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.arcticmodal-0.3.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/mobile.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic-ext" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script type="text/javascript" src="js/jquery.arcticmodal-0.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.ikSelect.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <title>Каталог товаров</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header__wrap">
+            <a class="header__wrap__img" href="/">
+                <img class="header__wrap__img-prev" src="./images/logo.png" alt="">
+            </a>
+            <div class="group">
+                <div class="header__wrap-group">
+                    <div class="top-menu">
+                        <ul class="top-menu__wrap">
+                            <li class="top-menu__wrap__body">
+                                <a class="top-menu__wrap__body-link" href="">Доставка</a>
+                            </li>
+                            <li class="top-menu__wrap__body">
+                                <a class="top-menu__wrap__body-link" href="">Оплата</a>
+                            </li>
+                            <li class="top-menu__wrap__body">
+                                <a class="top-menu__wrap__body-link" href="">Гарантии</a>
+                            </li>
+                            <li class="top-menu__wrap__body">
+                                <a class="top-menu__wrap__body-link" href="">Вопрос-ответ</a>
+                            </li>
+                            <li class="top-menu__wrap__body">
+                                <a class="top-menu__wrap__body-link" href="contacts.html">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header-line"></div>
+                    <div class="group-links">
+                        <a class="group-links__text" href="">Статус заказа</a>
+                        <a class="group-links__text" href="">Личный кабинет</a>
+                    </div>
+                    <div class="header-line"></div>
+                    <div class="group-info">
+                        <span class="group-info__text">Город доставки</span>
+                        <i class="group-info__icon"></i>
+                        <span class="group-info__link">Loremipsum-LoremipsumLor</span>
+                    </div>
+                </div>
+                <div class="header__wrap-group">
+                    <div class="group-info_2">
+                        <div class="group-info_2__elements">
+                            <div class="group-info_2__elements__img">
+                                <img class="group-info_2__elements__img-prev" src="./images/infoblock-img/1.png" alt="">
+                            </div>
+                            <span class="group-info_2__elements__text">
+                                Доставка бесплатно
+                            </span>
+                        </div>
+                        <div class="group-info_2__elements">
+                            <div class="group-info_2__elements__img">
+                                <img class="group-info_2__elements__img-prev" src="./images/infoblock-img/2.png" alt="">
+                            </div>
+                            <span class="group-info_2__elements__text">
+                                Фото момента вручения
+                            </span>
+                        </div>
+                        <div class="group-info_2__elements">
+                            <div class="group-info_2__elements__img">
+                                <img class="group-info_2__elements__img-prev" src="./images/infoblock-img/3.png" alt="">
+                            </div>
+                            <span class="group-info_2__elements__text">
+                                Бесплатная открытка
+                            </span>
+                        </div>
+                    </div>
+                    <div class="group-info_3">
+                        <div class="group-info_3__elements">
+                            <div class="group-info_3__elements__text">Ежедневно: c 10<sup class="group-info_3__elements__text-sup">00</sup> до 20<sup class="group-info_3__elements__text-sup">00</sup></div>
+                            <a class="group-info_3__elements-phone" href="tel:88000000000">8-800-000-0000</a>
+                        </div>
+                    </div>
+                    <div class="group-info_4">
+                        <div class="group-info_4__elements">
+                            <span class="group-info_4__elements-button">Обратный звонок</span>
+                        </div>
+                    </div>
+                    <div class="group-info_5">
+                        <a class="group-info_5__elements" href="basket.html">
+                            <i class="group-info_5__elements-icons">2</i>
+                            <div class="group-info_5__elements-group">
+                                <span class="group-info_5__elements-text">Корзина</span>
+                                <span class="group-info_5__elements-count">22 500 <i>&#8381;</i></span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-menu">
+            <ul class="main-menu__wrap">
+                <li class="main-menu__wrap__list">
+                    <a class="main-menu__wrap__list-link" href="">Осень</a>
+                </li>
+                <li class="main-menu__wrap__list">
+                    <a class="main-menu__wrap__list-link" href="">День рождения</a>
+                </li>
+                <li class="main-menu__wrap__list">
+                    <a class="main-menu__wrap__list-link" href="">Букеты</a>
+                </li>
+                <li class="main-menu__wrap__list">
+                    <a class="main-menu__wrap__list-link" href="">Розы</a>
+                </li>
+                <li class="main-menu__wrap__list">
+                    <a class="main-menu__wrap__list-link" href="">Премиум</a>
+                </li>
+                <li class="main-menu__wrap__list">
+                    <a class="main-menu__wrap__list-link" href="">Композиции</a>
+                </li>
+                <li class="main-menu__wrap__list">
+                    <a class="main-menu__wrap__list-link" href="">Подарки</a>
+                </li>
+                <li class="main-menu__wrap__list">
+                    <a class="main-menu__wrap__list-link" href="">Свадебные букеты</a>
+                </li>
+            </ul>
+            <form class="search" action="url">
+                <input class="search__poly" type="text" placeholder="Поиск">
+                <div class="search__wrap">
+                    <input class="search__wrap-button" type="submit" value="">
+                </div>
+            </form>
+        </div>
+        <div class="breadcrumbs">
+            <a class="breadcrumbs__link" href="/">Главная</a>
+            <span>/</span>
+            <span class="breadcrumbs__link">Каталог товаров</span>
+        </div>
+    </header>
+
+    <div class="content">
+        <h1 class="content__name">Доставка цветов по России</h1>
+        <div class="filter">
+            <ul class="filter__wrap">
+                <li class="filter__wrap__list js-filter-list">
+                    <span class="filter__wrap__list-name">Цена</span>
+                    <span class="filter__wrap__list-choice js-choice"></span>
+                    <div class="filter-menu js-filter-menu">
+                        <div class="filter-menu__group">
+                            <ul class="filter-menu__wrap">
+                                <li class="filter-menu__wrap__list"><span class="filter-menu__wrap__list-text">Все</span></li>
+                                <li class="filter-menu__wrap__list"><span class="filter-menu__wrap__list-text">Розами</span></li>
+                                <li class="filter-menu__wrap__list"><span class="filter-menu__wrap__list-text">Герберами</span></li>
+                                <li class="filter-menu__wrap__list"><span class="filter-menu__wrap__list-text">Лилиями</span></li>
+                                <li class="filter-menu__wrap__list"><span class="filter-menu__wrap__list-text">Хризантемами</span></li>
+                                <li class="filter-menu__wrap__list"><span class="filter-menu__wrap__list-text">Тюльпанами</span></li>
+                                <li class="filter-menu__wrap__list"><span class="filter-menu__wrap__list-text">Орхидеями</span></li>
+                                <li class="filter-menu__wrap__list"><span class="filter-menu__wrap__list-text">Альстромериями</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="filter__wrap__list js-filter-list">
+                    <span class="filter__wrap__list-name">Цветы</span>
+                    <span class="filter__wrap__list-choice js-choice"></span>
+                    <div class="filter-menu js-filter-menu">
+                        <div class="filter-menu__group">
+                            <ul class="filter-menu__wrap">
+                                <li class="filter-menu__wrap__list"><span class="filter-menu__wrap__list-text">Все</span></li>
+                                <li class="filter-menu__wrap__list"><span class="filter-menu__wrap__list-text">Розами</span></li>
+                                <li class="filter-menu__wrap__list"><span class="filter-menu__wrap__list-text">Герберами</span></li>
+                                <li class="filter-menu__wrap__list"><span class="filter-menu__wrap__list-text">Лилиями</span></li>
+                                <li class="filter-menu__wrap__list"><span class="filter-menu__wrap__list-text">Хризантемами</span></li>
+                                <li class="filter-menu__wrap__list"><span class="filter-menu__wrap__list-text">Тюльпанами</span></li>
+                                <li class="filter-menu__wrap__list"><span class="filter-menu__wrap__list-text">Орхидеями</span></li>
+                                <li class="filter-menu__wrap__list"><span class="filter-menu__wrap__list-text">Альстромериями</span></li>
+                            </ul>
+                            <ul class="filter-menu__wrap">
+                                <li class="filter-menu__wrap__list"><span class="filter-menu__wrap__list-text">Ирисами</span></li>
+                                <li class="filter-menu__wrap__list"><span class="filter-menu__wrap__list-text">Гвоздиками</span></li>
+                                <li class="filter-menu__wrap__list"><span class="filter-menu__wrap__list-text">Лизиантусами</span></li>
+                                <li class="filter-menu__wrap__list"><span class="filter-menu__wrap__list-text">Пионами</span></li>
+                                <li class="filter-menu__wrap__list"><span class="filter-menu__wrap__list-text">Ромашкой</span></li>
+                                <li class="filter-menu__wrap__list"><span class="filter-menu__wrap__list-text">Экзотическими цветами</span></li>
+                                <li class="filter-menu__wrap__list"><span class="filter-menu__wrap__list-text">Подсолнухами</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="filter__wrap__list">
+                    <span class="filter__wrap__list-name">Кому</span>
+                    <span class="filter__wrap__list-choice js-choice"></span>
+                </li>
+                <li class="filter__wrap__list">
+                    <span class="filter__wrap__list-name">По случаю</span>
+                    <span class="filter__wrap__list-choice js-choice"></span>
+                </li>
+                <li class="filter__wrap__list">
+                    <span class="filter__wrap__list-name">Стиль</span>
+                    <span class="filter__wrap__list-choice js-choice"></span>
+                </li>
+            </ul>
+        </div>
+        <div class="info-block">
+            <div class="grid-4">
+                <div class="col">
+                    <div class="block-product">
+                        <a class="block-product__img" href="card.html">
+                            <div class="block-product__img__sticker">
+                                <span class="block-product__img__sticker-hit">хит</span>
+                                <span class="block-product__img__sticker-sale">скидка</span>
+                                <span class="block-product__img__sticker-new">новинка</span>
+                            </div>
+                            <div class="block-product__img__info">
+                                <span class="block-product__img__info-text">60x30</span>
+                                <span class="block-product__img__info-text">см</span>
+                            </div>
+                            <img class="block-product__img-prev" src="./images/infoblock-img/byket.jpg" alt="">
+                            <div class="time-block_mini">
+                                <span class="time-block_mini__name">До конца акции осталось:</span>
+                                <div class="time-block_mini__group">
+                                    <div class="time-block_mini__group__elements">
+                                        <div class="time-block_mini__group__elements-count">
+                                            <span class="time-block_mini__group__elements-block">0</span>
+                                            <span class="time-block_mini__group__elements-block">5</span>
+                                        </div>
+                                        <span class="time-block_mini__group__elements-text">дней</span>
+                                    </div>
+                                    <div class="time-block_mini__group__elements">
+                                        <div class="time-block_mini__group__elements-count">
+                                            <span class="time-block_mini__group__elements-block">2</span>
+                                            <span class="time-block_mini__group__elements-block">4</span>
+                                        </div>
+                                        <span class="time-block_mini__group__elements-text">часы</span>
+                                    </div>
+                                    <div class="time-block_mini__group__elements">
+                                        <div class="time-block_mini__group__elements-count">
+                                            <span class="time-block_mini__group__elements-block">1</span>
+                                            <span class="time-block_mini__group__elements-block">2</span>
+                                        </div>
+                                        <span class="time-block_mini__group__elements-text">минут</span>
+                                    </div>
+                                    <div class="time-block_mini__group__elements">
+                                        <div class="time-block_mini__group__elements-count">
+                                            <span class="time-block_mini__group__elements-block">6</span>
+                                            <span class="time-block_mini__group__elements-block">0</span>
+                                        </div>
+                                        <span class="time-block_mini__group__elements-text">секунд</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="block-product__info">
+                            <span class="block-product__info-name">Букет</span>
+                            <div class="block-product__info__price">
+                                <span class="block-product__info__price-old">15000 Р</span>
+                                <span class="block-product__info__price-current">1500 Р</span>
+                            </div>
+                            <div class="block-product__info__button">
+                                <span class="block-product__info__button-order">Заказать</span>
+                                <span class="block-product__info__button-buy_one_click">Купить в 1 клик</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="block-product">
+                        <a class="block-product__img" href="card.html">
+                            <div class="block-product__img__sticker">
+                                <span class="block-product__img__sticker-hit">хит</span>
+                            </div>
+                            <div class="block-product__img__info">
+                                <span class="block-product__img__info-text">60x30</span>
+                                <span class="block-product__img__info-text">см</span>
+                            </div>
+                            <img class="block-product__img-prev" src="./images/infoblock-img/byket.jpg" alt="">
+                        </a>
+                        <div class="block-product__info">
+                            <span class="block-product__info-name">Букет</span>
+                            <div class="block-product__info__price">
+                                <span class="block-product__info__price-current">1500 Р</span>
+                            </div>
+                            <div class="block-product__info__button">
+                                <span class="block-product__info__button-order">Заказать</span>
+                                <span class="block-product__info__button-buy_one_click">Купить в 1 клик</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="block-product">
+                        <a class="block-product__img" href="card.html">
+                            <div class="block-product__img__sticker">
+                                <span class="block-product__img__sticker-hit">хит</span>
+                            </div>
+                            <div class="block-product__img__info">
+                                <span class="block-product__img__info-text">60x30</span>
+                                <span class="block-product__img__info-text">см</span>
+                            </div>
+                            <img class="block-product__img-prev" src="./images/infoblock-img/byket.jpg" alt="">
+                        </a>
+                        <div class="block-product__info">
+                            <span class="block-product__info-name">Букет</span>
+                            <div class="block-product__info__price">
+                                <span class="block-product__info__price-current">1500 Р</span>
+                            </div>
+                            <div class="block-product__info__button">
+                                <span class="block-product__info__button-order">Заказать</span>
+                                <span class="block-product__info__button-buy_one_click">Купить в 1 клик</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="block-product">
+                        <a class="block-product__img" href="card.html">
+                            <div class="block-product__img__sticker">
+                                <span class="block-product__img__sticker-hit">хит</span>
+                            </div>
+                            <div class="block-product__img__info">
+                                <span class="block-product__img__info-text">60x30</span>
+                                <span class="block-product__img__info-text">см</span>
+                            </div>
+                            <img class="block-product__img-prev" src="./images/infoblock-img/byket.jpg" alt="">
+                            <div class="time-block_mini">
+                                <span class="time-block_mini__name">До конца акции осталось:</span>
+                                <div class="time-block_mini__group">
+                                    <div class="time-block_mini__group__elements">
+                                        <div class="time-block_mini__group__elements-count">
+                                            <span class="time-block_mini__group__elements-block">0</span>
+                                            <span class="time-block_mini__group__elements-block">5</span>
+                                        </div>
+                                        <span class="time-block_mini__group__elements-text">дней</span>
+                                    </div>
+                                    <div class="time-block_mini__group__elements">
+                                        <div class="time-block_mini__group__elements-count">
+                                            <span class="time-block_mini__group__elements-block">2</span>
+                                            <span class="time-block_mini__group__elements-block">4</span>
+                                        </div>
+                                        <span class="time-block_mini__group__elements-text">часы</span>
+                                    </div>
+                                    <div class="time-block_mini__group__elements">
+                                        <div class="time-block_mini__group__elements-count">
+                                            <span class="time-block_mini__group__elements-block">1</span>
+                                            <span class="time-block_mini__group__elements-block">2</span>
+                                        </div>
+                                        <span class="time-block_mini__group__elements-text">минут</span>
+                                    </div>
+                                    <div class="time-block_mini__group__elements">
+                                        <div class="time-block_mini__group__elements-count">
+                                            <span class="time-block_mini__group__elements-block">6</span>
+                                            <span class="time-block_mini__group__elements-block">0</span>
+                                        </div>
+                                        <span class="time-block_mini__group__elements-text">секунд</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="block-product__info">
+                            <span class="block-product__info-name">Букет</span>
+                            <div class="block-product__info__price">
+                                <span class="block-product__info__price-current">1500 Р</span>
+                            </div>
+                            <div class="block-product__info__button">
+                                <span class="block-product__info__button-order">Заказать</span>
+                                <span class="block-product__info__button-buy_one_click">Купить в 1 клик</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="block-product">
+                        <a class="block-product__img" href="card.html">
+                            <div class="block-product__img__sticker">
+                                <span class="block-product__img__sticker-hit">хит</span>
+                            </div>
+                            <div class="block-product__img__info">
+                                <span class="block-product__img__info-text">60x30</span>
+                                <span class="block-product__img__info-text">см</span>
+                            </div>
+                            <img class="block-product__img-prev" src="./images/infoblock-img/byket.jpg" alt="">
+                        </a>
+                        <div class="block-product__info">
+                            <span class="block-product__info-name">Букет</span>
+                            <div class="block-product__info__price">
+                                <span class="block-product__info__price-current">1500 Р</span>
+                            </div>
+                            <div class="block-product__info__button">
+                                <span class="block-product__info__button-order">Заказать</span>
+                                <span class="block-product__info__button-buy_one_click">Купить в 1 клик</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="block-product">
+                        <a class="block-product__img" href="card.html">
+                            <div class="block-product__img__sticker">
+                                <span class="block-product__img__sticker-hit">хит</span>
+                            </div>
+                            <div class="block-product__img__info">
+                                <span class="block-product__img__info-text">60x30</span>
+                                <span class="block-product__img__info-text">см</span>
+                            </div>
+                            <img class="block-product__img-prev" src="./images/infoblock-img/byket.jpg" alt="">
+                            <div class="time-block_mini">
+                                <span class="time-block_mini__name">До конца акции осталось:</span>
+                                <div class="time-block_mini__group">
+                                    <div class="time-block_mini__group__elements">
+                                        <div class="time-block_mini__group__elements-count">
+                                            <span class="time-block_mini__group__elements-block">0</span>
+                                            <span class="time-block_mini__group__elements-block">5</span>
+                                        </div>
+                                        <span class="time-block_mini__group__elements-text">дней</span>
+                                    </div>
+                                    <div class="time-block_mini__group__elements">
+                                        <div class="time-block_mini__group__elements-count">
+                                            <span class="time-block_mini__group__elements-block">2</span>
+                                            <span class="time-block_mini__group__elements-block">4</span>
+                                        </div>
+                                        <span class="time-block_mini__group__elements-text">часы</span>
+                                    </div>
+                                    <div class="time-block_mini__group__elements">
+                                        <div class="time-block_mini__group__elements-count">
+                                            <span class="time-block_mini__group__elements-block">1</span>
+                                            <span class="time-block_mini__group__elements-block">2</span>
+                                        </div>
+                                        <span class="time-block_mini__group__elements-text">минут</span>
+                                    </div>
+                                    <div class="time-block_mini__group__elements">
+                                        <div class="time-block_mini__group__elements-count">
+                                            <span class="time-block_mini__group__elements-block">6</span>
+                                            <span class="time-block_mini__group__elements-block">0</span>
+                                        </div>
+                                        <span class="time-block_mini__group__elements-text">секунд</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="block-product__info">
+                            <span class="block-product__info-name">Букет</span>
+                            <div class="block-product__info__price">
+                                <span class="block-product__info__price-current">1500 Р</span>
+                            </div>
+                            <div class="block-product__info__button">
+                                <span class="block-product__info__button-order">Заказать</span>
+                                <span class="block-product__info__button-buy_one_click">Купить в 1 клик</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="block-product">
+                        <a class="block-product__img" href="card.html">
+                            <div class="block-product__img__sticker">
+                                <span class="block-product__img__sticker-hit">хит</span>
+                            </div>
+                            <div class="block-product__img__info">
+                                <span class="block-product__img__info-text">60x30</span>
+                                <span class="block-product__img__info-text">см</span>
+                            </div>
+                            <img class="block-product__img-prev" src="./images/infoblock-img/byket.jpg" alt="">
+                            <div class="time-block_mini">
+                                <span class="time-block_mini__name">До конца акции осталось:</span>
+                                <div class="time-block_mini__group">
+                                    <div class="time-block_mini__group__elements">
+                                        <div class="time-block_mini__group__elements-count">
+                                            <span class="time-block_mini__group__elements-block">0</span>
+                                            <span class="time-block_mini__group__elements-block">5</span>
+                                        </div>
+                                        <span class="time-block_mini__group__elements-text">дней</span>
+                                    </div>
+                                    <div class="time-block_mini__group__elements">
+                                        <div class="time-block_mini__group__elements-count">
+                                            <span class="time-block_mini__group__elements-block">2</span>
+                                            <span class="time-block_mini__group__elements-block">4</span>
+                                        </div>
+                                        <span class="time-block_mini__group__elements-text">часы</span>
+                                    </div>
+                                    <div class="time-block_mini__group__elements">
+                                        <div class="time-block_mini__group__elements-count">
+                                            <span class="time-block_mini__group__elements-block">1</span>
+                                            <span class="time-block_mini__group__elements-block">2</span>
+                                        </div>
+                                        <span class="time-block_mini__group__elements-text">минут</span>
+                                    </div>
+                                    <div class="time-block_mini__group__elements">
+                                        <div class="time-block_mini__group__elements-count">
+                                            <span class="time-block_mini__group__elements-block">6</span>
+                                            <span class="time-block_mini__group__elements-block">0</span>
+                                        </div>
+                                        <span class="time-block_mini__group__elements-text">секунд</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="block-product__info">
+                            <span class="block-product__info-name">Букет</span>
+                            <div class="block-product__info__price">
+                                <span class="block-product__info__price-current">1500 Р</span>
+                            </div>
+                            <div class="block-product__info__button">
+                                <span class="block-product__info__button-order">Заказать</span>
+                                <span class="block-product__info__button-buy_one_click">Купить в 1 клик</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="block-product">
+                        <a class="block-product__img" href="card.html">
+                            <div class="block-product__img__sticker">
+                                <span class="block-product__img__sticker-hit">хит</span>
+                            </div>
+                            <div class="block-product__img__info">
+                                <span class="block-product__img__info-text">60x30</span>
+                                <span class="block-product__img__info-text">см</span>
+                            </div>
+                            <img class="block-product__img-prev" src="./images/infoblock-img/byket.jpg" alt="">
+                        </a>
+                        <div class="block-product__info">
+                            <span class="block-product__info-name">Букет</span>
+                            <div class="block-product__info__price">
+                                <span class="block-product__info__price-current">1500 Р</span>
+                            </div>
+                            <div class="block-product__info__button">
+                                <span class="block-product__info__button-order">Заказать</span>
+                                <span class="block-product__info__button-buy_one_click">Купить в 1 клик</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="block-product">
+                        <a class="block-product__img" href="card.html">
+                            <div class="block-product__img__sticker">
+                                <span class="block-product__img__sticker-hit">хит</span>
+                            </div>
+                            <div class="block-product__img__info">
+                                <span class="block-product__img__info-text">60x30</span>
+                                <span class="block-product__img__info-text">см</span>
+                            </div>
+                            <img class="block-product__img-prev" src="./images/infoblock-img/byket.jpg" alt="">
+                        </a>
+                        <div class="block-product__info">
+                            <span class="block-product__info-name">Букет</span>
+                            <div class="block-product__info__price">
+                                <span class="block-product__info__price-current">1500 Р</span>
+                            </div>
+                            <div class="block-product__info__button">
+                                <span class="block-product__info__button-order">Заказать</span>
+                                <span class="block-product__info__button-buy_one_click">Купить в 1 клик</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="block-product">
+                        <a class="block-product__img" href="card.html">
+                            <div class="block-product__img__sticker">
+                                <span class="block-product__img__sticker-hit">хит</span>
+                            </div>
+                            <div class="block-product__img__info">
+                                <span class="block-product__img__info-text">60x30</span>
+                                <span class="block-product__img__info-text">см</span>
+                            </div>
+                            <img class="block-product__img-prev" src="./images/infoblock-img/byket.jpg" alt="">
+                        </a>
+                        <div class="block-product__info">
+                            <span class="block-product__info-name">Букет</span>
+                            <div class="block-product__info__price">
+                                <span class="block-product__info__price-current">1500 Р</span>
+                            </div>
+                            <div class="block-product__info__button">
+                                <span class="block-product__info__button-order">Заказать</span>
+                                <span class="block-product__info__button-buy_one_click">Купить в 1 клик</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="block-product">
+                        <a class="block-product__img" href="card.html">
+                            <div class="block-product__img__sticker">
+                                <span class="block-product__img__sticker-hit">хит</span>
+                            </div>
+                            <div class="block-product__img__info">
+                                <span class="block-product__img__info-text">60x30</span>
+                                <span class="block-product__img__info-text">см</span>
+                            </div>
+                            <img class="block-product__img-prev" src="./images/infoblock-img/byket.jpg" alt="">
+                        </a>
+                        <div class="block-product__info">
+                            <span class="block-product__info-name">Букет</span>
+                            <div class="block-product__info__price">
+                                <span class="block-product__info__price-current">1500 Р</span>
+                            </div>
+                            <div class="block-product__info__button">
+                                <span class="block-product__info__button-order">Заказать</span>
+                                <span class="block-product__info__button-buy_one_click">Купить в 1 клик</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="block-product">
+                        <a class="block-product__img" href="card.html">
+                            <div class="block-product__img__sticker">
+                                <span class="block-product__img__sticker-hit">хит</span>
+                            </div>
+                            <div class="block-product__img__info">
+                                <span class="block-product__img__info-text">60x30</span>
+                                <span class="block-product__img__info-text">см</span>
+                            </div>
+                            <img class="block-product__img-prev" src="./images/infoblock-img/byket.jpg" alt="">
+                        </a>
+                        <div class="block-product__info">
+                            <span class="block-product__info-name">Букет</span>
+                            <div class="block-product__info__price">
+                                <span class="block-product__info__price-current">1500 Р</span>
+                            </div>
+                            <div class="block-product__info__button">
+                                <span class="block-product__info__button-order">Заказать</span>
+                                <span class="block-product__info__button-buy_one_click">Купить в 1 клик</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="block-product">
+                        <a class="block-product__img" href="card.html">
+                            <div class="block-product__img__sticker">
+                                <span class="block-product__img__sticker-hit">хит</span>
+                            </div>
+                            <div class="block-product__img__info">
+                                <span class="block-product__img__info-text">60x30</span>
+                                <span class="block-product__img__info-text">см</span>
+                            </div>
+                            <img class="block-product__img-prev" src="./images/infoblock-img/byket.jpg" alt="">
+                        </a>
+                        <div class="block-product__info">
+                            <span class="block-product__info-name">Букет</span>
+                            <div class="block-product__info__price">
+                                <span class="block-product__info__price-current">1500 Р</span>
+                            </div>
+                            <div class="block-product__info__button">
+                                <span class="block-product__info__button-order">Заказать</span>
+                                <span class="block-product__info__button-buy_one_click">Купить в 1 клик</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="block-product">
+                        <a class="block-product__img" href="card.html">
+                            <div class="block-product__img__sticker">
+                                <span class="block-product__img__sticker-hit">хит</span>
+                            </div>
+                            <div class="block-product__img__info">
+                                <span class="block-product__img__info-text">60x30</span>
+                                <span class="block-product__img__info-text">см</span>
+                            </div>
+                            <img class="block-product__img-prev" src="./images/infoblock-img/byket.jpg" alt="">
+                        </a>
+                        <div class="block-product__info">
+                            <span class="block-product__info-name">Букет</span>
+                            <div class="block-product__info__price">
+                                <span class="block-product__info__price-current">1500 Р</span>
+                            </div>
+                            <div class="block-product__info__button">
+                                <span class="block-product__info__button-order">Заказать</span>
+                                <span class="block-product__info__button-buy_one_click">Купить в 1 клик</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="block-product">
+                        <a class="block-product__img" href="card.html">
+                            <div class="block-product__img__sticker">
+                                <span class="block-product__img__sticker-hit">хит</span>
+                            </div>
+                            <div class="block-product__img__info">
+                                <span class="block-product__img__info-text">60x30</span>
+                                <span class="block-product__img__info-text">см</span>
+                            </div>
+                            <img class="block-product__img-prev" src="./images/infoblock-img/byket.jpg" alt="">
+                            <div class="time-block_mini">
+                                <span class="time-block_mini__name">До конца акции осталось:</span>
+                                <div class="time-block_mini__group">
+                                    <div class="time-block_mini__group__elements">
+                                        <div class="time-block_mini__group__elements-count">
+                                            <span class="time-block_mini__group__elements-block">0</span>
+                                            <span class="time-block_mini__group__elements-block">5</span>
+                                        </div>
+                                        <span class="time-block_mini__group__elements-text">дней</span>
+                                    </div>
+                                    <div class="time-block_mini__group__elements">
+                                        <div class="time-block_mini__group__elements-count">
+                                            <span class="time-block_mini__group__elements-block">2</span>
+                                            <span class="time-block_mini__group__elements-block">4</span>
+                                        </div>
+                                        <span class="time-block_mini__group__elements-text">часы</span>
+                                    </div>
+                                    <div class="time-block_mini__group__elements">
+                                        <div class="time-block_mini__group__elements-count">
+                                            <span class="time-block_mini__group__elements-block">1</span>
+                                            <span class="time-block_mini__group__elements-block">2</span>
+                                        </div>
+                                        <span class="time-block_mini__group__elements-text">минут</span>
+                                    </div>
+                                    <div class="time-block_mini__group__elements">
+                                        <div class="time-block_mini__group__elements-count">
+                                            <span class="time-block_mini__group__elements-block">6</span>
+                                            <span class="time-block_mini__group__elements-block">0</span>
+                                        </div>
+                                        <span class="time-block_mini__group__elements-text">секунд</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="block-product__info">
+                            <span class="block-product__info-name">Букет</span>
+                            <div class="block-product__info__price">
+                                <span class="block-product__info__price-current">1500 Р</span>
+                            </div>
+                            <div class="block-product__info__button">
+                                <span class="block-product__info__button-order">Заказать</span>
+                                <span class="block-product__info__button-buy_one_click">Купить в 1 клик</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="block-product">
+                        <a class="block-product__img" href="card.html">
+                            <div class="block-product__img__sticker">
+                                <span class="block-product__img__sticker-hit">хит</span>
+                            </div>
+                            <div class="block-product__img__info">
+                                <span class="block-product__img__info-text">60x30</span>
+                                <span class="block-product__img__info-text">см</span>
+                            </div>
+                            <img class="block-product__img-prev" src="./images/infoblock-img/byket.jpg" alt="">
+                        </a>
+                        <div class="block-product__info">
+                            <span class="block-product__info-name">Букет</span>
+                            <div class="block-product__info__price">
+                                <span class="block-product__info__price-current">1500 Р</span>
+                            </div>
+                            <div class="block-product__info__button">
+                                <span class="block-product__info__button-order">Заказать</span>
+                                <span class="block-product__info__button-buy_one_click">Купить в 1 клик</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-navigation">
+                <div class="page-navigation__first">
+                    <a class="page-navigation__first-link" href="">&#8249;&#8249;</a>
+                    <a class="page-navigation__first-link" href="">&#8249;</a>
+                </div>
+                <a class="page-navigation__link" href="">1</a>
+                <span class="page-navigation__link active">2</span>
+                <a class="page-navigation__link" href="">3</a>
+                <a class="page-navigation__link" href="">4</a>
+                <a class="page-navigation__link" href="">5</a>
+                <div class="page-navigation__last">
+                    <a class="page-navigation__last-link" href="">&#8250;</a>
+                    <a class="page-navigation__last-link" href="">&#8250;&#8250;</a>
+                </div>
+            </div>
+        </div>
+        <div class="info-block_2 p-t-0">
+            <div class="info-block_2__group">
+                <div class="group">
+                    <h2 class="info-block_2__name">Заказать доставку цветов по Москве</h2>
+                    <div class="info-block_2__text"><p>Компания «Выбери букет» объединила в себе цветочные магазины России в единую партнерскую сеть по всей стране. Мы осуществляем доставку цветов в указанное вами время по указанному вами адресу круглосуточно, что бы вы могли сделать приятный подарок родным, близким или друзьям, даже если находитесь далеко от них. У нас всегда только свежие цветы, они хранятся при специально подобранной температуре и влажности, что помогает сохранить их внешний вид и аромат. При всем при этом, мы сохраняем минимальные цены, чтобы наши покупатели дарили больше цветов своим дорогим и любимым. А для наших постоянных покупателей предусмотрены накопительные скидки.</p>
+                    <h3>Как сделать заказ?</h3>
+                    <ul class="ul_count">
+                        <li class="ul_count__list">Выберите цветы из каталога;</li>
+                        <li class="ul_count__list">Свяжитесь с нами одним из способов:
+                            <ol class="ul_marker">
+                                <li class="ul_marker__list">по телефону: 8800-000-00-00;</li>
+                                <li class="ul_marker__list">оставьте заявку на обратный звонок, и мы вам перезвоним в течении 30 секунд;</li>
+                                <li class="ul_marker__list">оформите заказ на сайте, используя кнопку «купить в 1 клик»;</li>
+                                <li class="ul_marker__list">cформируйте заказ самостоятельно с помощью кнопки «заказать»</li>
+                            </ol>
+                        </li>
+                        <li class="ul_count__list">Совершите оплату;</li>
+                        <li class="ul_count__list">Ожидайте прибытия курьера.</li>
+                    </ul>
+                    <h3>Как произвести оплату?</h3>
+                    <p>Используйте один из 100 способов безналичной оплаты!
+                    Оплатите заказ наличными курьеру при получении.</p>
+                    <h3>Время доставки?</h3>
+                    <p>В зависимости от расстояния, гарантированное время доставки по Москве составляет от 1 до 4 часов, доставка осуществляется в наше рабочее время, мы работаем круглосуточно. При необходимости вы можете указать удобное вам время.</p>
+                    <h3>Стоимость доставки</h3>
+                    <p>Доставка по Москве - 300 руб. 
+                    При стоимости букетов от 3500 рублей - доставка бесплатно. 
+                    Доставка за черту города +30 рублей 1 км.
+                    При необходимости, курьер сделает фото при отправке и при вручении цветов, если это необходимо. Для этого вам необходимо отметить нужные опции при оформлении заказа. Так же вы можете отправить заказ анонимно, для этого требуется указать это при оформлении заказа на сайте, или по телефону менеджеру.</p>
+                    <p>Наш адрес: Город Москва, улица Кастанаевская, дом 17</p>
+                    </div>
+                </div>
+                <div class="info-block_2__img">
+                    <img class="info-block_2__img-prev" src="./images/infoblock-img/4.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="menu-footer">
+            <ul class="menu-footer__wrap">
+                <li class="menu-footer__wrap__list">
+                    <a class="menu-footer__wrap__list-link" href="">Осень</a>
+                </li>
+                <li class="menu-footer__wrap__list">
+                    <a class="menu-footer__wrap__list-link" href="">День рождения</a>
+                </li>
+                <li class="menu-footer__wrap__list">
+                    <a class="menu-footer__wrap__list-link" href="">Букеты</a>
+                </li>
+                <li class="menu-footer__wrap__list">
+                    <a class="menu-footer__wrap__list-link" href="">Розы</a>
+                </li>
+                <li class="menu-footer__wrap__list">
+                    <a class="menu-footer__wrap__list-link" href="">Премиум</a>
+                </li>
+                <li class="menu-footer__wrap__list">
+                    <a class="menu-footer__wrap__list-link" href="">Композиции</a>
+                </li>
+                <li class="menu-footer__wrap__list">
+                    <a class="menu-footer__wrap__list-link" href="">Подарки</a>
+                </li>
+                <li class="menu-footer__wrap__list">
+                    <a class="menu-footer__wrap__list-link" href="">Свадебные букеты</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer__wrap">
+            <div class="footer__wrap__elements">
+                <a class="footer-logo" href="">
+                    <img class="footer-logo__prev" src="./images/logo.png" alt="">
+                </a>
+                <div class="footer-copyright">© 2017. Все права защищены</div>
+            </div>
+            <div class="footer__wrap__elements">
+                <div class="group">
+                    <div class="bottom-menu__group">
+                        <ul class="bottom-menu">
+                            <li class="bottom-menu__list">
+                                <a class="bottom-menu__list-link" href="">О магазине</a>
+                            </li>
+                            <li class="bottom-menu__list">
+                                <a class="bottom-menu__list-link" href="">Доставка</a>
+                            </li>
+                            <li class="bottom-menu__list">
+                                <a class="bottom-menu__list-link" href="">Оплата</a>
+                            </li>
+                            <li class="bottom-menu__list">
+                                <a class="bottom-menu__list-link" href="">Партнерская программа</a>
+                            </li>
+                            <li class="bottom-menu__list">
+                                <a class="bottom-menu__list-link" href="">Гарантии</a>
+                            </li>
+                            <li class="bottom-menu__list">
+                                <a class="bottom-menu__list-link" href="map.html">Карта городов </a>
+                            </li>
+                        </ul>
+                        <ul class="bottom-menu">
+                            <li class="bottom-menu__list">
+                                <a class="bottom-menu__list-link" href="">Личный кабинет</a>
+                            </li>
+                            <li class="bottom-menu__list">
+                                <a class="bottom-menu__list-link" href="">Статьи о цветах</a>
+                            </li>
+                            <li class="bottom-menu__list">
+                                <a class="bottom-menu__list-link" href="">Статус заказа</a>
+                            </li>
+                            <li class="bottom-menu__list">
+                                <a class="bottom-menu__list-link" href="">Вопрос-ответ</a>
+                            </li>
+                            <li class="bottom-menu__list">
+                                <a class="bottom-menu__list-link" href="">Карта сайта</a>
+                            </li>
+                            <li class="bottom-menu__list">
+                                <a class="bottom-menu__list-link" href="contacts.html">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__wrap__elements">
+                <div class="footer__info">
+                    <div class="footer-address">
+                        <a class="footer-address__phone" href="tel:80000000000">8-000-000-0000</a>, Ежедневно: с 10<sup>00</sup> до 20<sup>00</sup> г. Москва, ул. Московская, д.0.<br>
+                        <a class="footer-address__mail" href="mail:namecompany@mail.ru">namecompany@mail.ru</a>
+                    </div>
+                    <div class="socials">
+                        <a class="socials__link" href=""><i class="fa fa-vk" aria-hidden="true"></i></a>
+                        <a class="socials__link" href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a class="socials__link" href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a class="socials__link" href=""><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a>
+                        <a class="socials__link" href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__wrap__elements">
+                <div class="footer-images">
+                    <img src="./images/visa.png" alt="">
+                    <img src="./images/mastercard.png" alt="">
+                    <img src="./images/yandex.png" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

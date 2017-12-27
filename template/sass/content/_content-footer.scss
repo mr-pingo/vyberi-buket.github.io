@@ -1,0 +1,31 @@
+.content-footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__group{
+        display: flex;
+        align-items: center;
+        &-text{
+            margin-right: 10px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            color: #000;
+        }
+        .socials{
+            margin-bottom: 0;
+            &__link{
+                margin: 0px 5px;
+            }
+        }
+    }
+    &__rating{
+        margin: 0px 5px;
+        &-count{
+            margin-left: 10px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            color: #708484;
+        }
+    }
+}

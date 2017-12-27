@@ -21,6 +21,7 @@
         font-weight: 500;
         font-size: 13px;
         color: #000;
+        text-align: center;
     }
     &__rating{
         margin-top: 13px;
@@ -34,5 +35,135 @@
         font-weight: 500;
         font-size: 13px;
         color: #96a3a3;
+    }
+}
+.block-add-comment{
+    width: 100%;
+    padding: 42px 0px;
+    margin: 60px 0px;
+    border: 1px solid #d4dede;
+    border-radius: 3px;
+    background: #fff;
+    box-sizing: border-box;
+    &__name{
+        margin: 0px;
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: lighter;
+        font-size: 28px;
+        color: #000;
+    }
+    &__wrap{
+        margin: 22px auto;
+        margin-bottom: 0;
+        width: 720px;
+        display: flex;
+        flex-direction: column;
+        &-elements{
+            position: relative;
+        }
+    }
+}
+.input-name,
+.input-phone,
+.input-text{
+    position: relative;
+    width: 100%;
+    height: 45px;
+    border: 1px solid #d4dede;
+    border-radius: 4px;
+    padding-left: 40px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    outline: none;
+    &::-webkit-input-placeholder{ /* WebKit browsers */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color:#000;
+    }
+}
+.input-name{
+    &+label{
+        position: absolute;
+        top: 17px;
+        left: 20px;
+        width: 10px;
+        height: 10px;
+        background: url(../../images/sprite.png) no-repeat;
+        background-position: -42px 0px;
+    }
+}
+.input-phone{
+    &+label{
+        position: absolute;
+        top: 17px;
+        left: 20px;
+        width: 10px;
+        height: 10px;
+        background: url(../../images/sprite.png) no-repeat;
+        background-position: -53px 0px;
+    }
+}
+.input-text{
+     &+label{
+        position: absolute;
+        top: 17px;
+        left: 20px;
+        width: 10px;
+        height: 10px;
+        background: url(../../images/sprite.png) no-repeat;
+        background-position: -63px 0px;
+    }
+}
+.textarea{
+    width: 100%;
+    height: 110px;
+    border: 1px solid #d4dede;
+    border-radius: 4px;
+    padding-top: 12px;
+    padding-left: 40px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    outline: none;
+    resize: none;
+    &::-webkit-input-placeholder{ /* WebKit browsers */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color:#000;
+    }
+    &+label{
+        position: absolute;
+        top: 17px;
+        left: 20px;
+        width: 10px;
+        height: 10px;
+        background: url(../../images/sprite.png) no-repeat;
+        background-position: -63px 0px;
+    }
+}
+.rating{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    &__text{
+        margin-right: 10px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        color: #000;
+    }
+}
+.submit{
+    float: right;
+    width: 250px;
+    height: 45px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    background: #55c3c0;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover{
+        background: #2bb4b0;
     }
 }

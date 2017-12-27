@@ -1,8 +1,7 @@
 .filter{
-    margin-bottom: 5px;
     &__name{
+        margin: 0;
         margin-top: 51px;
-        margin-bottom: 34px;
         text-align: center;
         font-family: 'Open Sans', sans-serif;
         font-weight: lighter;
@@ -18,132 +17,194 @@
         align-items: center;
         margin: 0;
         padding: 0;
+        margin: 34px 0px 40px;
         display: flex;
         &__list{
             position: relative;
             list-style: none;
+            width: 234px;
+            height: 58px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 20px;
+            border-right: 1px solid #a9a8ba;
+            box-sizing: border-box;
+            cursor: pointer;
             &:last-child{
-                .ik_select .ik_select_link{
-                    border-right: 0px;
-                }
+               border-right: none; 
+            }
+            &.active{
+                box-shadow: 0px 10px 17.82px 4.18px rgba(0, 0, 0, 0.17);
+            }
+            &:before{
+                content: '';
+                width: 11px;
+                height: 6px;
+                position: absolute;
+                background: url(../../images/sprite.png) no-repeat;
+                background-position: -11px -57px;
+                right: 20px;
             }
             &-name{
-                top: 22px;
-                left: 20px;
+                display: block;
                 font-family: 'Open Sans', sans-serif;
                 font-weight: bold;
                 font-size: 13px;
                 color: #5b5a8b;
-                position: absolute;
+            }
+            &-choice{
+                display: block;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: bold;
+                font-size: 13px;
+                color: #000;
             }
         }
     }
 }
-
-.ik_select {
-	width: 234px!important;
+.filter_2{
+    &__wrap{
+        width: 415px;
+        height: 79px;
+	    display: flex;
+        flex-wrap:wrap;
+        padding: 0;
+        margin: 16px 0px 25px 0px;
+        box-sizing: border-box;
+        &-count{
+            border: 1px solid #a9a8ba;
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            list-style: none;
+            width: 80px;
+            height: 39px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+            font-size: 13px;
+            color: #5b5a8b;
+            cursor: pointer;
+            margin-left: -1px;
+            margin-top: -1px;
+            &:hover{
+                box-shadow: 0px 3px 15px 4px rgba(0, 0, 0, 0.15);
+            }
+        }
+        .active{
+            box-shadow: 0px 3px 15px 4px rgba(0, 0, 0, 0.15);
+        }
+    }
 }
-	.ik_select_link {
+.filter_3{
+    margin-top: 28px;
+    &__group{
+        margin-bottom: 15px;
         display: flex;
         align-items: center;
-        height: 58px;
-		border-right: 1px solid #a9a8ba;
-        box-sizing: border-box;
-        cursor: pointer;
-        &:before{
-            content: '';
-            position: absolute;
-            width: 11px;
-            height: 7px;
-            background: url(../../images/sprite.png) no-repeat;
-            background-position: -11px -57px;
-            right: 19px;
+        &__elements{
+            display: flex;
+            width: 100%;
         }
-	}
-	.ik_select_link_focus {
-        border-bottom: none;
-		box-shadow: 0px 10px 17.82px 4.18px rgba(0, 0, 0, 0.17);
-	}
-	.ik_select_link_disabled {
-		/* Disabled state of the fake select */
-	}
-		.ik_select_link_text {
+    }
+    &__button{
+        margin-top: 35px;
+        display: flex;
+        justify-content: space-between;
+        &__order{
+            width: 201px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
             font-family: 'Open Sans', sans-serif;
-            font-weight: bold;
-            font-size: 13px;
+            font-size: 18px;
+            color: #fff;
+            border-radius: 4px;
+            background: #5b5a8b;
+            cursor: pointer;
+            transition: all 0.3s;
+            &:hover{
+                background: #5f5ead;
+            }
+        }
+        &__buy_one_click{
+            width: 201px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
             color: #000;
-            margin-left: 20px;
-            margin-top: 30px;
-		}
-
-	.ik_select_dropdown {
-        width: auto!important;
-        left: -1px;
-		background: #fff;
-        border: 1px solid #a9a8ba;
-        box-sizing: border-box;
-        box-shadow: 0px 10px 17.82px 4.18px rgba(0, 0, 0, 0.17);
-	}
-		.ik_select_list {
-             width: 233px;
-            .ik_select_list_inner{
-                ul{
-                    padding: 20px 60px;
-                    margin: 0;
-                    li{
-                        position: relative;
-                        list-style: none;
-                        &:after{
-                            content: '.';
-                            position: absolute;
-                            font-size: 20px;
-                            top: 0;
-                            color: #8282a3;
-                        }
-                    }
+            border-radius: 4px;
+            background: #fff;
+            border: 1px solid #5b5a8b;
+            box-sizing: border-box;
+            cursor: pointer;
+            transition: all 0.3s;
+            &:hover{
+                background: #d3d2eb;
+            }
+        }
+    }
+}
+.filter-menu{
+    position: absolute;
+    top: 57px;
+    left: -1px;
+    display: none;
+    border: 1px solid #a9a8ba;
+    background: #fff;
+    z-index: 100;
+    box-shadow: 0px 10px 17.82px 4.18px rgba(0, 0, 0, 0.17);
+    padding: 20px 56px;
+    box-sizing: border-box;
+    &__group{
+        display: flex;
+        min-width: 100px;
+    }
+    &__wrap{
+        padding: 0;
+        margin: 0;
+        margin-left: 55px;
+        &:first-child{
+            margin-left: 0;
+        }
+        &__list{
+            position: relative;
+            list-style: none;
+            &:before{
+                content: '.';
+                position: absolute;
+                color: #5b5a8b;
+                left: 0;
+                font-size: 20px;
+            }
+            &:last-child{
+                .filter-menu__wrap__list-text{
+                    border-bottom: none;
                 }
             }
-		}
-			.ik_select_optgroup {
-				/* Optgroup */
-			}
-				.ik_select_optgroup_label {
-					/* Optgroup label */
-				}
-				.ik_select_option {
-                    cursor: pointer;
-                    &:last-child{
-                        .ik_select_option_label{
-                            border-bottom: none;
-                        }
-                    }
-				}
-					.ik_select_option_label {
-                        padding-left: 9px;
-                        font-family: Arial;
-						font-size: 13px;
-                        color: #5b5a8b;
-                        height: 35px;
-                        display: flex;
-                        align-items: center;
-                        border-bottom: 1px solid #a9a8ba;
-                        &:hover{
-                            color: #000;
-                        }
-					}
-				.ik_select_hover {
-					/* The hovered state of an option */
-				}
-				.ik_select_active {
-					/* The active state of an option */
-				}
-
-		.ik_select_filter_wrap {
-			/* Wrapper for the filter input */
-		}
-		.ik_select_filter {
-			/* Filter input */
-		}
-		.ik_nothing_found {
-			/* Block that's shown when there's nothing found. */
-		}
+            &-text{
+                padding-left: 10px;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 600;
+                font-size: 13px;
+                height: 35px;
+                display: flex;
+                align-items: center;
+                color: #5b5a8b;
+                border-bottom: 1px solid #e1e1e7;
+                white-space: nowrap;
+                &:hover{
+                    color: #000;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,91 @@
+.page-navigation{
+    margin-bottom: 65px;
+    display: flex;
+    justify-content: center;
+    &__first{
+        display: flex;
+        margin-right: 50px;
+        &-link{
+            margin: 0px 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            background: #f7f7f7;
+            text-decoration: none;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            color: #000;
+            &:first-child{
+                position: relative;
+                margin-left: 0px;
+            }
+            &:last-child{
+                position: relative;
+                margin-right: 0px;
+            }
+            &:hover{
+                background: #55c3c0;
+                color: #fff;
+            } 
+        }
+    }
+    &__last{
+        display: flex;
+        margin-left: 50px;
+        &-link{
+            margin: 0px 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            background: #f7f7f7;
+            text-decoration: none;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            color: #000;
+            &:first-child{
+                margin-left: 0px;
+            }
+            &:last-child{
+                margin-right: 0px;
+            }
+            &:hover{
+                background: #55c3c0;
+                color: #fff;
+            } 
+        }
+    }
+    &__link{
+        margin: 0px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 40px;
+        height: 40px;
+        background: #f7f7f7;
+        text-decoration: none;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+        color: #000;
+        &:first-child{
+            margin-left: 0px;
+        }
+        &:last-child{
+            margin-right: 0px;
+        }
+        &:hover{
+            background: #55c3c0;
+            color: #fff;
+        }
+        &.active{
+            background: #55c3c0;
+            color: #fff;
+        }
+    }
+}

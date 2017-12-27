@@ -11,19 +11,15 @@
         font-size: 13px;
         color: #000;
         margin: 0 7px;
+        border-bottom: 1px dashed #000;
         &:first-child{
             margin-left: 16px;
         }
         &:last-child{
             margin-right: 16px;
         }
-        &:after{
-            content: '';
-            position: absolute;
-            width: 100%;
-            border-bottom: 1px dashed #000;
-            left: 0;
-            top: 17px;
+        &:hover{
+            border-bottom: 0px;
         }
     }
 }
@@ -53,13 +49,9 @@
         font-size: 13px;
         color: #000;
         cursor: pointer;
-        &:before{
-            content: '';
-            position: absolute;
-            width: 100%;
-            border-bottom: 1px dashed #000;
-            left: 0;
-            top: 17px;
+        border-bottom: 1px dashed #000;
+        &:hover{
+            border-bottom: 0;
         }
     }
 }
@@ -139,6 +131,10 @@
             font-size: 14px;
             color: #000;
             cursor: pointer;
+            transition: all 0.3s;
+            &:hover{
+                background: #ccebea;
+            }
         }
     }
 }
@@ -148,6 +144,7 @@
     flex-grow: 1;
     &__elements{
         display: flex;
+        text-decoration: none;
         &-icons{
             width: 33px;
             height: 40px;

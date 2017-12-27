@@ -1,0 +1,249 @@
+.basket-form{
+    &__elements{
+        display: flex;
+        align-items: center;
+        padding: 25px 0px;
+        border-bottom: 1px solid #d4dede;
+        &:last-child{
+            border-bottom: 0px;
+        }
+        &-group{
+            &:nth-child(1){
+                width: 115px;
+            }
+            &:nth-child(2){
+                width: 520px;
+                padding-left: 80px;
+                box-sizing: border-box;
+            }
+            &:nth-child(3){
+                width: 155px;
+                padding: 0px 35px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                box-sizing: border-box;
+            }
+            &:nth-child(4){
+                width: 195px;
+                display: flex;
+                justify-content: center;
+            }
+            &:nth-child(5){
+                width: 185px; 
+            }
+        }
+        &-name{
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            text-decoration: none;
+            color: #000;
+            &:hover{
+                border-bottom: 1px dashed #000;
+            }
+        }
+        &-img{
+            width: 100%;
+            cursor: pointer;
+        }
+        &-current{
+            font-family: 'Open Sans', sans-serif;
+            font-weight: lighter;
+            font-size: 26px;
+            color: #2fa6a3;
+        }
+        &-button{
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            color: #696969;
+            background: #fff;
+            box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.07);
+            border-radius: 3px;
+            width: 23px;
+            height: 25px;
+            border: 1px solid #e8e8e8;
+            box-sizing: border-box;
+            transition: all 0.1s;
+            &:hover{
+               background: #efefef;
+            }
+        }
+        &-count{
+            font-family: 'Open Sans', sans-serif;
+            font-size: 13px;
+            color: #2b2b2b;
+        }
+        &-delete{
+            cursor: pointer;
+            width: 173px;
+            height: 39px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            color: #000;
+            border: 1px solid #5b5a8b;
+            border-radius: 4px;
+            background: #fff;
+            box-sizing: border-box;
+            transition: all 0.3s;
+            &:hover{
+                background: #d3d2eb;
+            }
+        }
+    }
+}
+.basket-form_2{
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    box-sizing: border-box;
+    padding: 27px 0px;
+    &__elements{
+        display: flex;
+        &:nth-child(1){
+            border-bottom: 1px solid #d4dede;
+            padding-bottom: 25px;
+        }
+        &:nth-child(2){
+            padding-top: 25px;
+            display: flex;
+            align-items: center;
+        }
+         &-group{
+            &:nth-child(1){
+                width: 450px;
+            }
+            &:nth-child(2){
+                width: 180px;
+                margin-left: 210px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            &:nth-child(3){
+                width: 150px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            &:nth-child(4){
+                width: 180px; 
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+        &-header{
+            padding: 0;
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 18px;
+            color: #5b5a8b;
+        }
+        &-text{
+            padding: 0;
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            color: #9494a3;
+        }
+        &-text_2{
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            color: #000;
+        }
+        &-text_3{
+            text-transform: uppercase;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+            color: #000;
+            letter-spacing: 2px;
+        }
+        &-price{
+            font-family: 'Open Sans', sans-serif;
+            font-weight: lighter;
+            font-size: 26px;
+            color: #000;
+            color: #2fa6a3;
+        }
+        &-button{
+            width: 174px;
+            height: 39px;
+            border-radius: 4px;
+            background: #55c3c0;
+            color: #fff;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            &:hover{
+                background: #4ab1ae;
+            }
+        }
+    }
+}
+.sale-form{
+    display: flex;
+    &__poly{
+        outline: none;
+        width: 238px;
+        height: 39px;
+        box-sizing: border-box;
+        border: 1px solid #5b5a8b;
+        padding: 0px 20px;
+        border-radius: 4px 0px 0px 4px;
+        font-size: 14px;
+        color: #000;
+    }
+    &__button{
+        width: 180px;
+        height: 39px;
+        background: #5b5a8b;
+        border-radius: 0px 4px 4px 0px;
+        box-sizing: border-box;
+        color: #fff;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        transition: all 0.3s;
+        &:hover{
+            background: #5f5ead;
+        }
+    }
+}
+.sale-form__poly::-webkit-input-placeholder{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    font-size: 14px;
+    color:#000;
+}
+.sale-form__poly:-moz-placeholder{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    font-size: 14px;
+    color:#000;
+}
+.sale-form__poly::-moz-placeholder{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    font-size: 14px;
+    color:#000;
+}
+.sale-form__poly:-ms-input-placeholder{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    font-size: 14px;
+    color:#000;
+}
