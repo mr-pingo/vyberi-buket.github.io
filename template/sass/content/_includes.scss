@@ -17,8 +17,7 @@
         font-size: 16px;
         text-decoration: none;
         text-align: center;
-        max-width: 160px;
-        width: 100%;
+        min-width: 160px;
         height: 39px;
         border-radius: 4px;
         background: #fff;
@@ -51,8 +50,7 @@
         font-size: 16px;
         text-align: center;
         text-decoration: none;
-        max-width: 160px;
-        width: 100%;
+        min-width: 160px;
         height: 39px;
         border-radius: 4px;
         border: 1px solid #55c3c0;
@@ -65,83 +63,6 @@
             background: #2bb4b0;
         }
     }
-}
-.ul_count{
-    counter-reset: myCounter;
-    margin: 0;
-    padding: 0;
-    &__list{
-        list-style: none;
-        &:before{ 
-            counter-increment: myCounter;
-            content:counter(myCounter);
-            font-family: 'Open Sans', sans-serif;
-            font-size: 14px;
-            color: #55c3c0;
-            background: #fff;
-            border: 1px solid #55c3c0;
-            border-radius: 50px;
-            display: inline-block;
-            text-align: center;
-            margin: 5px 10px;
-            line-height: 22px;
-            width: 24px;
-            height: 24px;
-        }
-        .ul_marker{
-            padding-left: 70px;
-            &__list{
-                line-height: 25px;
-                list-style: none;
-                position: relative;
-                &:before{ 
-                    content: '';
-                    position: absolute;
-                    left: -20px;
-                    top: 8px;
-                    background: url(../../images/sprite.png) no-repeat;
-                    background-position: -14px 0px;
-                    width: 9px;
-                    height: 10px;
-                }
-            }
-        }
-    }
-}
-.ul_marker{
-    &__list{
-        list-style: none;
-        position: relative;
-        &:before{ 
-            content: '';
-            position: absolute;
-            left: -22px;
-            top: 7px;
-            background: url(../../images/sprite.png) no-repeat;
-            background-position: -14px 0px;
-            width: 9px;
-            height: 10px;
-        }
-    }
-}
-h2{
-    font-family: 'Open Sans', sans-serif;
-    font-weight: lighter;
-    font-size: 28px;
-    color: #000;
-}
-h3{
-    font-family: 'Open Sans', sans-serif;
-    font-weight: lighter;
-    font-size: 23px;
-    color: #000;
-}
-p{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    line-height: 22px;
-    text-align: justify;
-    color: #000;
 }
 .order-info{
     height: 85px;
@@ -169,6 +90,13 @@ p{
             background: #b3bebe;
         }
     }
+    .group{
+        width: 100%;
+        position: relative;
+        &:first-child{
+            margin-bottom: 10px;
+        }
+    }
     &__text{
         margin: 12px 0px;
         text-transform: uppercase;
@@ -178,6 +106,7 @@ p{
         color: #000;
         border-bottom: 1px dashed #000;
         cursor: pointer;
+        user-select: none;
         &:before{
             content: '';
             position: absolute;
@@ -201,6 +130,121 @@ p{
             box-sizing: border-box;
             border-right: none;
             align-items: flex-start;
+        }
+        &__window{
+            display: none;
+            position: absolute;
+            padding: 30px;
+            width: auto;
+            right: 0px;
+            bottom: 30px;
+            height: auto;
+            box-sizing: border-box;
+            box-shadow: 0px 3px 15px 4px rgba(0, 0, 0, 0.15);
+            border: 1px solid #a9a8ba;
+            background: #fff;
+            border-radius: 4px;
+            z-index: 100;
+            &:before{
+                position: absolute;
+                content: '';
+                width: 13px;
+                height: 10px;
+                bottom: -8px;
+                right: 20px;
+                background: url(../../images/sprite.png) no-repeat;
+                background-position: -81px -25px;
+                z-index: 101;
+            }
+            &__elements{
+                display: flex;
+                align-items: center;
+            }
+            &-text{
+                display: block;
+                line-height: 24px;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 500;
+                font-size: 13px;
+                color: #5b5a8b;
+                &:last-child{
+                    margin-left: 4px;
+                }
+                &:first-child{
+                    margin-left: 0;
+                }
+            }
+            &-text_2{
+                display: block;
+                line-height: 24px;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 500;
+                font-size: 13px;
+                color: #708484;
+                &:last-child{
+                    margin-left: 4px;
+                }
+            }
+            &-line{
+                border: 0;
+                border-bottom: 1px solid #d4dede;
+            }
+            &__wrap{
+                display: flex;
+                &-header{
+                    display: block;
+                    height: 25px;
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight: 600;
+                    font-size: 13px;
+                    color: #5b5a8b;
+                }
+                &__ul{
+                    display: block;
+                    padding: 0;
+                    margin: 0;
+                    margin-top: 20px;
+                    &-list{
+                        list-style: none;
+                        font-family: 'Open Sans', sans-serif;
+                        font-weight: 500;
+                        font-size: 13px;
+                        color: #708484;
+                        line-height: 29px;
+                    }
+                }
+                .group{
+                    min-width: 180px;
+                    margin-right: 65px;
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                }
+            }
+            .group-info{
+                min-width: 300px;
+                width: 100%;
+                display: flex;
+                &__text{
+                    font-family: 'Open Sans', sans-serif;
+                    width: auto;
+                    margin: 0;
+                    white-space: nowrap;
+                    font-size: 13px;
+                    display: inline-block;
+                }
+                &__icon{
+                    display: inline-block;
+                }
+                &__link{
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 13px;
+                    display: inline-block;
+                    width: auto;
+                    white-space: nowrap;
+                    border-bottom: 0;
+                }
+            }
         }
     }
 }
@@ -587,4 +631,26 @@ p{
     height: 11px;
     background: url(../../images/sprite.png) no-repeat;
     background-position: -60px -24px;
+}
+.swiper-mobile-button{
+    display: none;
+}
+.popup-block{
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+    &__list{
+        list-style: none;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 13px;
+        line-height: 24px;
+        font-weight: 600;
+        color: #5b5a8b;
+        &-text{
+            font-family: 'Open Sans', sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            color: #708484;
+        }
+    }
 }

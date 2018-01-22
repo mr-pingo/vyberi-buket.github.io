@@ -58,7 +58,7 @@
     font-size: 18px;
     background: #fff;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 .swiper-pagination-bullet{
@@ -81,4 +81,7 @@
 }
 .swiper-button-prev, .swiper-button-next{
     background-size: auto;
+}
+.swiper-container_3{
+    margin-bottom: 30px;
 }

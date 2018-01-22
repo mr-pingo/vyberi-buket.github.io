@@ -3,3 +3,93 @@ html, body{
     display: flex;
     flex-direction: column;
 }
+ol{
+    counter-reset: myCounter;
+    margin: 0;
+    padding: 0;
+    li{
+        list-style: none;
+        &:before{ 
+            counter-increment: myCounter;
+            content:counter(myCounter);
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            color: #55c3c0;
+            background: #fff;
+            border: 1px solid #55c3c0;
+            border-radius: 50px;
+            display: inline-block;
+            text-align: center;
+            margin: 5px 10px;
+            margin-left: 0;
+            line-height: 22px;
+            width: 24px;
+            height: 24px;
+            box-sizing: border-box;
+        }
+        ul{
+            padding-left: 55px;
+            li{
+                line-height: 25px;
+                list-style: none;
+                position: relative;
+                &:before{ 
+                    content: '';
+                    position: absolute;
+                    left: -20px;
+                    top: 4px;
+                    border: none;
+                    background: url(../../images/sprite.png) no-repeat;
+                    background-position: -15px 0px;
+                    width: 9px;
+                    height: 10px;
+                }
+            }
+        }
+    }
+}
+/*ul{
+    padding-left: 20px;
+    li{
+        line-height: 25px;
+        list-style: none;
+        position: relative;
+        &:before{ 
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 8px;
+            border: none;
+            background: url(../../images/sprite.png) no-repeat;
+            background-position: -15px 0px;
+            width: 9px;
+            height: 10px;
+        }
+    }
+}*/
+h1{
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    font-size: 36px;
+    color: #000;
+}
+h2{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    font-size: 28px;
+    color: #000;
+}
+h3{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    font-size: 23px;
+    color: #000;
+}
+p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: justify;
+    color: #000;
+}

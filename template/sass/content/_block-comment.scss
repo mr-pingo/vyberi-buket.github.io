@@ -1,12 +1,20 @@
 .block-comment{
     text-align: center;
+    padding: 0px 40px;
+    box-sizing: border-box;
+    &__wrap{
+        flex-direction: column;
+        margin: auto;
+    }
     &__name_user{
+        display: block;
         font-family: 'Open Sans', sans-serif;
         font-weight: 500;
         font-size: 18px;
         color: #000;
     }
     &__name{
+        display: block;
         margin-top: 20px;
         margin-bottom: 10px;
         text-transform: uppercase;
@@ -16,6 +24,7 @@
         color: #96a3a3;
     }
     &__text{
+        display: block;
         margin: 0px;
         font-family: 'Open Sans', sans-serif;
         font-weight: 500;
@@ -92,6 +101,9 @@
         background: url(../../images/sprite.png) no-repeat;
         background-position: -42px 0px;
     }
+    &:focus{
+        border: 1px solid #55c3c0;
+    }
 }
 .input-phone{
     &+label{
@@ -103,6 +115,9 @@
         background: url(../../images/sprite.png) no-repeat;
         background-position: -53px 0px;
     }
+    &:focus{
+        border: 1px solid #55c3c0;
+    }
 }
 .input-text{
      &+label{
@@ -113,6 +128,9 @@
         height: 10px;
         background: url(../../images/sprite.png) no-repeat;
         background-position: -63px 0px;
+    }
+    &:focus{
+        border: 1px solid #55c3c0;
     }
 }
 .textarea{
@@ -139,6 +157,9 @@
         height: 10px;
         background: url(../../images/sprite.png) no-repeat;
         background-position: -63px 0px;
+    }
+    &:focus{
+        border: 1px solid #55c3c0;
     }
 }
 .rating{

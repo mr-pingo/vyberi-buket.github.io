@@ -1,14 +1,7 @@
-.filter{
-    &__name{
-        margin: 0;
-        margin-top: 51px;
-        text-align: center;
-        font-family: 'Open Sans', sans-serif;
-        font-weight: lighter;
-        font-size: 36px;
-        color: #000;
-    }
-    &__wrap{
+.filter {
+    margin: 0;
+    margin-top: 51px;
+    &__wrap {
         height: 58px;
         border: 1px solid #a9a8ba;
         border-radius: 4px;
@@ -19,7 +12,7 @@
         padding: 0;
         margin: 34px 0px 40px;
         display: flex;
-        &__list{
+        &__list {
             position: relative;
             list-style: none;
             width: 234px;
@@ -31,48 +24,71 @@
             border-right: 1px solid #a9a8ba;
             box-sizing: border-box;
             cursor: pointer;
-            &:last-child{
-               border-right: none; 
+            &:hover {
+                box-shadow: 0px 4px 17.82px 4.18px rgba(0, 0, 0, 0.15);
             }
-            &.active{
-                box-shadow: 0px 10px 17.82px 4.18px rgba(0, 0, 0, 0.17);
+            &:last-child {
+                border-right: none;
+                .filter-menu{
+                    left: auto;
+                    right: -2px;
+                }
             }
-            &:before{
-                content: '';
-                width: 11px;
-                height: 6px;
-                position: absolute;
-                background: url(../../images/sprite.png) no-repeat;
-                background-position: -11px -57px;
-                right: 20px;
+            &.active {
+                box-shadow: 0px 4px 17.82px 4.18px rgba(0, 0, 0, 0.15);
             }
-            &-name{
-                display: block;
+            &-name {
                 font-family: 'Open Sans', sans-serif;
                 font-weight: bold;
                 font-size: 13px;
                 color: #5b5a8b;
+                height: 58px;
+                display: flex;
+                align-items: center;
+                user-select: none;
+                &:before {
+                    content: '';
+                    width: 11px;
+                    height: 6px;
+                    position: absolute;
+                    background: url(../../images/sprite.png) no-repeat;
+                    background-position: -11px -57px;
+                    right: 20px;
+                    top: 28px;
+                }
+                &.filter-select {
+                    margin-top: 16px;
+                    align-items: flex-start;
+                }
             }
-            &-choice{
+            &-choice {
                 display: block;
+                width: 75%;
+                padding-right: 40px;
                 font-family: 'Open Sans', sans-serif;
                 font-weight: bold;
                 font-size: 13px;
                 color: #000;
+                position: absolute;
+                top: 33px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
             }
         }
     }
 }
-.filter_2{
-    &__wrap{
+
+.filter_2 {
+    &__wrap {
         width: 415px;
         height: 79px;
-	    display: flex;
-        flex-wrap:wrap;
+        display: flex;
+        flex-wrap: wrap;
         padding: 0;
         margin: 16px 0px 25px 0px;
         box-sizing: border-box;
-        &-count{
+        &-count {
             border: 1px solid #a9a8ba;
             flex-grow: 1;
             display: flex;
@@ -89,31 +105,32 @@
             cursor: pointer;
             margin-left: -1px;
             margin-top: -1px;
-            &:hover{
+            &:hover {
                 box-shadow: 0px 3px 15px 4px rgba(0, 0, 0, 0.15);
             }
         }
-        .active{
+        .active {
             box-shadow: 0px 3px 15px 4px rgba(0, 0, 0, 0.15);
         }
     }
 }
-.filter_3{
+
+.filter_3 {
     margin-top: 28px;
-    &__group{
+    &__group {
         margin-bottom: 15px;
         display: flex;
         align-items: center;
-        &__elements{
+        &__elements {
             display: flex;
             width: 100%;
         }
     }
-    &__button{
+    &__button {
         margin-top: 35px;
         display: flex;
         justify-content: space-between;
-        &__order{
+        &__order {
             width: 201px;
             height: 50px;
             display: flex;
@@ -127,11 +144,11 @@
             background: #5b5a8b;
             cursor: pointer;
             transition: all 0.3s;
-            &:hover{
+            &:hover {
                 background: #5f5ead;
             }
         }
-        &__buy_one_click{
+        &__buy_one_click {
             width: 201px;
             height: 50px;
             display: flex;
@@ -147,13 +164,14 @@
             box-sizing: border-box;
             cursor: pointer;
             transition: all 0.3s;
-            &:hover{
+            &:hover {
                 background: #d3d2eb;
             }
         }
     }
 }
-.filter-menu{
+
+.filter-menu {
     position: absolute;
     top: 57px;
     left: -1px;
@@ -164,33 +182,33 @@
     box-shadow: 0px 10px 17.82px 4.18px rgba(0, 0, 0, 0.17);
     padding: 20px 56px;
     box-sizing: border-box;
-    &__group{
+    &__group {
         display: flex;
         min-width: 100px;
     }
-    &__wrap{
+    &__wrap {
         padding: 0;
         margin: 0;
         margin-left: 55px;
-        &:first-child{
+        &:first-child {
             margin-left: 0;
         }
-        &__list{
+        &__list {
             position: relative;
             list-style: none;
-            &:before{
+            &:before {
                 content: '.';
                 position: absolute;
                 color: #5b5a8b;
                 left: 0;
                 font-size: 20px;
             }
-            &:last-child{
-                .filter-menu__wrap__list-text{
+            &:last-child {
+                .filter-menu__wrap__list-text {
                     border-bottom: none;
                 }
             }
-            &-text{
+            &-text {
                 padding-left: 10px;
                 font-family: 'Open Sans', sans-serif;
                 font-weight: 600;
@@ -201,7 +219,8 @@
                 color: #5b5a8b;
                 border-bottom: 1px solid #e1e1e7;
                 white-space: nowrap;
-                &:hover{
+                user-select: none;
+                &:hover {
                     color: #000;
                 }
             }

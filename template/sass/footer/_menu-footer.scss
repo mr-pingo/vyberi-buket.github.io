@@ -1,4 +1,5 @@
 .menu-footer{
+    max-width: 1170px;
     width: 100%;
     border-top: 1px solid #d4dede;
     border-bottom: 1px solid #d4dede;
@@ -7,12 +8,12 @@
     &__wrap{
         display: flex;
         align-items: center;
+        justify-content: space-between;
         height: 61px;
         margin: 0;
         padding: 0;
         &__list{
             list-style: none;
-            padding: 0 38px;
             &:first-child{
                 padding-left: 10px;
             }
@@ -42,6 +43,7 @@
                 font-size: 13px;
                 color: #000;
                 transition: all 0.3s;
+                white-space: nowrap;
                 &:before{
                     content: '';
                     position: absolute;
