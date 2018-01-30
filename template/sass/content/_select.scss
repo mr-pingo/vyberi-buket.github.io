@@ -41,6 +41,12 @@
     color: #5b5a8b;
     white-space: nowrap;
 }
+.ik_select_list_inner{
+    ul{
+        padding: 0;
+        margin: 0;
+    }
+}
 .ik_select_dropdown {
 /*
 Dropdown wrapper. Needed for script calculations.
@@ -50,6 +56,9 @@ by changing top and left values like
 top: -2px;
 left: -5px;
 */
+    top: 39px;
+    background: #fff;
+    border: 1px solid #a9a8ba;
 }
 .ik_select_list {
 /*
@@ -61,13 +70,29 @@ Now that's a good place to add visual styles.
 /* Optgroup */
 }
 .ik_select_optgroup_label {
-/* Optgroup label */
+    
 }
 .ik_select_option {
-/* Option */
+    list-style: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #a9a8ba;
+    &:last-child{
+        border-bottom: 0;
+    }
 }
 .ik_select_option_label {
-/* Option label */
+    padding-left: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: #5b5a8b;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 .ik_select_hover {
 /* The hovered state of an option */

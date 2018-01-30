@@ -1,4 +1,6 @@
 html, body{
+    min-height: 100%; 
+    height: auto!important;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -93,3 +95,23 @@ p{
     text-align: justify;
     color: #000;
 }
+.top{
+    display: none;
+    width: 46px;
+    height: 46px;
+    cursor: pointer;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 99;
+    background: url(../../images/top.png) no-repeat;
+}
+.rub{
+    display: inline-block;
+    width: 12px;
+    height: 14px;
+    background: url(../../images/rub.png) no-repeat;
+    margin-left: 5px;
+}
+*::-ms-backdrop, .search { width: 100%;}
+*::-ms-backdrop, .group-info_4 { width: 100%;}

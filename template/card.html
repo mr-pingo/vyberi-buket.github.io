@@ -3,8 +3,12 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Интернет магазина 'Выбери букет' круглосуточно осуществляет доставку цветов по Москве и по России, у нас всегда можно недорого купить свежие цветы и заказать доставку на дом или в офис, время доставки от 1 до 4 часов">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="Url адерс главной">
+    <meta property="og:title" content="Купить цветы с доставкой в Москве и по России">
+    <meta property="og:image" content="URL адрес картинки сайта">
+    <meta property="og:description" name="description" content="Интернет магазина 'Выбери букет' круглосуточно осуществляет доставку цветов по Москве и по России, у нас всегда можно недорого купить свежие цветы и заказать доставку на дом или в офис, время доставки от 1 до 4 часов">
     <meta name="keywords" content="доставка цветов, цветы с доставкой по Москве, купить цветы, заказать доставку цветов, цветы в москве, недорогие цветы Москва">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/gridlex.css">
@@ -14,13 +18,14 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic-ext" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/mobile.js"></script>
-    <script type="text/javascript" src="js/swiper.min.js"></script>
-    <script type="text/javascript" src="js/jquery.arcticmodal-0.3.min.js"></script>
-    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="js/jquery.ikSelect.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script src="js/mobile.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/jquery.arcticmodal-0.3.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.ikSelect.min.js"></script>
+    <script src="js/main.js"></script>
     <title>Купить цветы с доставкой в Москве и по России</title>
 </head>
 
@@ -30,44 +35,42 @@
         <div class="header__body js-header--">
             <div class="header__wrap js-header-wrap">
                 <a class="header__wrap__img" href="/">
-                <img class="header__wrap__img-prev" src="./images/logo.png" alt="">
-            </a>
+                    <img class="header__wrap__img-prev" src="./images/logo.png" alt="">
+                </a>
                 <a class="mobile-header-logo js-logo--" href="/">
-                <img class="mobile-header-logo__img" src="./images/logo-mobile.png" alt="">
-            </a>
+                    <img class="mobile-header-logo__img" src="./images/logo-mobile.png" alt="">
+                </a>
                 <div class="header__wrap-el group">
                     <div class="header__wrap-group js-header-wrap--">
-                        <div class="group js-top-menu--">
-                            <div class="top-menu js-top-menu">
-                                <ul class="top-menu__wrap">
-                                    <li class="top-menu__wrap__body">
-                                        <a class="top-menu__wrap__body-link" href="">Доставка</a>
-                                    </li>
-                                    <li class="top-menu__wrap__body">
-                                        <a class="top-menu__wrap__body-link" href="">Оплата</a>
-                                    </li>
-                                    <li class="top-menu__wrap__body">
-                                        <a class="top-menu__wrap__body-link" href="">Гарантии</a>
-                                    </li>
-                                    <li class="top-menu__wrap__body">
-                                        <a class="top-menu__wrap__body-link" href="">Вопрос-ответ</a>
-                                    </li>
-                                    <li class="top-menu__wrap__body">
-                                        <a class="top-menu__wrap__body-link" href="contacts.html">Контакты</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="group-links js-top-links--">
-                                <div class="header-line"></div>
-                                <a class="group-links__text" href="">Статус заказа</a>
-                                <a class="group-links__text" href="">Личный кабинет</a>
-                                <div class="header-line"></div>
-                            </div>
+                        <ul class="top-menu js-top-menu">
+                            <li class="top-menu__body">
+                                <a class="top-menu__body-link" href="">Доставка</a>
+                            </li>
+                            <li class="top-menu__body">
+                                <a class="top-menu__body-link" href="">Оплата</a>
+                            </li>
+                            <li class="top-menu__body">
+                                <a class="top-menu__body-link" href="">Гарантии</a>
+                            </li>
+                            <li class="top-menu__body">
+                                <a class="top-menu__body-link" href="">Вопрос-ответ</a>
+                            </li>
+                            <li class="top-menu__body">
+                                <a class="top-menu__body-link" href="contacts.html">Контакты</a>
+                            </li>
+                        </ul>
+                        <div class="group-links js-top-links--">
+                            <div class="header-line"></div>
+                            <span class="group-links__text">Статус заказа</span>
+                            <span class="group-links__text">Личный кабинет</span>
+                            <i class="group-links__icon" title="Статус заказа"></i>
+                            <i class="group-links__icon_2" title="Личный кабинет"></i>
+                            <div class="header-line"></div>
                         </div>
                         <div class="group-info">
                             <span class="group-info__text">Город доставки</span>
                             <i class="group-info__icon"></i>
-                            <span class="group-info__link">Владимир</span>
+                            <span class="group-info__link">Александровск-Сахалинский</span>
                         </div>
                     </div>
                     <div class="header__wrap-group js-header-wrap-group--">
@@ -98,27 +101,25 @@
                             </div>
                         </div>
                         <div class="group__blocks js-number-basket--">
-                            <div class="group">
-                                <div class="group-info_3">
-                                    <div class="group-info_3__elements">
-                                        <div class="group-info_3__elements__text">Ежедневно: c 10<sup class="group-info_3__elements__text-sup">00</sup> до 20<sup class="group-info_3__elements__text-sup">00</sup></div>
-                                        <a class="group-info_3__elements-phone" href="tel:88000000000">8-800-000-0000</a>
-                                    </div>
+                            <div class="group-info_3">
+                                <div class="group-info_3__elements">
+                                    <div class="group-info_3__elements__text">Ежедневно: c 10<sup class="group-info_3__elements__text-sup">00</sup> до 20<sup class="group-info_3__elements__text-sup">00</sup></div>
+                                    <a class="group-info_3__elements-phone" href="tel:88000000000">8-800-000-0000</a>
                                 </div>
-                                <div class="group-info_4">
-                                    <div class="group-info_4__elements">
-                                        <span class="group-info_4__elements-button">Обратный звонок</span>
-                                    </div>
+                            </div>
+                            <div class="group-info_4">
+                                <div class="group-info_4__elements">
+                                    <span class="group-info_4__elements-button js-call-back">Обратный звонок</span>
                                 </div>
                             </div>
                             <div class="group-info_5">
                                 <a class="group-info_5__elements" href="basket.html">
-                                <i class="group-info_5__elements-icons">2</i>
-                                <div class="group-info_5__elements-group">
-                                    <span class="group-info_5__elements-text">Корзина</span>
-                                    <span class="group-info_5__elements-count">22 500 <i>&#8381;</i></span>
-                                </div>
-                            </a>
+                                    <i class="group-info_5__elements-icons">2</i>
+                                    <div class="group-info_5__elements-group">
+                                        <span class="group-info_5__elements-text">Корзина</span>
+                                        <span class="group-info_5__elements-count">22 500 <i>&#8381;</i></span>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -131,22 +132,43 @@
                             <a class="main-menu__wrap__list-link" href="">Осень</a>
                         </li>
                         <li class="main-menu__wrap__list">
+                            <i class="main-menu__wrap__list-dot"></i>
+                        </li>
+                        <li class="main-menu__wrap__list">
                             <a class="main-menu__wrap__list-link" href="">День рождения</a>
+                        </li>
+                        <li class="main-menu__wrap__list">
+                            <i class="main-menu__wrap__list-dot"></i>
                         </li>
                         <li class="main-menu__wrap__list">
                             <a class="main-menu__wrap__list-link" href="">Букеты</a>
                         </li>
                         <li class="main-menu__wrap__list">
+                            <i class="main-menu__wrap__list-dot"></i>
+                        </li>
+                        <li class="main-menu__wrap__list">
                             <a class="main-menu__wrap__list-link" href="">Розы</a>
+                        </li>
+                        <li class="main-menu__wrap__list">
+                            <i class="main-menu__wrap__list-dot"></i>
                         </li>
                         <li class="main-menu__wrap__list">
                             <a class="main-menu__wrap__list-link" href="">Премиум</a>
                         </li>
                         <li class="main-menu__wrap__list">
+                            <i class="main-menu__wrap__list-dot"></i>
+                        </li>
+                        <li class="main-menu__wrap__list">
                             <a class="main-menu__wrap__list-link" href="">Композиции</a>
                         </li>
                         <li class="main-menu__wrap__list">
+                            <i class="main-menu__wrap__list-dot"></i>
+                        </li>
+                        <li class="main-menu__wrap__list">
                             <a class="main-menu__wrap__list-link" href="">Подарки</a>
+                        </li>
+                        <li class="main-menu__wrap__list">
+                            <i class="main-menu__wrap__list-dot"></i>
                         </li>
                         <li class="main-menu__wrap__list">
                             <a class="main-menu__wrap__list-link" href="">Свадебные букеты</a>
@@ -168,21 +190,15 @@
                                     <a class="mobile-menu__wrap__list-link" href="">Партнерская программа</a>
                                 </li>
                                 <li class="mobile-menu__wrap__list">
-                                    <a class="mobile-menu__wrap__list-link" href="">Гарантии</a>
-                                </li>
-                                <li class="mobile-menu__wrap__list">
                                     <a class="mobile-menu__wrap__list-link" href="">Карта городов</a>
                                 </li>
                             </ul>
                             <ul class="mobile-menu__wrap">
                                 <li class="mobile-menu__wrap__list">
-                                    <a class="mobile-menu__wrap__list-link" href="">Личный кабинет</a>
+                                    <a class="mobile-menu__wrap__list-link" href="">Гарантии</a>
                                 </li>
                                 <li class="mobile-menu__wrap__list">
                                     <a class="mobile-menu__wrap__list-link" href="">Статьи о цветах</a>
-                                </li>
-                                <li class="mobile-menu__wrap__list">
-                                    <a class="mobile-menu__wrap__list-link" href="">Статус заказа</a>
                                 </li>
                                 <li class="mobile-menu__wrap__list">
                                     <a class="mobile-menu__wrap__list-link" href="">Вопрос-ответ</a>
@@ -216,12 +232,12 @@
             <a class="breadcrumbs__link" href="">Каталог товаров</a>
             <span>/</span>
             <span class="breadcrumbs__link">Необыкновенные бабочки экстра</span>
-        </div>      
+        </div>
     </header>
 
     <div class="content">
-        <div class="grid-2">
-            <div class="col-7_md-12">
+        <div class="content__group-block">
+            <div class="content__left-block">
                 <div class="gallery">
                     <div class="group">
                         <div class="gallery__mini">
@@ -292,10 +308,11 @@
                     </div>
                 </div>
             </div>
-            <div class="col-5">
+            <div class="content__right-block">
                 <div class="info-block_4 js-info_block_4--">
                     <h1 class="info-block_4__name js-card_name--">Lorem ipsum dolor sit amet, consectetur.</h1>
-                    <div class="filter_2">
+                    <div class="info-block_4__left-block">
+                        <div class="filter_2">
                         <ul class="filter_2__wrap">
                             <li class="filter_2__wrap-count js-chose">7</li>
                             <li class="filter_2__wrap-count js-chose">9</li>
@@ -309,7 +326,7 @@
                             <li class="filter_2__wrap-count js-chose">101</li>
                         </ul>
                     </div>
-                    <div class="order-info js-order_info--">
+                        <div class="order-info js-order_info--">
                         <div class="order-info__group js-order_info_1--">
                             <span class="order-info__price">4 500 Р</span>
                             <span class="order-info__price_old">5 100 Р</span>
@@ -375,9 +392,29 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="group mobile-block">
+                                <span class="order-info__text js-btn-popup-block_1">Состав букета</span>
+                                <div class="order-info__group__window js-popup-block_1">
+                                    <ul class="popup-block">
+                                        <li class="popup-block__list">Орхидея ванда
+                                            <span class="popup-block__list-text">- 7 шт.</span>
+                                        </li>
+                                        <li class="popup-block__list">Лизиантус
+                                            <span class="popup-block__list-text">- 7 шт.</span>
+                                        </li>
+                                        <li class="popup-block__list">Хризантема кустовая сталион
+                                            <span class="popup-block__list-text">- 7 шт.</span>
+                                        </li>
+                                        <li class="popup-block__list">Альстромерии
+                                            <span class="popup-block__list-text">- 6 шт.</span>
+                                        </li>
+                                    </ul>
+                                    <span class="popup-block__list-text">Статица, Фисташка, Аспарагус сетакус, Лента</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="time-block js-time_block--">
+                        <div class="time-block js-time_block--">
                         <span class="time-block__name">До конца акции осталось:</span>
                         <div class="time-block__group">
                             <div class="time-block__group__elements">
@@ -410,7 +447,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="filter_3 js-filter_3--">
+                    </div>
+                    <div class="info-block_4__right-block">
+                        <div class="filter_3 js-filter_3--">
                         <form action="url">
                             <div class="filter_3__group js-form-select">
                                 <div class="filter_3__group__elements">
@@ -421,10 +460,10 @@
                                 </div>
                                 <div class="filter_3__group__elements">
                                     <select name="" id="" class="js-select">
-                                       <option value="">+60% скидка 10% (+1200 руб.) sffs sdfsdf sdf</option>
-                                       <option value="">+50% скидка 10% (+600 руб.)</option>
-                                       <option value="">+50% скидка 10% (+600 руб.)</option>
-                                   </select>
+                                           <option value="">+60% скидка 10% (+1200 руб.) sffs sdfsdf sdf</option>
+                                           <option value="">+50% скидка 10% (+600 руб.)</option>
+                                           <option value="">+50% скидка 10% (+600 руб.)</option>
+                                       </select>
                                 </div>
                             </div>
                             <div class="filter_3__group js-form-select">
@@ -436,10 +475,10 @@
                                 </div>
                                 <div class="filter_3__group__elements">
                                     <select name="" id="" class="js-select">
-                                       <option value="">+60% скидка 10% (+1200 руб.) sffs sdfsdf sdf</option>
-                                       <option value="">+50% скидка 10% (+600 руб.)</option>
-                                       <option value="">+50% скидка 10% (+600 руб.)</option>
-                                   </select>
+                                           <option value="">+60% скидка 10% (+1200 руб.) sffs sdfsdf sdf</option>
+                                           <option value="">+50% скидка 10% (+600 руб.)</option>
+                                           <option value="">+50% скидка 10% (+600 руб.)</option>
+                                       </select>
                                 </div>
                             </div>
                             <div class="filter_3__group js-form-select">
@@ -451,10 +490,10 @@
                                 </div>
                                 <div class="filter_3__group__elements">
                                     <select name="" id="" class="js-select">
-                                       <option value="">+60% скидка 10% (+1200 руб.) sffs sdfsdf sdf</option>
-                                       <option value="">+50% скидка 10% (+600 руб.)</option>
-                                       <option value="">+50% скидка 10% (+600 руб.)</option>
-                                   </select>
+                                           <option value="">+60% скидка 10% (+1200 руб.) sffs sdfsdf sdf</option>
+                                           <option value="">+50% скидка 10% (+600 руб.)</option>
+                                           <option value="">+50% скидка 10% (+600 руб.)</option>
+                                       </select>
                                 </div>
                             </div>
                             <div class="filter_3__group js-form-select">
@@ -466,10 +505,10 @@
                                 </div>
                                 <div class="filter_3__group__elements">
                                     <select name="" id="" class="js-select">
-                                       <option value="">+60% скидка 10% (+1200 руб.) sffs sdfsdf sdf</option>
-                                       <option value="">+50% скидка 10% (+600 руб.)</option>
-                                       <option value="">+50% скидка 10% (+600 руб.)</option>
-                                   </select>
+                                           <option value="">+60% скидка 10% (+1200 руб.) sffs sdfsdf sdf</option>
+                                           <option value="">+50% скидка 10% (+600 руб.)</option>
+                                           <option value="">+50% скидка 10% (+600 руб.)</option>
+                                       </select>
                                 </div>
                             </div>
                         </form>
@@ -477,6 +516,7 @@
                             <span class="filter_3__button__order">Заказать</span>
                             <span class="filter_3__button__buy_one_click">Купить в 1 клик</span>
                         </div>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -493,7 +533,7 @@
                 </div>
             </div>
         </div>
-        <div class="info-block">
+        <!--div class="info-block">
             <h3 class="info-block__name">Рекомендуемые товары</h3>
             <div class="info-block__slider">
                 <div class="swiper-container swiper-container_4">
@@ -698,7 +738,7 @@
                     </div>
                 </div>
             </form>
-        </div>
+        </div-->
     </div>
 
     <footer class="footer">
@@ -731,6 +771,7 @@
             </ul>
         </div>
         <div class="footer__wrap">
+            <hr class="info-block_5__hr">
             <div class="footer__wrap__elements js-footer-el--">
                 <a class="footer-logo" href="">
                     <img class="footer-logo__prev" src="./images/logo.png" alt="">
@@ -751,7 +792,7 @@
                                 <a class="bottom-menu__list-link" href="">Оплата</a>
                             </li>
                             <li class="bottom-menu__list">
-                                <a class="bottom-menu__list-link" href="">Партнерская программа</a>
+                                <a class="bottom-menu__list-link" href="">Программа</a>
                             </li>
                             <li class="bottom-menu__list">
                                 <a class="bottom-menu__list-link" href="">Гарантии</a>
@@ -786,7 +827,7 @@
             <div class="footer__wrap__elements js-footer-el_3--">
                 <div class="footer__info js-footer-info--">
                     <div class="footer-address js-footer-address--">
-                        <div class="group"><a class="footer-address__phone" href="tel:80000000000">8-000-000-0000</a>,<span class="br-mobile"><br></span> Ежедневно: с 10<sup>00</sup> до 20<sup>00</sup></div>
+                        <div class="group"><a class="footer-address__phone" href="tel:80000000000">8-000-000-0000</a><span class="br-mobile"><br></span> Ежедневно: с 10<sup>00</sup> до 20<sup>00</sup></div>
                         <div class="group">г. Москва, ул. Московская, д.0.<br>
                             <a class="footer-address__mail" href="mail:namecompany@mail.ru">namecompany@mail.ru</a></div>
                     </div>
@@ -808,6 +849,7 @@
             </div>
         </div>
     </footer>
+    <div class="top js-top"></div>
 </body>
 
 </html>

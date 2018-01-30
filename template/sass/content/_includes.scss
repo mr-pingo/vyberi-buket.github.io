@@ -93,8 +93,9 @@
     .group{
         width: 100%;
         position: relative;
-        &:first-child{
-            margin-bottom: 10px;
+        margin-bottom: 10px;
+        &:last-child{
+            margin-bottom: 0;
         }
     }
     &__text{
@@ -247,6 +248,9 @@
             }
         }
     }
+}
+.mobile-block{
+    display: none;
 }
 .time-block{
     margin-top: 22px;

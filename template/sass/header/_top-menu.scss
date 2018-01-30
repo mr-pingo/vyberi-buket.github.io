@@ -1,25 +1,24 @@
 .top-menu{
+    //width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    padding: 0;
+    margin: 0;
     flex-grow: 1;
-    &__wrap{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height: 50px;
-        padding: 0;
-        margin: 0;
-        &__body{
-            list-style: none;
-            &-link{
-                //margin-right: 18px;
-                text-decoration: none;
-                font-family: 'Open Sans', sans-serif;
-                font-size: 13px;
-                color: #000;
-                white-space: nowrap;
-                &:hover{
-                    color: #4ab1ae;
-                    border-bottom: 1px solid #4ab1ae;
-                }
+    &__body{
+        list-style: none;
+        &-link{
+            //margin-right: 18px;
+            text-decoration: none;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 13px;
+            color: #000;
+            white-space: nowrap;
+            &:hover{
+                color: #4ab1ae;
+                border-bottom: 1px solid #4ab1ae;
             }
         }
     }

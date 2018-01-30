@@ -1,8 +1,9 @@
 $(document).ready(function () {
+    if(/*@cc_on!@*/false){document.documentElement.className+=' ie11';}
     //-------
     // Slider
     //-------
-    var swiper = new Swiper('.swiper-container_1', {
+    var swiper_1 = new Swiper('.swiper-container_1', {
         slidesPerView: 1,
         spaceBetween: 30,
         loop: true,
@@ -11,8 +12,8 @@ $(document).ready(function () {
             clickable: true,
         },
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.slider1-next',
+            prevEl: '.slider1-prev',
         },
     });
     var swiper_2 = new Swiper('.swiper-container_2', {
@@ -27,8 +28,8 @@ $(document).ready(function () {
         slidesPerView: 3,
         spaceBetween: 20,
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.product-slider__next',
+            prevEl: '.product-slider__prev',
         },
         noSwiping: true,
         noSwipingClass: 'swiper-no-swiping',
@@ -304,5 +305,18 @@ $(document).ready(function () {
         } else {
             $('.js-popup-block_3').removeClass('active').hide();
         }
+    });
+    //-----------
+    //Скролл топ
+    //-----------
+    $(window).scroll(function() {
+        if($(this).scrollTop() != 0) {
+            $('.js-top').fadeIn();
+        }else{
+            $('.js-top').fadeOut();
+        }
+    });
+    $('.js-top').click(function() {
+        $('body,html').animate({scrollTop:0},800);
     });
 });

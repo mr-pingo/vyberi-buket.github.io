@@ -3,6 +3,7 @@
     padding: 0px 40px;
     box-sizing: border-box;
     &__wrap{
+        position: relative;
         flex-direction: column;
         margin: auto;
     }
