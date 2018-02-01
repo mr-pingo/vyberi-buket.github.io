@@ -6,24 +6,32 @@
     width: 100%;   
     font-family: 'Open Sans', sans-serif;
     font-size: 13px;
-    span{
-        margin: 0px 7px;
-        color: #000;
-        line-height: 23px;
-        border-bottom: none;
-        &:hover{
-            color: #000;
-            border-bottom: none;
+    &__list{
+        line-height: 24px;
+        &:before{
+            content: '';
+            display: none;
         }
-    }
-    &__link{
-        margin: 0!important;
-        text-decoration: none;
-        color: #4ab1ae;
-        border-bottom: 1px solid #4ab1ae;
-        &:hover{
-            color: #000;
-            border-bottom: 1px solid #000;
+        &__link{
+            text-decoration: none;
+            color: #4ab1ae;
+            &:hover{
+                color: #000;
+            }
+            &:after{
+                content: '/';
+                color: #000;
+            }
+            &-text{
+                margin: 0px 5px;
+                border-bottom: 1px solid #4ab1ae;
+                &:hover{
+                    border-bottom: 1px solid #000;
+                }
+                &.active{
+                    border-bottom: 0px;
+                }
+            }
         }
     }
 }

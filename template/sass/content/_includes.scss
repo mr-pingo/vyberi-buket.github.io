@@ -216,7 +216,8 @@
                 }
                 .group{
                     min-width: 180px;
-                    margin-right: 65px;
+                    margin-right: 65px!important;
+                    margin-bottom: 0!important;
                     &:last-child{
                         margin-right: 0;
                     }
@@ -250,6 +251,9 @@
     }
 }
 .mobile-block{
+    display: none;
+}
+.mobile-swiper-button{
     display: none;
 }
 .time-block{

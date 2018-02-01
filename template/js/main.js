@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    if(/*@cc_on!@*/false){document.documentElement.className+=' ie11';}
     //-------
     // Slider
     //-------
@@ -28,8 +27,8 @@ $(document).ready(function () {
         slidesPerView: 3,
         spaceBetween: 20,
         navigation: {
-            nextEl: '.product-slider__next',
-            prevEl: '.product-slider__prev',
+            nextEl: '.slider3-next',
+            prevEl: '.slider3-prev',
         },
         noSwiping: true,
         noSwipingClass: 'swiper-no-swiping',
@@ -48,14 +47,19 @@ $(document).ready(function () {
         slidesPerView: 4,
         spaceBetween: 20,
         navigation: {
-            nextEl: '.info-block__slider-next',
-            prevEl: '.info-block__slider-prev',
+            nextEl: '.slider4-next',
+            prevEl: '.slider4-prev',
         },
         noSwiping: true,
         noSwipingClass: 'swiper-no-swiping',
         breakpoints: {
-            1169: {
+            999: {
                 slidesPerView: 3,
+                spaceBetween: 10,
+                noSwiping: false,
+            },
+            730: {
+                slidesPerView: 2,
                 spaceBetween: 10,
                 noSwiping: false,
             },
@@ -99,7 +103,7 @@ $(document).ready(function () {
             $('.js-main-list').removeClass('active');
         }
     });
-    $('.js-choice-select').on('click', function () {
+    $('.js-choice-select').on('click', function() {
         var text = $(this).html();
         $(this).parents('.js-main-list').find('.js-filter-list').addClass('filter-select');
         $(this).parents('.js-main-list').find('.js-choice').html(text);
@@ -107,11 +111,36 @@ $(document).ready(function () {
     //--------
     // Gallery
     //--------
-    $('.js-gallery').on('click', function () {
+    $('.js-gallery').on('click', function() {
         $('.js-gallery').removeClass('active');
         $(this).addClass('active');
         var link = $(this).children('img').attr('src');
         $(this).parents('.gallery').find('.js-gallery-img').attr('src', link);
+    });
+    //----------
+    //Переключатель изображений
+    //----------
+    $('.js-next-slide').on('click', function(){
+        if($('.gallery__mini__img.active').next('.gallery__mini__img').length > 0){
+            $('.gallery__mini__img.active').removeClass('active').next('.gallery__mini__img').addClass('active');
+            var link = $('.gallery__mini__img.active').children('.gallery__mini__img-prev').attr('src');
+            $('body').find('.js-photo-link').attr('src', link);
+        }else{
+            $('.gallery__mini__img').removeClass('active').eq(0).addClass('active');
+            var link = $('.gallery__mini__img.active').children('.gallery__mini__img-prev').attr('src');
+            $('body').find('.js-photo-link').attr('src', link);
+        }
+    });
+     $('.js-prev-slide').on('click', function(){
+        if($('.gallery__mini__img.active').prev('.gallery__mini__img').length > 0){
+            $('.gallery__mini__img.active').removeClass('active').prev('.gallery__mini__img').addClass('active');
+            var link = $('.gallery__mini__img.active').children('.gallery__mini__img-prev').attr('src');
+            $('body').find('.js-photo-link').attr('src', link);
+        }else{
+            $('.gallery__mini__img').removeClass('active').eq($('.gallery__mini__img').length - 1).addClass('active');
+            var link = $('.gallery__mini__img.active').children('.gallery__mini__img-prev').attr('src');
+            $('body').find('.js-photo-link').attr('src', link);
+        }
     });
     //--------------------
     // Выбор кол-во цветов
@@ -123,7 +152,10 @@ $(document).ready(function () {
     //------- 
     // Select
     //-------
-    $('select').ikSelect();
+    $('select').ikSelect({
+        //autoWidth: false,
+        //ddFullWidth: false,
+    });
     $('.js-select').ikSelect('disable');
     $('.checkbox').on('click', function () {
         if ($(this).prop('checked')) {
@@ -181,6 +213,60 @@ $(document).ready(function () {
         $('#popup-callback').arcticmodal({
             afterClose: function (data, el) {
                 $(document).find('#popup-callback').remove();
+            }
+        });
+    });
+    $('.js-select-town').on('click', function () {
+        var popup = $('<div style="display: none;">\
+        <div class="box-modal popup-call-back" id="popup-select-town">\
+        <div class="box-modal_close arcticmodal-close"></div>\
+        <div class="select-town">\
+            <div class="select-town__header">Вы находитесь в городе <span class="select-town__header-name">Владимир</span></div>\
+            <div class="select-town__info">Если <span class="select-town__info-name">Владимир</span> не Ваш город, то для отображения верной стоимости и сроков доставки укажите Ваш город в поле ниже.</div>\
+            <form class="select-town__form" action="">\
+                <input class="select-town__form-poly" type="text" plaseholder="Ваш город">\
+                <button class="select-town__form-button" >Сохранить</button>\
+            </form>\
+            <div class="select-town__list">\
+                <span class="select-town__list-text">Популярные города:</span>\
+                <div class="select-town__list-group">\
+                    <ul class="select-town__list__elements">\
+                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Москва</a></li>\
+                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Санкт-Петербург</a></li>\
+                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Новосибирск</a></li>\
+                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Екатеринбург</a></li>\
+                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Нижний Новгород</a></li>\
+                    </ul>\
+                    <ul class="select-town__list__elements">\
+                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Казань</a></li>\
+                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Челябинск</a></li>\
+                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Омск</a></li>\
+                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Самара</a></li>\
+                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Ростов-на-Дону</a></li>\
+                    </ul>\
+                    <ul class="select-town__list__elements">\
+                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Уфа</a></li>\
+                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Красноярск</a></li>\
+                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Пермь</a></li>\
+                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Воронеж</a></li>\
+                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Волгоград</a></li>\
+                    </ul>\
+                    <ul class="select-town__list__elements">\
+                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Краснодар</a></li>\
+                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Саратов</a></li>\
+                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Тюмень</a></li>\
+                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Тольятти</a></li>\
+                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Ижевск</a></li>\
+                    </ul>\
+                </div>\
+            </div>\
+        </div>\
+        </div>\
+        </div>');
+        $('body').append(popup);
+        $('#popup-select-town').arcticmodal({
+            afterClose: function (data, el) {
+                $(document).find('#popup-select-town').remove();
             }
         });
     });

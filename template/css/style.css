@@ -12,6 +12,7 @@ body {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  font-family: 'Open Sans', sans-serif;
 }
 
 ol {
@@ -978,28 +979,40 @@ p {
   font-size: 13px;
 }
 
-.breadcrumbs span {
-  margin: 0px 7px;
-  color: #000;
-  line-height: 23px;
-  border-bottom: none;
+.breadcrumbs__list {
+  line-height: 24px;
 }
 
-.breadcrumbs span:hover {
-  color: #000;
-  border-bottom: none;
+.breadcrumbs__list:before {
+  content: '';
+  display: none;
 }
 
-.breadcrumbs__link {
-  margin: 0 !important;
+.breadcrumbs__list__link {
   text-decoration: none;
   color: #4ab1ae;
+}
+
+.breadcrumbs__list__link:hover {
+  color: #000;
+}
+
+.breadcrumbs__list__link:after {
+  content: '/';
+  color: #000;
+}
+
+.breadcrumbs__list__link-text {
+  margin: 0px 5px;
   border-bottom: 1px solid #4ab1ae;
 }
 
-.breadcrumbs__link:hover {
-  color: #000;
+.breadcrumbs__list__link-text:hover {
   border-bottom: 1px solid #000;
+}
+
+.breadcrumbs__list__link-text.active {
+  border-bottom: 0px;
 }
 
 .search-button-mobile {
@@ -2172,7 +2185,8 @@ hr.info-block_5__hr {
 
 .order-info__group__window__wrap .group {
   min-width: 180px;
-  margin-right: 65px;
+  margin-right: 65px !important;
+  margin-bottom: 0 !important;
 }
 
 .order-info__group__window__wrap .group:last-child {
@@ -2211,6 +2225,10 @@ hr.info-block_5__hr {
 }
 
 .mobile-block {
+  display: none;
+}
+
+.mobile-swiper-button {
   display: none;
 }
 
@@ -3503,6 +3521,7 @@ input[type="checkbox"] + label {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  white-space: nowrap;
 }
 
 input[type="checkbox"] + label::before {
@@ -3534,7 +3553,6 @@ input[type="checkbox"]:checked + label::before {
 }
 
 .ik_select_link {
-  /* Fake select you click on to open the dropdown */
   position: relative;
   width: 247px;
   height: 40px;
@@ -3564,10 +3582,6 @@ input[type="checkbox"]:checked + label::before {
   right: 20px;
 }
 
-.ik_select_link_focus {
-  /* Focused state of the fake select */
-}
-
 .ik_select_link_disabled .ik_select_link_text {
   color: #708484;
 }
@@ -3586,37 +3600,24 @@ input[type="checkbox"]:checked + label::before {
 }
 
 .ik_select_list_inner ul {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 .ik_select_dropdown {
-  /*
-Dropdown wrapper. Needed for script calculations.
-You should not add any visual styles here.
-You can shift the position of the dropdown
-by changing top and left values like
-top: -2px;
-left: -5px;
-*/
-  top: 39px;
+  width: 100% !important;
+  top: 39px !important;
+  left: 0 !important;
   background: #fff;
   border: 1px solid #a9a8ba;
-}
-
-.ik_select_list {
-  /*
-Wrapper for the options list.
-Now that's a good place to add visual styles.
-*/
-}
-
-.ik_select_optgroup {
-  /* Optgroup */
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .ik_select_option {
-  list-style: none;
+  position: relative;
   cursor: pointer;
   margin: 0;
   padding: 0;
@@ -3636,35 +3637,17 @@ Now that's a good place to add visual styles.
   border-bottom: 0;
 }
 
+.ik_select_option:hover {
+  background: #d3d2eb;
+}
+
 .ik_select_option_label {
   padding-left: 20px;
+  padding-right: 20px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   font-size: 13px;
   color: #5b5a8b;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-.ik_select_hover {
-  /* The hovered state of an option */
-}
-
-.ik_select_active {
-  /* The active state of an option */
-}
-
-.ik_select_filter_wrap {
-  /* Wrapper for the filter input */
-}
-
-.ik_select_filter {
-  /* Filter input */
-}
-
-.ik_nothing_found {
-  /* Block that's shown when there's nothing found. */
 }
 
 .element-block {
@@ -5182,6 +5165,111 @@ Now that's a good place to add visual styles.
   overflow: hidden;
 }
 
+.select-town {
+  max-width: 720px;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.select-town__header {
+  font-size: 24px;
+  margin-right: 25px;
+}
+
+.select-town__header-name {
+  font-weight: 700;
+}
+
+.select-town__info {
+  margin: 15px 0px;
+  font-size: 14px;
+}
+
+.select-town__form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.select-town__form-poly {
+  outline: none;
+  width: 100%;
+  height: 39px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #5b5a8b;
+  padding: 0px 20px;
+  -webkit-border-radius: 4px 0px 0px 4px;
+  border-radius: 4px 0px 0px 4px;
+  font-size: 14px;
+  color: #000;
+}
+
+.select-town__form-button {
+  width: 180px;
+  height: 39px;
+  background: #5b5a8b;
+  -webkit-border-radius: 0px 4px 4px 0px;
+  border-radius: 0px 4px 4px 0px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.select-town__list {
+  margin: 15px 0;
+}
+
+.select-town__list-text {
+  font-size: 14px;
+}
+
+.select-town__list-group {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.select-town__list__elements {
+  min-width: 149px;
+  margin: 0;
+  padding: 0;
+  margin-right: 25px;
+}
+
+.select-town__list__elements:last-child {
+  margin-right: 0;
+}
+
+.select-town__list__elements__link {
+  list-style: none;
+}
+
+.select-town__list__elements__link-name {
+  line-height: 26px;
+  font-size: 14px;
+  color: #000;
+  text-decoration: none;
+}
+
+.select-town__list__elements__link-name:hover {
+  color: #4ab1ae;
+  border-bottom: 1px solid #4ab1ae;
+}
+
 .footer {
   margin: 0 auto;
   max-width: 1170px;
@@ -6041,6 +6129,7 @@ Now that's a good place to add visual styles.
     flex-grow: 1;
     float: none;
     height: 150px;
+    min-width: 80px;
   }
 
   .filter__wrap__list:nth-last-child(2) .filter-menu {
@@ -6287,7 +6376,10 @@ Now that's a good place to add visual styles.
 
   .group-info_3 {
     margin-top: 3px;
-    width: 100%;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -6305,6 +6397,11 @@ Now that's a good place to add visual styles.
 
   .group-info_3__elements__text {
     display: none;
+  }
+
+  *::-ms-backdrop,
+  .group-info_3 {
+    width: 100%;
   }
 
   .group-info_4 {
@@ -6379,12 +6476,12 @@ Now that's a good place to add visual styles.
   }
 
   .order-info__group:last-child {
-    padding-left: 20px;
+    padding-left: 30px;
   }
 
   .order-info__group .group {
     width: 163px;
-    margin: 0;
+    margin: 0 auto;
     margin-bottom: 10px;
   }
 
@@ -6396,6 +6493,12 @@ Now that's a good place to add visual styles.
   .order-info__group__window:before {
     right: auto;
     left: 277px;
+  }
+
+  .order-info__group__window__wrap {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 
   .order-info__text:before {
@@ -6413,10 +6516,6 @@ Now that's a good place to add visual styles.
 
   .textarea {
     overflow-x: hidden;
-  }
-
-  .swiper-container_4 {
-    width: 670px;
   }
 
   .group-links {
@@ -6492,6 +6591,14 @@ Now that's a good place to add visual styles.
 
   .js-right-block {
     margin-left: 15px;
+  }
+
+  .ik_select {
+    margin-left: 0px;
+  }
+
+  .info-block__slider {
+    padding: 0px 30px;
   }
 }
 
@@ -6831,6 +6938,10 @@ Now that's a good place to add visual styles.
     border-bottom: 1px solid #d4dede;
   }
 
+  .footer .info-block_5__hr {
+    margin-top: 0;
+  }
+
   .socials {
     margin-top: 0;
     margin-bottom: 20px;
@@ -7035,6 +7146,27 @@ Now that's a good place to add visual styles.
     height: 100%;
   }
 
+  .info-block_3 {
+    margin-bottom: 0;
+    height: auto;
+  }
+
+  .info-block_3__bg {
+    -webkit-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+    left: -420px;
+  }
+
+  .info-block_3__content {
+    height: auto;
+    margin: 15px;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
   .info-block_4__name {
     text-align: center;
     font-size: 28px;
@@ -7114,7 +7246,6 @@ Now that's a good place to add visual styles.
   }
 
   .order-info__group:last-child {
-    padding-left: 0;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
@@ -7141,6 +7272,35 @@ Now that's a good place to add visual styles.
   }
 
   .mobile-block {
+    display: block;
+  }
+
+  .ik_select {
+    width: 100% !important;
+  }
+
+  .rating {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .submit {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+    float: none;
+    margin: auto;
+  }
+
+  .mobile-swiper-button {
     display: block;
   }
 }
@@ -7214,6 +7374,20 @@ Now that's a good place to add visual styles.
   .call-back__wrap__right_block {
     padding: 60px 30px 80px 30px;
   }
+
+  .order-info__price {
+    font-size: 26px;
+  }
+
+  .block-add-comment {
+    padding: 35px 10px;
+  }
+
+  .socials__link {
+    margin: 0px 2px;
+    width: 32px;
+    height: 32px;
+  }
 }
 
 @media screen and (max-width: 345px) {
@@ -7229,5 +7403,9 @@ Now that's a good place to add visual styles.
                 background: #4ab1ae;
                 color: #fff;
                 font-size: 10px;*/
+  }
+
+  .call-back__wrap__right_block {
+    padding: 40px 10px 10px 10px;
   }
 }

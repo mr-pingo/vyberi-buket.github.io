@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<head>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# product: http://ogp.me/ns/product#">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="Url адерс главной">
-    <meta property="og:title" content="Купить цветы с доставкой в Москве и по России">
-    <meta property="og:image" content="URL адрес картинки сайта">
-    <meta property="og:description" name="description" content="Интернет магазина 'Выбери букет' круглосуточно осуществляет доставку цветов по Москве и по России, у нас всегда можно недорого купить свежие цветы и заказать доставку на дом или в офис, время доставки от 1 до 4 часов">
+    <meta property="og:type" content="product" /> 
+    <meta property="og:url" content="URL адрес карточки товара" /> 
+    <meta property="og:title" content="название товара из H1" /> 
+    <meta property="og:image" content="URL адрес картинки товара" />
+    <meta property="og:description" name="description" content="Описание товара из descriptions">
     <meta name="keywords" content="доставка цветов, цветы с доставкой по Москве, купить цветы, заказать доставку цветов, цветы в москве, недорогие цветы Москва">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/gridlex.css">
@@ -226,17 +226,28 @@
             </nav>
             <hr class="info-block_5__hr js-hr--">
         </div>
-        <div class="breadcrumbs">
-            <a class="breadcrumbs__link" href="/">Главная</a>
-            <span>/</span>
-            <a class="breadcrumbs__link" href="">Каталог товаров</a>
-            <span>/</span>
-            <span class="breadcrumbs__link">Необыкновенные бабочки экстра</span>
-        </div>
+        <ol class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+                <li class="breadcrumbs__list" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"> 
+                    <a class="breadcrumbs__list__link" itemprop="item" href=""> 
+                        <span class="breadcrumbs__list__link-text" itemprop="name">Главная</span>
+                    </a> 
+                    <meta class="" itemprop="position" content="1" />
+                </li> 
+                <li class="breadcrumbs__list" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                    <a class="breadcrumbs__list__link" itemprop="item" href=""> 
+                        <span class="breadcrumbs__list__link-text" itemprop="name">Каталог товаров</span>
+                    </a> 
+                    <meta class="" itemprop="position" content="2" />
+                </li>
+                <li class="breadcrumbs__list" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"> 
+                    <span class="breadcrumbs__list__link-text active" itemprop="name">Необыкновенные бабочки экстра</span> 
+                    <meta class="" itemprop="position" content="3" /> 
+                </li>
+            </ol>
     </header>
 
     <div class="content">
-        <div class="content__group-block">
+        <div class="content__group-block" itemscope itemtype="http://schema.org/Product">
             <div class="content__left-block">
                 <div class="gallery">
                     <div class="group">
@@ -283,11 +294,13 @@
                             <span class="gallery__full__info-text">см</span>
                         </div>
                         <div class="gallery__full__img js-photo">
-                            <img class="gallery__full__img-prev js-gallery-img js-photo-link" src="./images/infoblock-img/byket.jpg" alt="">
+                            <img class="gallery__full__img-prev js-gallery-img js-photo-link" src="./images/infoblock-img/byket.jpg" alt="Роза красная" title="Букет из красной розы" itemprop="image">
                         </div>
+                        <div class="swiper-button-prev product-slider__prev mobile-swiper-button js-prev-slide"></div>
+                        <div class="swiper-button-next product-slider__next mobile-swiper-button js-next-slide"></div>
                     </div>
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt id obcaecati enim necessitatibus maiores possimus maxime numquam cupiditate voluptatibus sunt ipsum eveniet dignissimos, rerum nesciunt. Quidem, deleniti excepturi id illum, vel porro expedita laborum officia explicabo ab dignissimos minima saepe atque omnis voluptatem, ullam veniam eius fuga. Natus, aut. Non impedit dignissimos molestiae? Odio qui, sapiente iste id, aspernatur, veniam quam praesentium officia sint quia eos aut. Aspernatur necessitatibus consequuntur dolorem labore nulla ad rerum nam, molestiae accusantium, praesentium maxime?</p>
+                <p itemprop="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt id obcaecati enim necessitatibus maiores possimus maxime numquam cupiditate voluptatibus sunt ipsum eveniet dignissimos, rerum nesciunt. Quidem, deleniti excepturi id illum, vel porro expedita laborum officia explicabo ab dignissimos minima saepe atque omnis voluptatem, ullam veniam eius fuga. Natus, aut. Non impedit dignissimos molestiae? Odio qui, sapiente iste id, aspernatur, veniam quam praesentium officia sint quia eos aut. Aspernatur necessitatibus consequuntur dolorem labore nulla ad rerum nam, molestiae accusantium, praesentium maxime?</p>
                 <div class="content-footer">
                     <div class="content-footer__group">
                         <span class="content-footer__group-text">Поделиться:</span>
@@ -299,10 +312,12 @@
                             <a class="socials__link" href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a>
                         </div>
                     </div>
-                    <div class="content-footer__group">
+                    <div class="content-footer__group" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
                         <span class="content-footer__group-text">Оценить:</span>
                         <div class="content-footer__rating">
                             <img src="./images/rate-2.png" alt="">
+                            <meta itemprop="reviewCount" content="1"/>
+                            <meta itemprop="ratingValue" content="4"/>
                         </div>
                         <span class="content-footer__rating-count">1946 голосов</span>
                     </div>
@@ -310,213 +325,215 @@
             </div>
             <div class="content__right-block">
                 <div class="info-block_4 js-info_block_4--">
-                    <h1 class="info-block_4__name js-card_name--">Lorem ipsum dolor sit amet, consectetur.</h1>
+                    <h1 class="info-block_4__name js-card_name--" itemprop="name">Lorem ipsum dolor sit amet, consectetur.</h1>
                     <div class="info-block_4__left-block">
                         <div class="filter_2">
-                        <ul class="filter_2__wrap">
-                            <li class="filter_2__wrap-count js-chose">7</li>
-                            <li class="filter_2__wrap-count js-chose">9</li>
-                            <li class="filter_2__wrap-count js-chose">11</li>
-                            <li class="filter_2__wrap-count js-chose">15</li>
-                            <li class="filter_2__wrap-count js-chose">21</li>
-                            <li class="filter_2__wrap-count js-chose">25</li>
-                            <li class="filter_2__wrap-count js-chose">35</li>
-                            <li class="filter_2__wrap-count js-chose">51</li>
-                            <li class="filter_2__wrap-count js-chose">75</li>
-                            <li class="filter_2__wrap-count js-chose">101</li>
-                        </ul>
-                    </div>
+                            <ul class="filter_2__wrap">
+                                <li class="filter_2__wrap-count js-chose">7</li>
+                                <li class="filter_2__wrap-count js-chose">9</li>
+                                <li class="filter_2__wrap-count js-chose">11</li>
+                                <li class="filter_2__wrap-count js-chose">15</li>
+                                <li class="filter_2__wrap-count js-chose">21</li>
+                                <li class="filter_2__wrap-count js-chose">25</li>
+                                <li class="filter_2__wrap-count js-chose">35</li>
+                                <li class="filter_2__wrap-count js-chose">51</li>
+                                <li class="filter_2__wrap-count js-chose">75</li>
+                                <li class="filter_2__wrap-count js-chose">101</li>
+                            </ul>
+                        </div>
                         <div class="order-info js-order_info--">
-                        <div class="order-info__group js-order_info_1--">
-                            <span class="order-info__price">4 500 Р</span>
-                            <span class="order-info__price_old">5 100 Р</span>
+                            <div class="order-info__group js-order_info_1--" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                                <meta itemprop="priceCurrency" content="RUB"/>
+                                <span class="order-info__price" itemprop="price">4 500 Р</span>
+                                <link itemprop="availability" href="http://schema.org/InStock"/> 
+                                <span class="order-info__price_old">5 100 Р</span>
+                            </div>
+                            <div class="order-info__group">
+                                <div class="group">
+                                    <span class="order-info__text js-btn-popup-block_2">Доставка: + 600 Р</span>
+                                    <div class="order-info__group__window js-popup-block_2">
+                                        <div class="order-info__group__window__wrap">
+                                            <div class="group">
+                                                <span class="order-info__group__window__wrap-header">Электронные платежные системы</span>
+                                                <ul class="order-info__group__window__wrap__ul">
+                                                    <li class="order-info__group__window__wrap__ul-list">С телефона</li>
+                                                    <li class="order-info__group__window__wrap__ul-list">PayPal / Cards, Qiwi-кошелек</li>
+                                                    <li class="order-info__group__window__wrap__ul-list">Яндекс.Деньги, Вэбмани</li>
+                                                    <li class="order-info__group__window__wrap__ul-list">Золотая Корона</li>
+                                                    <li class="order-info__group__window__wrap__ul-list">Расчетный счет</li>
+                                                </ul>
+                                            </div>
+                                            <div class="group">
+                                                <span class="order-info__group__window__wrap-header">Банковскими картами</span>
+                                                <ul class="order-info__group__window__wrap__ul">
+                                                    <li class="order-info__group__window__wrap__ul-list">Visa / Mastercard</li>
+                                                    <li class="order-info__group__window__wrap__ul-list">Карта Сбербанк</li>
+                                                    <li class="order-info__group__window__wrap__ul-list">Альфа-Клик</li>
+                                                    <li class="order-info__group__window__wrap__ul-list">payonline.ru Visa / Mastercard</li>
+                                                </ul>
+                                            </div>
+                                            <div class="group">
+                                                <span class="order-info__group__window__wrap-header">Наличными в банкоматах</span>
+                                                <ul class="order-info__group__window__wrap__ul">
+                                                    <li class="order-info__group__window__wrap__ul-list">Сбербанк</li>
+                                                    <li class="order-info__group__window__wrap__ul-list">Связной и Евросеть</li>
+                                                    <li class="order-info__group__window__wrap__ul-list">Терминалы</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="group">
+                                    <span class="order-info__text js-btn-popup-block_3">Способы оплаты</span>
+                                    <div class="order-info__group__window js-popup-block_3">
+                                        <div class="group-info">
+                                            <span class="group-info__text">Город доставки</span>
+                                            <i class="group-info__icon"></i>
+                                            <span class="group-info__link">Loremipsum-LoremipsumLor</span>
+                                        </div>
+                                        <div class="order-info__group__window__elements">
+                                            <span class="order-info__group__window-text_2">Бесплатная доставка от </span>
+                                            <span class="order-info__group__window-text"> 2500 руб.</span>
+                                        </div>
+                                        <hr class="order-info__group__window-line">
+                                        <div class="order-info__group__window__elements">
+                                            <span class="order-info__group__window-text">Стоимость доставки</span>
+                                            <span class="order-info__group__window-text_2"> - 600 руб.</span>
+                                        </div>
+                                        <div class="order-info__group__window__elements">
+                                            <span class="order-info__group__window-text">Стоимость заказa</span>
+                                            <span class="order-info__group__window-text_2"> - 1800 руб.</span>
+                                        </div>
+                                        <div class="order-info__group__window__elements">
+                                            <span class="order-info__group__window-text">ИТОГО - 2 400 руб.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="group mobile-block">
+                                    <span class="order-info__text js-btn-popup-block_1">Состав букета</span>
+                                    <div class="order-info__group__window js-popup-block_1">
+                                        <ul class="popup-block">
+                                            <li class="popup-block__list">Орхидея ванда
+                                                <span class="popup-block__list-text">- 7 шт.</span>
+                                            </li>
+                                            <li class="popup-block__list">Лизиантус
+                                                <span class="popup-block__list-text">- 7 шт.</span>
+                                            </li>
+                                            <li class="popup-block__list">Хризантема кустовая сталион
+                                                <span class="popup-block__list-text">- 7 шт.</span>
+                                            </li>
+                                            <li class="popup-block__list">Альстромерии
+                                                <span class="popup-block__list-text">- 6 шт.</span>
+                                            </li>
+                                        </ul>
+                                        <span class="popup-block__list-text">Статица, Фисташка, Аспарагус сетакус, Лента</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="order-info__group">
-                            <div class="group">
-                                <span class="order-info__text js-btn-popup-block_2">Доставка: + 600 Р</span>
-                                <div class="order-info__group__window js-popup-block_2">
-                                    <div class="order-info__group__window__wrap">
-                                        <div class="group">
-                                            <span class="order-info__group__window__wrap-header">Электронные платежные системы</span>
-                                            <ul class="order-info__group__window__wrap__ul">
-                                                <li class="order-info__group__window__wrap__ul-list">С телефона</li>
-                                                <li class="order-info__group__window__wrap__ul-list">PayPal / Cards, Qiwi-кошелек</li>
-                                                <li class="order-info__group__window__wrap__ul-list">Яндекс.Деньги, Вэбмани</li>
-                                                <li class="order-info__group__window__wrap__ul-list">Золотая Корона</li>
-                                                <li class="order-info__group__window__wrap__ul-list">Расчетный счет</li>
-                                            </ul>
-                                        </div>
-                                        <div class="group">
-                                            <span class="order-info__group__window__wrap-header">Банковскими картами</span>
-                                            <ul class="order-info__group__window__wrap__ul">
-                                                <li class="order-info__group__window__wrap__ul-list">Visa / Mastercard</li>
-                                                <li class="order-info__group__window__wrap__ul-list">Карта Сбербанк</li>
-                                                <li class="order-info__group__window__wrap__ul-list">Альфа-Клик</li>
-                                                <li class="order-info__group__window__wrap__ul-list">payonline.ru Visa / Mastercard</li>
-                                            </ul>
-                                        </div>
-                                        <div class="group">
-                                            <span class="order-info__group__window__wrap-header">Наличными в банкоматах</span>
-                                            <ul class="order-info__group__window__wrap__ul">
-                                                <li class="order-info__group__window__wrap__ul-list">Сбербанк</li>
-                                                <li class="order-info__group__window__wrap__ul-list">Связной и Евросеть</li>
-                                                <li class="order-info__group__window__wrap__ul-list">Терминалы</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="group">
-                                <span class="order-info__text js-btn-popup-block_3">Способы оплаты</span>
-                                <div class="order-info__group__window js-popup-block_3">
-                                    <div class="group-info">
-                                        <span class="group-info__text">Город доставки</span>
-                                        <i class="group-info__icon"></i>
-                                        <span class="group-info__link">Loremipsum-LoremipsumLor</span>
-                                    </div>
-                                    <div class="order-info__group__window__elements">
-                                        <span class="order-info__group__window-text_2">Бесплатная доставка от </span>
-                                        <span class="order-info__group__window-text"> 2500 руб.</span>
-                                    </div>
-                                    <hr class="order-info__group__window-line">
-                                    <div class="order-info__group__window__elements">
-                                        <span class="order-info__group__window-text">Стоимость доставки</span>
-                                        <span class="order-info__group__window-text_2"> - 600 руб.</span>
-                                    </div>
-                                    <div class="order-info__group__window__elements">
-                                        <span class="order-info__group__window-text">Стоимость заказa</span>
-                                        <span class="order-info__group__window-text_2"> - 1800 руб.</span>
-                                    </div>
-                                    <div class="order-info__group__window__elements">
-                                        <span class="order-info__group__window-text">ИТОГО - 2 400 руб.</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="group mobile-block">
-                                <span class="order-info__text js-btn-popup-block_1">Состав букета</span>
-                                <div class="order-info__group__window js-popup-block_1">
-                                    <ul class="popup-block">
-                                        <li class="popup-block__list">Орхидея ванда
-                                            <span class="popup-block__list-text">- 7 шт.</span>
-                                        </li>
-                                        <li class="popup-block__list">Лизиантус
-                                            <span class="popup-block__list-text">- 7 шт.</span>
-                                        </li>
-                                        <li class="popup-block__list">Хризантема кустовая сталион
-                                            <span class="popup-block__list-text">- 7 шт.</span>
-                                        </li>
-                                        <li class="popup-block__list">Альстромерии
-                                            <span class="popup-block__list-text">- 6 шт.</span>
-                                        </li>
-                                    </ul>
-                                    <span class="popup-block__list-text">Статица, Фисташка, Аспарагус сетакус, Лента</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                         <div class="time-block js-time_block--">
-                        <span class="time-block__name">До конца акции осталось:</span>
-                        <div class="time-block__group">
-                            <div class="time-block__group__elements">
-                                <div class="time-block__group__elements-count">
-                                    <span class="time-block__group__elements-block">0</span>
-                                    <span class="time-block__group__elements-block">5</span>
+                            <span class="time-block__name">До конца акции осталось:</span>
+                            <div class="time-block__group">
+                                <div class="time-block__group__elements">
+                                    <div class="time-block__group__elements-count">
+                                        <span class="time-block__group__elements-block">0</span>
+                                        <span class="time-block__group__elements-block">5</span>
+                                    </div>
+                                    <span class="time-block__group__elements-text">дней</span>
                                 </div>
-                                <span class="time-block__group__elements-text">дней</span>
-                            </div>
-                            <div class="time-block__group__elements">
-                                <div class="time-block__group__elements-count">
-                                    <span class="time-block__group__elements-block">2</span>
-                                    <span class="time-block__group__elements-block">4</span>
+                                <div class="time-block__group__elements">
+                                    <div class="time-block__group__elements-count">
+                                        <span class="time-block__group__elements-block">2</span>
+                                        <span class="time-block__group__elements-block">4</span>
+                                    </div>
+                                    <span class="time-block__group__elements-text">часы</span>
                                 </div>
-                                <span class="time-block__group__elements-text">часы</span>
-                            </div>
-                            <div class="time-block__group__elements">
-                                <div class="time-block__group__elements-count">
-                                    <span class="time-block__group__elements-block">1</span>
-                                    <span class="time-block__group__elements-block">2</span>
+                                <div class="time-block__group__elements">
+                                    <div class="time-block__group__elements-count">
+                                        <span class="time-block__group__elements-block">1</span>
+                                        <span class="time-block__group__elements-block">2</span>
+                                    </div>
+                                    <span class="time-block__group__elements-text">минут</span>
                                 </div>
-                                <span class="time-block__group__elements-text">минут</span>
-                            </div>
-                            <div class="time-block__group__elements">
-                                <div class="time-block__group__elements-count">
-                                    <span class="time-block__group__elements-block">6</span>
-                                    <span class="time-block__group__elements-block">0</span>
+                                <div class="time-block__group__elements">
+                                    <div class="time-block__group__elements-count">
+                                        <span class="time-block__group__elements-block">6</span>
+                                        <span class="time-block__group__elements-block">0</span>
+                                    </div>
+                                    <span class="time-block__group__elements-text">секунд</span>
                                 </div>
-                                <span class="time-block__group__elements-text">секунд</span>
                             </div>
                         </div>
-                    </div>
                     </div>
                     <div class="info-block_4__right-block">
                         <div class="filter_3 js-filter_3--">
-                        <form action="url">
-                            <div class="filter_3__group js-form-select">
-                                <div class="filter_3__group__elements">
-                                    <div class="checkbox-form">
-                                        <input id="check1" type="checkbox" class="checkbox" />
-                                        <label for="check1" class="checkbox-label">Увеличить букет</label>
+                            <form action="url">
+                                <div class="filter_3__group js-form-select">
+                                    <div class="filter_3__group__elements">
+                                        <div class="checkbox-form">
+                                            <input id="check1" type="checkbox" class="checkbox" />
+                                            <label for="check1" class="checkbox-label">Увеличить букет</label>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="filter_3__group__elements">
-                                    <select name="" id="" class="js-select">
+                                    <div class="filter_3__group__elements">
+                                        <select name="" id="" class="js-select">
                                            <option value="">+60% скидка 10% (+1200 руб.) sffs sdfsdf sdf</option>
                                            <option value="">+50% скидка 10% (+600 руб.)</option>
                                            <option value="">+50% скидка 10% (+600 руб.)</option>
                                        </select>
-                                </div>
-                            </div>
-                            <div class="filter_3__group js-form-select">
-                                <div class="filter_3__group__elements">
-                                    <div class="checkbox-form">
-                                        <input id="check2" type="checkbox" class="checkbox" />
-                                        <label for="check2" class="checkbox-label">Добавить шарики</label>
                                     </div>
                                 </div>
-                                <div class="filter_3__group__elements">
-                                    <select name="" id="" class="js-select">
+                                <div class="filter_3__group js-form-select">
+                                    <div class="filter_3__group__elements">
+                                        <div class="checkbox-form">
+                                            <input id="check2" type="checkbox" class="checkbox" />
+                                            <label for="check2" class="checkbox-label">Добавить шарики</label>
+                                        </div>
+                                    </div>
+                                    <div class="filter_3__group__elements">
+                                        <select name="" id="" class="js-select">
                                            <option value="">+60% скидка 10% (+1200 руб.) sffs sdfsdf sdf</option>
                                            <option value="">+50% скидка 10% (+600 руб.)</option>
                                            <option value="">+50% скидка 10% (+600 руб.)</option>
                                        </select>
-                                </div>
-                            </div>
-                            <div class="filter_3__group js-form-select">
-                                <div class="filter_3__group__elements">
-                                    <div class="checkbox-form">
-                                        <input id="check3" type="checkbox" class="checkbox" />
-                                        <label for="check3" class="checkbox-label">Добавить конфеты</label>
                                     </div>
                                 </div>
-                                <div class="filter_3__group__elements">
-                                    <select name="" id="" class="js-select">
+                                <div class="filter_3__group js-form-select">
+                                    <div class="filter_3__group__elements">
+                                        <div class="checkbox-form">
+                                            <input id="check3" type="checkbox" class="checkbox" />
+                                            <label for="check3" class="checkbox-label">Добавить конфеты</label>
+                                        </div>
+                                    </div>
+                                    <div class="filter_3__group__elements">
+                                        <select name="" id="" class="js-select">
                                            <option value="">+60% скидка 10% (+1200 руб.) sffs sdfsdf sdf</option>
                                            <option value="">+50% скидка 10% (+600 руб.)</option>
                                            <option value="">+50% скидка 10% (+600 руб.)</option>
                                        </select>
-                                </div>
-                            </div>
-                            <div class="filter_3__group js-form-select">
-                                <div class="filter_3__group__elements">
-                                    <div class="checkbox-form">
-                                        <input id="check4" type="checkbox" class="checkbox" />
-                                        <label for="check4" class="checkbox-label">Добавить игрушку</label>
                                     </div>
                                 </div>
-                                <div class="filter_3__group__elements">
-                                    <select name="" id="" class="js-select">
+                                <div class="filter_3__group js-form-select">
+                                    <div class="filter_3__group__elements">
+                                        <div class="checkbox-form">
+                                            <input id="check4" type="checkbox" class="checkbox" />
+                                            <label for="check4" class="checkbox-label">Добавить игрушку</label>
+                                        </div>
+                                    </div>
+                                    <div class="filter_3__group__elements">
+                                        <select name="" id="" class="js-select">
                                            <option value="">+60% скидка 10% (+1200 руб.) sffs sdfsdf sdf</option>
                                            <option value="">+50% скидка 10% (+600 руб.)</option>
                                            <option value="">+50% скидка 10% (+600 руб.)</option>
                                        </select>
+                                    </div>
                                 </div>
+                            </form>
+                            <div class="filter_3__button">
+                                <span class="filter_3__button__order">Заказать</span>
+                                <span class="filter_3__button__buy_one_click js-buy-one-click">Купить в 1 клик</span>
                             </div>
-                        </form>
-                        <div class="filter_3__button">
-                            <span class="filter_3__button__order">Заказать</span>
-                            <span class="filter_3__button__buy_one_click">Купить в 1 клик</span>
                         </div>
-                    </div>
                     </div>
                 </div>
             </div>
@@ -533,156 +550,55 @@
                 </div>
             </div>
         </div>
-        <!--div class="info-block">
-            <h3 class="info-block__name">Рекомендуемые товары</h3>
-            <div class="info-block__slider">
-                <div class="swiper-container swiper-container_4">
-                    <div class="swiper-wrapper swiper-no-swiping">
-                        <div class="swiper-slide">
-                            <div class="block-product">
-                                <a class="block-product__img" href="card.html">
-                                    <div class="block-product__img__sticker">
-                                        <span class="block-product__img__sticker-hit">хит</span>
-                                    </div>
-                                    <div class="block-product__img__info">
-                                        <span class="block-product__img__info-text">60x30</span>
-                                        <span class="block-product__img__info-text">см</span>
-                                    </div>
-                                    <img class="block-product__img-prev" src="./images/infoblock-img/byket.jpg" alt="">
-                                </a>
-                                <div class="block-product__info">
-                                    <span class="block-product__info-name">Букет</span>
-                                    <div class="block-product__info__price">
-                                        <span class="block-product__info__price-current">1500 Р</span>
-                                    </div>
-                                    <div class="block-product__info__button">
-                                        <span class="block-product__info__button-order">Заказать</span>
-                                        <span class="block-product__info__button-buy_one_click">Купить в 1 клик</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="block-product">
-                                <a class="block-product__img" href="">
-                                    <div class="block-product__img__sticker">
-                                        <span class="block-product__img__sticker-hit">хит</span>
-                                    </div>
-                                    <div class="block-product__img__info">
-                                        <span class="block-product__img__info-text">60x30</span>
-                                        <span class="block-product__img__info-text">см</span>
-                                    </div>
-                                    <img class="block-product__img-prev" src="./images/infoblock-img/byket.jpg" alt="">
-                                </a>
-                                <div class="block-product__info">
-                                    <span class="block-product__info-name">Букет</span>
-                                    <div class="block-product__info__price">
-                                        <span class="block-product__info__price-current">1500 Р</span>
-                                    </div>
-                                    <div class="block-product__info__button">
-                                        <span class="block-product__info__button-order">Заказать</span>
-                                        <span class="block-product__info__button-buy_one_click">Купить в 1 клик</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="block-product">
-                                <a class="block-product__img" href="">
-                                    <div class="block-product__img__sticker">
-                                        <span class="block-product__img__sticker-hit">хит</span>
-                                    </div>
-                                    <div class="block-product__img__info">
-                                        <span class="block-product__img__info-text">60x30</span>
-                                        <span class="block-product__img__info-text">см</span>
-                                    </div>
-                                    <img class="block-product__img-prev" src="./images/infoblock-img/byket.jpg" alt="">
-                                </a>
-                                <div class="block-product__info">
-                                    <span class="block-product__info-name">Букет</span>
-                                    <div class="block-product__info__price">
-                                        <span class="block-product__info__price-current">1500 Р</span>
-                                    </div>
-                                    <div class="block-product__info__button">
-                                        <span class="block-product__info__button-order">Заказать</span>
-                                        <span class="block-product__info__button-buy_one_click">Купить в 1 клик</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="block-product">
-                                <a class="block-product__img" href="">
-                                    <div class="block-product__img__sticker">
-                                        <span class="block-product__img__sticker-hit">хит</span>
-                                    </div>
-                                    <div class="block-product__img__info">
-                                        <span class="block-product__img__info-text">60x30</span>
-                                        <span class="block-product__img__info-text">см</span>
-                                    </div>
-                                    <img class="block-product__img-prev" src="./images/infoblock-img/byket.jpg" alt="">
-                                </a>
-                                <div class="block-product__info">
-                                    <span class="block-product__info-name">Букет</span>
-                                    <div class="block-product__info__price">
-                                        <span class="block-product__info__price-current">1500 Р</span>
-                                    </div>
-                                    <div class="block-product__info__button">
-                                        <span class="block-product__info__button-order">Заказать</span>
-                                        <span class="block-product__info__button-buy_one_click">Купить в 1 клик</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-mobile-button">
-                    <div class="swiper-button-prev product-slider__prev info-block__slider-prev"></div>
-                    <div class="swiper-button-next product-slider__next info-block__slider-next"></div>
-                </div>
-            </div>
-        </div>
         <div class="info-block">
-            <h3 class="info-block__name">Отзывы клиентов</h3>
-            <div class="swiper-container swiper-container_3">
-                <div class="swiper-wrapper swiper-no-swiping">
-                    <div class="swiper-slide block-comment">
-                        <div class="block-comment__wrap">
-                            <span class="block-comment__name_user">Иванов Иван</span>
-                            <span class="block-comment__name">Заголовок отзыва</span>
-                            <span class="block-comment__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, delectus vitae eaque possimus, tenetur ex voluptatem!</span>
-                            <div class="block-comment__rating">
-                                <img src="./images/rate.png" alt="">
+            <span class="info-block__name">Отзывы клиентов</span>
+            <div class="info-block__slider">
+                <div class="swiper-container swiper-container_3">
+                    <div class="swiper-wrapper swiper-no-swiping">
+                        <div class="swiper-slide block-comment">
+                            <div class="block-comment__wrap" itemprop="review" itemscope itemtype="http://schema.org/Review">
+                                <span class="block-comment__name_user" itemprop="author">Иванов Иван</span>
+                                <span class="block-comment__name" itemprop="name">Заголовок отзыва</span>
+                                <span class="block-comment__text" itemprop="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, delectus vitae eaque possimus, tenetur ex voluptatem!</span>
+                                <div class="block-comment__rating" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+                                    <meta itemprop="ratingValue" content = "3"/> 
+                                    <img src="./images/rate.png" alt="">
+                                </div>
+                                <meta itemprop="datePublished" content="2017-10-27">
+                                <span class="block-comment__date">27/10/2017</span>
                             </div>
-                            <span class="block-comment__date">27/10/2017</span>
                         </div>
-                    </div>
-                    <div class="swiper-slide block-comment">
-                        <div class="block-comment__wrap">
-                            <span class="block-comment__name_user">Иванов Иван</span>
-                            <span class="block-comment__name">Заголовок отзыва</span>
-                            <span class="block-comment__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, delectus vitae eaque possimus, tenetur ex voluptatem!</span>
-                            <div class="block-comment__rating">
-                                <img src="./images/rate.png" alt="">
+                        <div class="swiper-slide block-comment">
+                            <div class="block-comment__wrap" itemprop="review" itemscope itemtype="http://schema.org/Review">
+                                <span class="block-comment__name_user" itemprop="author">Иванов Иван</span>
+                                <span class="block-comment__name" itemprop="name">Заголовок отзыва</span>
+                                <span class="block-comment__text" itemprop="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, delectus vitae eaque possimus, tenetur ex voluptatem!</span>
+                                <div class="block-comment__rating" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+                                    <meta itemprop="ratingValue" content = "3"/> 
+                                    <img src="./images/rate.png" alt="">
+                                </div>
+                                <meta itemprop="datePublished" content="2017-10-27">
+                                <span class="block-comment__date">27/10/2017</span>
                             </div>
-                            <span class="block-comment__date">27/10/2017</span>
                         </div>
-                    </div>
-                    <div class="swiper-slide block-comment">
-                        <div class="block-comment__wrap">
-                            <span class="block-comment__name_user">Иванов Иван</span>
-                            <span class="block-comment__name">Заголовок отзыва</span>
-                            <span class="block-comment__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, delectus vitae eaque possimus, tenetur ex voluptatem!</span>
-                            <div class="block-comment__rating">
-                                <img src="./images/rate.png" alt="">
+                        <div class="swiper-slide block-comment">
+                            <div class="block-comment__wrap" itemprop="review" itemscope itemtype="http://schema.org/Review">
+                                <span class="block-comment__name_user" itemprop="author">Иванов Иван</span>
+                                <span class="block-comment__name" itemprop="name">Заголовок отзыва</span>
+                                <span class="block-comment__text" itemprop="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, delectus vitae eaque possimus, tenetur ex voluptatem!</span>
+                                <div class="block-comment__rating" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+                                    <meta itemprop="ratingValue" content = "3"/> 
+                                    <img src="./images/rate.png" alt="">
+                                </div>
+                                <meta itemprop="datePublished" content="2017-10-27">
+                                <span class="block-comment__date">27/10/2017</span>
                             </div>
-                            <span class="block-comment__date">27/10/2017</span>
                         </div>
                     </div>
                 </div>
                 <div class="swiper-mobile-button">
-                    <div class="swiper-button-prev product-slider__prev"></div>
-                    <div class="swiper-button-next product-slider__next"></div>
+                    <div class="swiper-button-prev product-slider__prev slider3-prev"></div>
+                    <div class="swiper-button-next product-slider__next slider3-next"></div>
                 </div>
             </div>
             <div class="show-more_2">
@@ -691,11 +607,122 @@
                 <div class="show-more_2__line"></div>
             </div>
         </div>
+
+        <div class="info-block">
+            <h3 class="info-block__name">Рекомендуемые товары</h3>
+            <div class="info-block__slider">
+                <div class="swiper-container swiper-container_4">
+                    <div class="swiper-wrapper swiper-no-swiping">
+                        <div class="swiper-slide">
+                            <div class="block-product">
+                                <a class="block-product__img" href="">
+                                    <div class="block-product__img__sticker">
+                                        <span class="block-product__img__sticker-new">новинка</span>
+                                    </div>
+                                    <div class="block-product__img__info">
+                                        <span class="block-product__img__info-text">60x30</span>
+                                        <span class="block-product__img__info-text">см</span>
+                                    </div>
+                                    <img class="block-product__img-prev" src="./images/infoblock-img/byket.jpg" alt="">
+                                </a>
+                                <div class="block-product__info">
+                                    <span class="block-product__info-name">Букет</span>
+                                    <div class="block-product__info__price">
+                                        <span class="block-product__info__price-current">1500 Р</span>
+                                    </div>
+                                    <div class="block-product__info__button">
+                                        <span class="block-product__info__button-order">Заказать</span>
+                                        <span class="block-product__info__button-buy_one_click js-buy-one-click">Купить в 1 клик</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="block-product">
+                                <a class="block-product__img" href="">
+                                    <div class="block-product__img__sticker">
+                                        <span class="block-product__img__sticker-new">новинка</span>
+                                    </div>
+                                    <div class="block-product__img__info">
+                                        <span class="block-product__img__info-text">60x30</span>
+                                        <span class="block-product__img__info-text">см</span>
+                                    </div>
+                                    <img class="block-product__img-prev" src="./images/infoblock-img/byket.jpg" alt="">
+                                </a>
+                                <div class="block-product__info">
+                                    <span class="block-product__info-name">Букет</span>
+                                    <div class="block-product__info__price">
+                                        <span class="block-product__info__price-current">1500 Р</span>
+                                    </div>
+                                    <div class="block-product__info__button">
+                                        <span class="block-product__info__button-order">Заказать</span>
+                                        <span class="block-product__info__button-buy_one_click js-buy-one-click">Купить в 1 клик</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="block-product">
+                                <a class="block-product__img" href="">
+                                    <div class="block-product__img__sticker">
+                                        <span class="block-product__img__sticker-new">новинка</span>
+                                    </div>
+                                    <div class="block-product__img__info">
+                                        <span class="block-product__img__info-text">60x30</span>
+                                        <span class="block-product__img__info-text">см</span>
+                                    </div>
+                                    <img class="block-product__img-prev" src="./images/infoblock-img/byket.jpg" alt="">
+                                </a>
+                                <div class="block-product__info">
+                                    <span class="block-product__info-name">Букет</span>
+                                    <div class="block-product__info__price">
+                                        <span class="block-product__info__price-current">1500 Р</span>
+                                    </div>
+                                    <div class="block-product__info__button">
+                                        <span class="block-product__info__button-order">Заказать</span>
+                                        <span class="block-product__info__button-buy_one_click js-buy-one-click">Купить в 1 клик</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="block-product">
+                                <a class="block-product__img" href="">
+                                    <div class="block-product__img__sticker">
+                                        <span class="block-product__img__sticker-new">новинка</span>
+                                    </div>
+                                    <div class="block-product__img__info">
+                                        <span class="block-product__img__info-text">60x30</span>
+                                        <span class="block-product__img__info-text">см</span>
+                                    </div>
+                                    <img class="block-product__img-prev" src="./images/infoblock-img/byket.jpg" alt="">
+                                </a>
+                                <div class="block-product__info">
+                                    <span class="block-product__info-name">Букет</span>
+                                    <div class="block-product__info__price">
+                                        <span class="block-product__info__price-current">1500 Р</span>
+                                    </div>
+                                    <div class="block-product__info__button">
+                                        <span class="block-product__info__button-order">Заказать</span>
+                                        <span class="block-product__info__button-buy_one_click js-buy-one-click">Купить в 1 клик</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-mobile-button">
+                    <div class="swiper-button-prev product-slider__prev slider4-prev"></div>
+                    <div class="swiper-button-next product-slider__next slider4-next"></div>
+                </div>
+            </div>
+        </div>
+
         <div class="block-add-comment">
             <h3 class="block-add-comment__name">Оставить отзыв</h3>
             <form action="url">
                 <div class="block-add-comment__wrap">
-                    <div class="grid-2">
+                    <div class="grid-2_sm-1">
                         <div class="col">
                             <div class="block-add-comment__wrap-elements">
                                 <input class="input-name" name="name" type="text" placeholder="Имя">
@@ -725,7 +752,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="grid-2">
+                    <div class="grid-2_sm-1">
                         <div class="col">
                             <div class="rating">
                                 <span class="rating__text">Ваша оценка</span>
@@ -738,7 +765,7 @@
                     </div>
                 </div>
             </form>
-        </div-->
+        </div>
     </div>
 
     <footer class="footer">
