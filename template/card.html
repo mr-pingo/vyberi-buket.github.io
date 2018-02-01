@@ -314,12 +314,14 @@
                     </div>
                     <div class="content-footer__group" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
                         <span class="content-footer__group-text">Оценить:</span>
-                        <div class="content-footer__rating">
-                            <img src="./images/rate-2.png" alt="">
-                            <meta itemprop="reviewCount" content="1"/>
-                            <meta itemprop="ratingValue" content="4"/>
+                        <div class="group">
+                            <div class="content-footer__rating">
+                                <img src="./images/rate-2.png" alt="">
+                                <meta itemprop="reviewCount" content="1"/>
+                                <meta itemprop="ratingValue" content="4"/>
+                            </div>
+                            <span class="content-footer__rating-count">1946 голосов</span>
                         </div>
-                        <span class="content-footer__rating-count">1946 голосов</span>
                     </div>
                 </div>
             </div>
@@ -725,13 +727,13 @@
                     <div class="grid-2_sm-1">
                         <div class="col">
                             <div class="block-add-comment__wrap-elements">
-                                <input class="input-name" name="name" type="text" placeholder="Имя">
+                                <input class="input-name" id="name" name="name" type="text" placeholder="Имя">
                                 <label for="name"></label>
                             </div>
                         </div>
                         <div class="col">
                             <div class="block-add-comment__wrap-elements">
-                                <input class="input-phone" name="phone" type="text" placeholder="Телефон">
+                                <input class="input-phone" id="phone" name="phone" type="text" placeholder="Телефон">
                                 <label for="phone"></label>
                             </div>
                         </div>
@@ -739,7 +741,7 @@
                     <div class="grid">
                         <div class="col">
                             <div class="block-add-comment__wrap-elements">
-                                <input class="input-text" name="message" type="text" placeholder="Заголовок отзыва">
+                                <input class="input-text" id="message" name="message" type="text" placeholder="Заголовок отзыва">
                                 <label for="message"></label>
                             </div>
                         </div>
@@ -747,8 +749,8 @@
                     <div class="grid">
                         <div class="col">
                             <div class="block-add-comment__wrap-elements">
-                                <textarea class="textarea" name="message" id="" cols="30" rows="10" placeholder="Комментарий"></textarea>
-                                <label for="message"></label>
+                                <textarea class="textarea" id="message_2" name="message" cols="30" rows="10" placeholder="Комментарий"></textarea>
+                                <label for="message_2"></label>
                             </div>
                         </div>
                     </div>

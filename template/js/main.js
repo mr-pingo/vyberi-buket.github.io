@@ -231,32 +231,32 @@ $(document).ready(function () {
                 <span class="select-town__list-text">Популярные города:</span>\
                 <div class="select-town__list-group">\
                     <ul class="select-town__list__elements">\
-                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Москва</a></li>\
-                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Санкт-Петербург</a></li>\
-                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Новосибирск</a></li>\
-                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Екатеринбург</a></li>\
-                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Нижний Новгород</a></li>\
+                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">Москва</a></li>\
+                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">Санкт-Петербург</a></li>\
+                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">Новосибирск</a></li>\
+                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">Екатеринбург</a></li>\
+                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">Нижний Новгород</a></li>\
                     </ul>\
                     <ul class="select-town__list__elements">\
-                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Казань</a></li>\
-                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Челябинск</a></li>\
-                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Омск</a></li>\
-                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Самара</a></li>\
-                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Ростов-на-Дону</a></li>\
+                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">Казань</a></li>\
+                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">Челябинск</a></li>\
+                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">Омск</a></li>\
+                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">Самара</a></li>\
+                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">Ростов-на-Дону</a></li>\
                     </ul>\
                     <ul class="select-town__list__elements">\
-                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Уфа</a></li>\
-                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Красноярск</a></li>\
-                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Пермь</a></li>\
-                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Воронеж</a></li>\
-                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Волгоград</a></li>\
+                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">Уфа</a></li>\
+                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">Красноярск</a></li>\
+                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">Пермь</a></li>\
+                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">Воронеж</a></li>\
+                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">Волгоград</a></li>\
                     </ul>\
                     <ul class="select-town__list__elements">\
-                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Краснодар</a></li>\
-                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Саратов</a></li>\
-                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Тюмень</a></li>\
-                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Тольятти</a></li>\
-                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Ижевск</a></li>\
+                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">Краснодар</a></li>\
+                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">Саратов</a></li>\
+                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">Тюмень</a></li>\
+                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">Тольятти</a></li>\
+                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">Ижевск</a></li>\
                     </ul>\
                 </div>\
             </div>\

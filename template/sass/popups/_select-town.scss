@@ -5,13 +5,22 @@
     &__header{
         font-size: 24px;
         margin-right: 25px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: lighter;
+        font-size: 28px;
+        line-height: 35px;
+        color: #000;
         &-name{
-            font-weight: 700;
+            font-weight: 600;
         }
     }
     &__info{
         margin: 15px 0px;
         font-size: 14px;
+        font-family: 'Open Sans', sans-serif;
+        line-height: 22px;
+        text-align: justify;
+        color: #000;
     }
     &__form{
         display: flex;
