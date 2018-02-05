@@ -46,6 +46,7 @@ function changes(screen){
         $('.js-info-block_2--').insertAfter($('.group .info-block_2__name'));
         //----------------------Карточка товара
         $('.js-card_name--').appendTo('.header');
+        $('.content-footer').appendTo('.content__group-block');
         /*$('.content__right-block').insertAfter($('.content__left-block .gallery'));
         $('.content__right-block').append('<div class="js-left-block"></div>');
         $('.content__right-block').append('<div class="js-right-block"></div>');
@@ -68,6 +69,7 @@ function changes(screen){
         $('.js-info-block_2--').insertAfter($('.info-block_2__group .group'));
         //----------------------Карточка товара
         $('.js-card_name--').prependTo('.js-info_block_4--');
+        $('.content-footer').appendTo('.js-description');
         /*$('.content__right-block').appendTo('.content__group-block');
         $('.filter_2').insertAfter($('.js-info_block_4-- .js-card_name--'));
         $('.js-order_info_1--').prependTo('.js-order_info--');

@@ -117,9 +117,9 @@ $(document).ready(function () {
         var link = $(this).children('img').attr('src');
         $(this).parents('.gallery').find('.js-gallery-img').attr('src', link);
     });
-    //----------
+    //-------------------------
     //Переключатель изображений
-    //----------
+    //-------------------------
     $('.js-next-slide').on('click', function(){
         if($('.gallery__mini__img.active').next('.gallery__mini__img').length > 0){
             $('.gallery__mini__img.active').removeClass('active').next('.gallery__mini__img').addClass('active');
@@ -168,7 +168,7 @@ $(document).ready(function () {
     // Popups
     //-------
     $('.js-photo').on('click', function () {
-        var link = $(this).find('.js-photo-link').attr('src');
+        var link = $(this).find('.js-photo-link').data('src');
         var popup = $('<div style="display: none;">\
         <div class="box-modal" id="popup_img">\
         <div class="box-modal_close arcticmodal-close"></div>\
@@ -325,9 +325,9 @@ $(document).ready(function () {
     });
     $("#amount").html("с " + $("#slider-range").slider("values", 0) + ":00" + " до " + $("#slider-range").slider("values", 1) + ":00");
 
-    //--------
-    //Calendar
-    //--------
+    //---------
+    //Календарь
+    //---------
     $("#datepicker").datepicker({
         showOn: "button",
         buttonImage: "/images/calendar.png",
@@ -404,5 +404,31 @@ $(document).ready(function () {
     });
     $('.js-top').click(function() {
         $('body,html').animate({scrollTop:0},800);
+    });
+    //------------
+    //Размер блока
+    //------------
+    $('.element-block_2').each(function () {
+        var height = '290';
+        if($(this).innerHeight() > height){
+            $(this).innerHeight(290).css({'overflow' : 'hidden'});
+            $(this).append('<div class="bottom-element-block"><div class="bottom-element-block__group"><span class="bottom-element-block__group-link js-rev">Показать всё</span></div></div>');
+        }else{
+            $(this).innerHeight();
+        }
+        $(this).on('click', '.js-rev', function(){
+            $(this).toggleClass('active');
+            if($(this).hasClass('active')){
+                $(this).html('Скрыть всё').parents('.element-block_2').css({'padding-bottom' : '50px'}).innerHeight('100%');
+                $(this).parents('.bottom-element-block').css({
+                    'background' : 'none',
+                });
+            }else{
+                $(this).html('Показать всё').parents('.element-block_2').css({'padding-bottom' : '30px'}).innerHeight(height);
+                $(this).parents('.bottom-element-block').css({
+                    'background' : 'url(../../images/bg-rev.png) repeat-x',
+                });
+            }
+        });
     });
 });

@@ -172,6 +172,7 @@
     &__name{
         margin: 0;
         padding: 0;
+        margin-bottom: 16px;
         text-align: center;
         font-family: 'Open Sans', sans-serif;
         font-weight: lighter;
@@ -275,7 +276,6 @@ hr.info-block_5__hr{
     &__elements{
         height: 100%;
         display: flex;
-        justify-content: space-between;
         margin-bottom: 40px;
         &:first-child{
             margin-top: 40px;

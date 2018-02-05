@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# product: http://ogp.me/ns/product#">
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:type" content="product" /> 
-    <meta property="og:url" content="URL адрес карточки товара" /> 
-    <meta property="og:title" content="название товара из H1" /> 
-    <meta property="og:image" content="URL адрес картинки товара" />
-    <meta property="og:description" name="description" content="Описание товара из descriptions">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="Url адерс главной">
+    <meta property="og:title" content="Купить цветы с доставкой в Москве и по России">
+    <meta property="og:image" content="URL адрес картинки сайта">
+    <meta property="og:description" name="description" content="Интернет магазина 'Выбери букет' круглосуточно осуществляет доставку цветов по Москве и по России, у нас всегда можно недорого купить свежие цветы и заказать доставку на дом или в офис, время доставки от 1 до 4 часов">
     <meta name="keywords" content="доставка цветов, цветы с доставкой по Москве, купить цветы, заказать доставку цветов, цветы в москве, недорогие цветы Москва">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/gridlex.css">
@@ -70,7 +70,7 @@
                         <div class="group-info">
                             <span class="group-info__text">Город доставки</span>
                             <i class="group-info__icon"></i>
-                            <span class="group-info__link">Александровск-Сахалинский</span>
+                            <span class="group-info__link js-select-town">Александровск-Сахалинский</span>
                         </div>
                     </div>
                     <div class="header__wrap-group js-header-wrap-group--">
@@ -110,6 +110,7 @@
                             <div class="group-info_4">
                                 <div class="group-info_4__elements">
                                     <span class="group-info_4__elements-button js-call-back">Обратный звонок</span>
+                                    <i class="group-info_4__elements-icon js-call-back" title="Обратный звонок"></i>
                                 </div>
                             </div>
                             <div class="group-info_5">
@@ -117,7 +118,7 @@
                                     <i class="group-info_5__elements-icons">2</i>
                                     <div class="group-info_5__elements-group">
                                         <span class="group-info_5__elements-text">Корзина</span>
-                                        <span class="group-info_5__elements-count">22 500 <i>&#8381;</i></span>
+                                        <span class="group-info_5__elements-count">22 500<i class="rub"></i></span>
                                     </div>
                                 </a>
                             </div>
@@ -227,105 +228,106 @@
             <hr class="info-block_5__hr js-hr--">
         </div>
         <ol class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
-                <li class="breadcrumbs__list" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"> 
-                    <a class="breadcrumbs__list__link" itemprop="item" href=""> 
+            <li class="breadcrumbs__list" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a class="breadcrumbs__list__link" itemprop="item" href=""> 
                         <span class="breadcrumbs__list__link-text" itemprop="name">Главная</span>
-                    </a> 
-                    <meta itemprop="position" content="1" />
-                </li> 
-                <li class="breadcrumbs__list" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                    <a class="breadcrumbs__list__link" itemprop="item" href=""> 
+                    </a>
+                <meta itemprop="position" content="1" />
+            </li>
+            <li class="breadcrumbs__list" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a class="breadcrumbs__list__link" itemprop="item" href=""> 
                         <span class="breadcrumbs__list__link-text" itemprop="name">Каталог товаров</span>
-                    </a> 
-                    <meta itemprop="position" content="2" />
-                </li>
-                <li class="breadcrumbs__list" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"> 
-                    <span class="breadcrumbs__list__link-text active" itemprop="name">Необыкновенные бабочки экстра</span> 
-                    <meta itemprop="position" content="3" /> 
-                </li>
-            </ol>
+                    </a>
+                <meta itemprop="position" content="2" />
+            </li>
+            <li class="breadcrumbs__list" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <span class="breadcrumbs__list__link-text active" itemprop="name">Необыкновенные бабочки экстра</span>
+                <meta itemprop="position" content="3" />
+            </li>
+        </ol>
     </header>
 
     <div class="content">
-        <div class="content__group-block" itemscope itemtype="http://schema.org/Product">
+        <main itemscope itemtype="http://schema.org/Product">
+        <div class="content__group-block">
             <div class="content__left-block">
-                <main>
+                <div class="js-description">
                     <div class="gallery">
-                    <div class="group">
-                        <div class="gallery__mini">
-                            <div class="gallery__mini__img js-gallery active">
-                                <img class="gallery__mini__img-prev" src="./images/infoblock-img/byket.jpg" alt="">
+                        <div class="group">
+                            <div class="gallery__mini">
+                                <div class="gallery__mini__img js-gallery active">
+                                    <img class="gallery__mini__img-prev" src="./images/infoblock-img/byket.jpg" alt="">
+                                </div>
+                                <div class="gallery__mini__img js-gallery">
+                                    <img class="gallery__mini__img-prev" src="./images/infoblock-img/mini.jpg" alt="">
+                                </div>
+                                <div class="gallery__mini__img js-gallery">
+                                    <img class="gallery__mini__img-prev" src="./images/infoblock-img/mini.jpg" alt="">
+                                </div>
                             </div>
-                            <div class="gallery__mini__img js-gallery">
-                                <img class="gallery__mini__img-prev" src="./images/infoblock-img/mini.jpg" alt="">
-                            </div>
-                            <div class="gallery__mini__img js-gallery">
-                                <img class="gallery__mini__img-prev" src="./images/infoblock-img/mini.jpg" alt="">
+                            <div class="gallery__btn">
+                                <div class="gallery__btn-img js-btn-popup-block_1"></div>
+                                <div class="gallery__btn__window js-popup-block_1">
+                                    <ul class="popup-block">
+                                        <li class="popup-block__list">Орхидея ванда
+                                            <span class="popup-block__list-text">- 7 шт.</span>
+                                        </li>
+                                        <li class="popup-block__list">Лизиантус
+                                            <span class="popup-block__list-text">- 7 шт.</span>
+                                        </li>
+                                        <li class="popup-block__list">Хризантема кустовая сталион
+                                            <span class="popup-block__list-text">- 7 шт.</span>
+                                        </li>
+                                        <li class="popup-block__list">Альстромерии
+                                            <span class="popup-block__list-text">- 6 шт.</span>
+                                        </li>
+                                    </ul>
+                                    <span class="popup-block__list-text">Статица, Фисташка, Аспарагус сетакус, Лента</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="gallery__btn">
-                            <div class="gallery__btn-img js-btn-popup-block_1"></div>
-                            <div class="gallery__btn__window js-popup-block_1">
-                                <ul class="popup-block">
-                                    <li class="popup-block__list">Орхидея ванда
-                                        <span class="popup-block__list-text">- 7 шт.</span>
-                                    </li>
-                                    <li class="popup-block__list">Лизиантус
-                                        <span class="popup-block__list-text">- 7 шт.</span>
-                                    </li>
-                                    <li class="popup-block__list">Хризантема кустовая сталион
-                                        <span class="popup-block__list-text">- 7 шт.</span>
-                                    </li>
-                                    <li class="popup-block__list">Альстромерии
-                                        <span class="popup-block__list-text">- 6 шт.</span>
-                                    </li>
-                                </ul>
-                                <span class="popup-block__list-text">Статица, Фисташка, Аспарагус сетакус, Лента</span>
+                        <div class="gallery__full">
+                            <div class="gallery__full__sticker">
+                                <span class="gallery__full__sticker-sale">-20%</span>
+                                <span class="gallery__full__sticker-new">новинка</span>
+                                <span class="gallery__full__sticker-hit">хит</span>
                             </div>
+                            <div class="gallery__full__info">
+                                <span class="gallery__full__info-text">60x30</span>
+                                <span class="gallery__full__info-text">см</span>
+                            </div>
+                            <div class="gallery__full__img js-photo">
+                                <img class="gallery__full__img-prev js-gallery-img js-photo-link" src="./images/infoblock-img/byket.jpg" data-src="./images/infoblock-img/byket.jpg" alt="Роза красная" title="Букет из красной розы" itemprop="image">
+                            </div>
+                            <div class="swiper-button-prev product-slider__prev mobile-swiper-button js-prev-slide"></div>
+                            <div class="swiper-button-next product-slider__next mobile-swiper-button js-next-slide"></div>
                         </div>
                     </div>
-                    <div class="gallery__full">
-                        <div class="gallery__full__sticker">
-                            <span class="gallery__full__sticker-sale">-20%</span>
-                            <span class="gallery__full__sticker-new">новинка</span>
-                            <span class="gallery__full__sticker-hit">хит</span>
-                        </div>
-                        <div class="gallery__full__info">
-                            <span class="gallery__full__info-text">60x30</span>
-                            <span class="gallery__full__info-text">см</span>
-                        </div>
-                        <div class="gallery__full__img js-photo">
-                            <img class="gallery__full__img-prev js-gallery-img js-photo-link" src="./images/infoblock-img/byket.jpg" alt="Роза красная" title="Букет из красной розы" itemprop="image">
-                        </div>
-                        <div class="swiper-button-prev product-slider__prev mobile-swiper-button js-prev-slide"></div>
-                        <div class="swiper-button-next product-slider__next mobile-swiper-button js-next-slide"></div>
-                    </div>
-                </div>
                     <p itemprop="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt id obcaecati enim necessitatibus maiores possimus maxime numquam cupiditate voluptatibus sunt ipsum eveniet dignissimos, rerum nesciunt. Quidem, deleniti excepturi id illum, vel porro expedita laborum officia explicabo ab dignissimos minima saepe atque omnis voluptatem, ullam veniam eius fuga. Natus, aut. Non impedit dignissimos molestiae? Odio qui, sapiente iste id, aspernatur, veniam quam praesentium officia sint quia eos aut. Aspernatur necessitatibus consequuntur dolorem labore nulla ad rerum nam, molestiae accusantium, praesentium maxime?</p>
                     <div class="content-footer">
-                    <div class="content-footer__group">
-                        <span class="content-footer__group-text">Поделиться:</span>
-                        <div class="socials">
-                            <a class="socials__link" href=""><i class="fa fa-vk" aria-hidden="true"></i></a>
-                            <a class="socials__link" href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                            <a class="socials__link" href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                            <a class="socials__link" href=""><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a>
-                            <a class="socials__link" href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                    <div class="content-footer__group" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                        <span class="content-footer__group-text">Оценить:</span>
-                        <div class="group">
-                            <div class="content-footer__rating">
-                                <img src="./images/rate-2.png" alt="">
-                                <meta itemprop="reviewCount" content="1"/>
-                                <meta itemprop="ratingValue" content="4"/>
+                        <div class="content-footer__group">
+                            <span class="content-footer__group-text">Поделиться:</span>
+                            <div class="socials">
+                                <a class="socials__link" href=""><i class="fa fa-vk" aria-hidden="true"></i></a>
+                                <a class="socials__link" href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                <a class="socials__link" href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <a class="socials__link" href=""><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a>
+                                <a class="socials__link" href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a>
                             </div>
-                            <span class="content-footer__rating-count">1946 голосов</span>
+                        </div>
+                        <div class="content-footer__group" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                            <span class="content-footer__group-text">Оценка:</span>
+                            <div class="group">
+                                <div class="content-footer__rating">
+                                    <img src="./images/rate-2.png" alt="">
+                                    <meta itemprop="reviewCount" content="1" />
+                                    <meta itemprop="ratingValue" content="4" />
+                                </div>
+                                <span class="content-footer__rating-count">1946 голосов</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                </main>
             </div>
             <div class="content__right-block">
                 <div class="info-block_4 js-info_block_4--">
@@ -347,15 +349,16 @@
                         </div>
                         <div class="order-info js-order_info--">
                             <div class="order-info__group js-order_info_1--" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                                <meta itemprop="priceCurrency" content="RUB"/>
+                                <meta itemprop="priceCurrency" content="RUB" />
                                 <span class="order-info__price" itemprop="price">4 500 Р</span>
-                                <link itemprop="availability" href="http://schema.org/InStock"/> 
+                                <link itemprop="availability" href="http://schema.org/InStock" />
                                 <span class="order-info__price_old">5 100 Р</span>
                             </div>
                             <div class="order-info__group">
                                 <div class="group">
                                     <span class="order-info__text js-btn-popup-block_2">Доставка: + 600 Р</span>
                                     <div class="order-info__group__window js-popup-block_2">
+                                        <div class="order-info__group__window-close"></div>
                                         <div class="group-info">
                                             <span class="group-info__text">Город доставки</span>
                                             <i class="group-info__icon"></i>
@@ -382,6 +385,7 @@
                                 <div class="group">
                                     <span class="order-info__text js-btn-popup-block_3">Способы оплаты</span>
                                     <div class="order-info__group__window js-popup-block_3">
+                                        <div class="order-info__group__window-close"></div>
                                         <div class="order-info__group__window__wrap">
                                             <div class="group">
                                                 <span class="order-info__group__window__wrap-header">Электронные платежные системы</span>
@@ -416,6 +420,7 @@
                                 <div class="group mobile-block">
                                     <span class="order-info__text js-btn-popup-block_1">Состав букета</span>
                                     <div class="order-info__group__window js-popup-block_1">
+                                        <div class="order-info__group__window-close"></div>
                                         <ul class="popup-block">
                                             <li class="popup-block__list">Орхидея ванда
                                                 <span class="popup-block__list-text">- 7 шт.</span>
@@ -542,6 +547,7 @@
                 </div>
             </div>
         </div>
+        </main>
         <div class="info-block_3">
             <img class="info-block_3__bg" src="./images/infoblock-img/5.png" alt="">
             <div class="info-block_3__content">
@@ -674,7 +680,7 @@
                                 <span class="block-comment__name" itemprop="name">Заголовок отзыва</span>
                                 <span class="block-comment__text" itemprop="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, delectus vitae eaque possimus, tenetur ex voluptatem!</span>
                                 <div class="block-comment__rating" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
-                                    <meta itemprop="ratingValue" content = "3"/> 
+                                    <meta itemprop="ratingValue" content="3" />
                                     <img src="./images/rate.png" alt="">
                                 </div>
                                 <meta itemprop="datePublished" content="2017-10-27">
@@ -687,7 +693,7 @@
                                 <span class="block-comment__name" itemprop="name">Заголовок отзыва</span>
                                 <span class="block-comment__text" itemprop="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, delectus vitae eaque possimus, tenetur ex voluptatem!</span>
                                 <div class="block-comment__rating" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
-                                    <meta itemprop="ratingValue" content = "3"/> 
+                                    <meta itemprop="ratingValue" content="3" />
                                     <img src="./images/rate.png" alt="">
                                 </div>
                                 <meta itemprop="datePublished" content="2017-10-27">
@@ -700,7 +706,7 @@
                                 <span class="block-comment__name" itemprop="name">Заголовок отзыва</span>
                                 <span class="block-comment__text" itemprop="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, delectus vitae eaque possimus, tenetur ex voluptatem!</span>
                                 <div class="block-comment__rating" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
-                                    <meta itemprop="ratingValue" content = "3"/> 
+                                    <meta itemprop="ratingValue" content="3" />
                                     <img src="./images/rate.png" alt="">
                                 </div>
                                 <meta itemprop="datePublished" content="2017-10-27">
@@ -721,7 +727,7 @@
             </div>
         </div>
         <div class="block-add-comment">
-            <h3 class="block-add-comment__name">Оставить отзыв</h3>
+            <span class="block-add-comment__name">Оставить отзыв</span>
             <form action="url">
                 <div class="block-add-comment__wrap">
                     <div class="grid-2_sm-1">

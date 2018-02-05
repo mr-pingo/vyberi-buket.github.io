@@ -157,6 +157,15 @@
                 background-position: -81px -25px;
                 z-index: 101;
             }
+            &-close{
+                position: absolute;
+                width: 19px;
+                height: 19px;
+                background: url(../../images/sprite.png) no-repeat;
+                background-position: -124px -24px;
+                top: -10px;
+                right: 20px;
+            }
             &__elements{
                 display: flex;
                 align-items: center;
@@ -225,7 +234,7 @@
             }
             .group-info{
                 min-width: 300px;
-                width: 100%;
+                width: max-content;
                 display: flex;
                 &__text{
                     font-family: 'Open Sans', sans-serif;
@@ -316,6 +325,7 @@
 .time-block_mini{
     position: absolute;
     bottom: 0;
+    left: 0;
     width: 100%;
     height: 66px;
     background: #55c3c0;
@@ -664,4 +674,54 @@
 }
 .input-error{
     border: 1px solid #c35555;
+}
+.bottom-element-block{
+    position: absolute;
+    width: 100%;
+    height: 86px;    
+    bottom: 0;
+    left: 0;
+    background: url(../../images/bg-rev.png) repeat-x;
+    z-index: 2;
+    &__group{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-link{
+            position: relative;
+            margin-top: 45px;
+            cursor: pointer;
+            font-size: 14px;
+            color: #000;
+            &:before{
+                content: '';
+                position: absolute;
+                height: 1px;
+                width: 100%;
+                top: 15px;
+                border-bottom: 1px dashed #000;
+            }
+            &:hover{
+                &:before{
+                    border-bottom: 0px;
+                }
+            }
+            &:after{
+                content: '';
+                width: 11px;
+                height: 7px;
+                position: absolute;
+                top: 6px;
+                right: -20px;
+                background: url(../../images/sprite.png) no-repeat;
+                background-position: -81px -35px;
+            }
+            &.active{
+                &:after{
+                    background-position: -81px -43px
+                }
+            }
+        }
+    }
 }
