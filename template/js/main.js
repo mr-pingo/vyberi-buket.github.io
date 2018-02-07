@@ -152,15 +152,12 @@ $(document).ready(function () {
     //------- 
     // Select
     //-------
-    $('select').ikSelect({
-        //autoWidth: false,
-        //ddFullWidth: false,
-    });
+    $('select').ikSelect();
     $('.js-select').ikSelect('disable');
     $('.checkbox').on('click', function () {
-        if ($(this).prop('checked')) {
+        if($(this).prop('checked')){
             $(this).parents('.js-form-select').find('.js-select').ikSelect('enable');
-        } else {
+        }else{
             $(this).parents('.js-form-select').find('.js-select').ikSelect('disable');
         }
     });
@@ -168,12 +165,14 @@ $(document).ready(function () {
     // Popups
     //-------
     $('.js-photo').on('click', function () {
-        var link = $(this).find('.js-photo-link').data('src');
+        var link = $(this).find('.js-photo-link').attr('src');
         var popup = $('<div style="display: none;">\
         <div class="box-modal" id="popup_img">\
         <div class="box-modal_close arcticmodal-close"></div>\
         <div class="images">\
-        <img class="images__prev" src="' + link + '" alt="">\
+        <div class="swiper-button-prev product-slider__prev mobile-swiper-button js-prev-slide"></div>\
+        <img class="images__prev" src="'+link+'" alt="">\
+        <div class="swiper-button-next product-slider__next mobile-swiper-button js-next-slide"></div>\
         </div>\
         </div>\
         </div>');
@@ -181,6 +180,29 @@ $(document).ready(function () {
         $('#popup_img').arcticmodal({
             afterClose: function (data, el) {
                 $(document).find('#popup_img').remove();
+            }
+        });
+        $('.js-next-slide').on('click', function(){
+            if($('.gallery__mini__img.active').next('.gallery__mini__img').length > 0){
+                $('.gallery__mini__img.active').removeClass('active').next('.gallery__mini__img').addClass('active');
+                var link = $('.gallery__mini__img.active').children('.gallery__mini__img-prev').attr('src');
+                $('body').find('.images__prev').attr('src', link);
+            }else{
+                $('.gallery__mini__img').removeClass('active').eq(0).addClass('active');
+                var link = $('.gallery__mini__img.active').children('.gallery__mini__img-prev').attr('src');
+                $('body').find('.images__prev').attr('src', link);
+            }
+        });
+         $('.js-prev-slide').on('click', function(){
+            if($('.gallery__mini__img.active').prev('.gallery__mini__img').length > 0){
+                $('.gallery__mini__img.active').removeClass('active').prev('.gallery__mini__img').addClass('active');
+                $('.gallery__mini__img.active').removeClass('active').prev('.gallery__mini__img').addClass('active');
+                var link = $('.gallery__mini__img.active').children('.gallery__mini__img-prev').attr('src');
+                $('body').find('.images__prev').attr('src', link);
+            }else{
+                $('.gallery__mini__img').removeClass('active').eq($('.gallery__mini__img').length - 1).addClass('active');
+                var link = $('.gallery__mini__img.active').children('.gallery__mini__img-prev').attr('src');
+                $('body').find('.images__prev').attr('src', link);
             }
         });
     });
@@ -221,8 +243,8 @@ $(document).ready(function () {
         <div class="box-modal popup-call-back" id="popup-select-town">\
         <div class="box-modal_close arcticmodal-close"></div>\
         <div class="select-town">\
-            <div class="select-town__header">Вы находитесь в городе <span class="select-town__header-name">Владимир</span></div>\
-            <div class="select-town__info">Если <span class="select-town__info-name">Владимир</span> не Ваш город, то для отображения верной стоимости и сроков доставки укажите Ваш город в поле ниже.</div>\
+            <div class="select-town__header">Город доставки <span class="select-town__header-name">Владимир</span></div>\
+            <div class="select-town__info">Если доставка нужна в другой город, укажите его в поле ниже.</div>\
             <form class="select-town__form" action="">\
                 <input class="select-town__form-poly" type="text" plaseholder="Ваш город">\
                 <button class="select-town__form-button" >Сохранить</button>\

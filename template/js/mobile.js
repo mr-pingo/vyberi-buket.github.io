@@ -1,12 +1,11 @@
 document.addEventListener("DOMContentLoaded", function(){
-    $curSize = '';
     var screen = window.matchMedia('(max-width:999px)');
     var screen2 = window.matchMedia('(max-width:767px)');
     changes(screen);
     changes2(screen2);
-    screen.addListener(changes);
-    screen2.addListener(changes2);
-    if(!screen2.matches){
+    if(navigator.userAgent.search(/Edge/) == -1 ){
+        screen.addListener(changes);
+        screen2.addListener(changes2);
     }
 });
 if(navigator.userAgent.search(/Edge/) >-1 ){
@@ -17,16 +16,6 @@ if(navigator.userAgent.search(/Edge/) >-1 ){
         screen2.addListener(changes2);
     });
 }
-/*if(matchMedia){
-    var screen = window.matchMedia('(max-width:999px)');
-    screen.addListener(changes);
-    var screen2 = window.matchMedia('(max-width:767px)');
-    screen2.addListener(changes2);
-    //changes2(screen2);
-    if(!screen2.matches){
-        //changes(screen);
-    }
-}*/
 function changes(screen){
     if(screen.matches){
         //----------------------Главная
@@ -47,14 +36,14 @@ function changes(screen){
         //----------------------Карточка товара
         $('.js-card_name--').appendTo('.header');
         $('.content-footer').appendTo('.content__group-block');
-        /*$('.content__right-block').insertAfter($('.content__left-block .gallery'));
-        $('.content__right-block').append('<div class="js-left-block"></div>');
-        $('.content__right-block').append('<div class="js-right-block"></div>');
-        $('.filter_2').prependTo('.js-right-block');
-        $('.js-filter_3--').appendTo('.js-right-block');
-        $('.js-order_info_1--').appendTo('.js-left-block');
-        $('.js-time_block--').insertAfter($('.js-left-block .js-order_info_1--'));
-        $('.js-order_info--').appendTo('.js-left-block');*/
+        $(document).ready(function(){
+            $('.js-select').each(function(){
+                var text = $(this).parents('.js-form-select').find('.checkbox-label').text();
+                $(this).ikSelect('enable');
+                $(this).prepend('<option value="0" class="select-opt" selected disabled>'+text+'</option>');
+                $(this).ikSelect('reset');
+            });
+        });
     }else{
         //----------------------Главная
         $('.js-top-links--').prependTo('.js-header-wrap--');
@@ -70,14 +59,11 @@ function changes(screen){
         //----------------------Карточка товара
         $('.js-card_name--').prependTo('.js-info_block_4--');
         $('.content-footer').appendTo('.js-description');
-        /*$('.content__right-block').appendTo('.content__group-block');
-        $('.filter_2').insertAfter($('.js-info_block_4-- .js-card_name--'));
-        $('.js-order_info_1--').prependTo('.js-order_info--');
-        $('.js-order_info--').insertAfter($('.js-info_block_4-- .filter_2'));
-        $('.js-time_block--').insertAfter($('.js-info_block_4-- .js-order_info--'));
-        $('.js-filter_3--').insertAfter($('.js-info_block_4-- .js-time_block--'));
-        $('.js-left-block').remove();
-        $('.js-right-block').remove();*/
+        $(document).ready(function(){
+            $('.js-select').ikSelect('disable');
+            $('.select-opt').remove();
+            $('.js-select').ikSelect('reset');
+        });
     }
 }
 function changes2(screen2){
@@ -110,9 +96,6 @@ function changes2(screen2){
                 $('body').find('.js-open-menu').toggle();
             });
         }
-        //----------------------Карточка товара
-        /*$('.js-card_name--').insertAfter($('.header .breadcrumbs'));*/
-        
     }else if(laptop.matches){
         $('.js-top-links--').appendTo($('.js-top-menu--'));
         $('.js-logo--').insertAfter($('.js-header-wrap .header__wrap__img'));
@@ -134,6 +117,11 @@ function changes2(screen2){
         $('.js-footer-img--').prependTo($('.js-footer-el_4--'));
         $('.js-info-block_2--').insertAfter($('.info-block_2__group .group'));
         $('.js-open-search').css({'display' : 'block'});
+        $(document).ready(function(){
+            $('.js-select').ikSelect('disable');
+            $('.select-opt').remove();
+            $('.js-select').ikSelect('reset');
+        });
     }else{
         $('.js-call-back').prependTo('.group-info_3');
         $('.js-number-basket--').appendTo($('.js-header-wrap--'));

@@ -118,7 +118,7 @@
                                     <i class="group-info_5__elements-icons">2</i>
                                     <div class="group-info_5__elements-group">
                                         <span class="group-info_5__elements-text">Корзина</span>
-                                        <span class="group-info_5__elements-count">22 500<i class="rub"></i></span>
+                                        <span class="group-info_5__elements-count">22 500<i class="rub">Р</i></span>
                                     </div>
                                 </a>
                             </div>
@@ -247,9 +247,8 @@
         </ol>
     </header>
 
-    <div class="content">
-        <main itemscope itemtype="http://schema.org/Product">
-        <div class="content__group-block">
+    <div class="content" itemscope itemtype="http://schema.org/Product">
+        <main class="content__group-block">
             <div class="content__left-block">
                 <div class="js-description">
                     <div class="gallery">
@@ -349,14 +348,17 @@
                         </div>
                         <div class="order-info js-order_info--">
                             <div class="order-info__group js-order_info_1--" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                                <meta itemprop="priceCurrency" content="RUB" />
-                                <span class="order-info__price" itemprop="price">4 500 Р</span>
+                                <span class="order-info__price">
+                                    <meta itemprop="priceCurrency" content="RUB" />
+                                    <span itemprop="price">4500</span>
+                                    <i class="rub">Р</i>
+                                </span>
                                 <link itemprop="availability" href="http://schema.org/InStock" />
-                                <span class="order-info__price_old">5 100 Р</span>
+                                <span class="order-info__price_old">5100<i class="rub">Р</i></span>
                             </div>
                             <div class="order-info__group">
                                 <div class="group">
-                                    <span class="order-info__text js-btn-popup-block_2">Доставка: + 600 Р</span>
+                                    <span class="order-info__text js-btn-popup-block_2">Доставка: + 600<i class="rub">Р</i></span>
                                     <div class="order-info__group__window js-popup-block_2">
                                         <div class="order-info__group__window-close"></div>
                                         <div class="group-info">
@@ -546,13 +548,12 @@
                     </div>
                 </div>
             </div>
-        </div>
         </main>
         <div class="info-block_3">
             <img class="info-block_3__bg" src="./images/infoblock-img/5.png" alt="">
             <div class="info-block_3__content">
                 <div class="info-block_3__content-group">
-                    <h3 class="info-block_3__content__name">Lorem ipsum.</h3>
+                    <span class="info-block_3__content__name">Lorem ipsum.</span>
                 </div>
                 <div class="info-block_3__content-group">
                     <p class="info-block_3__content__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, mollitia!</p>
@@ -561,7 +562,7 @@
             </div>
         </div>
         <div class="info-block">
-            <h3 class="info-block__name">Рекомендуемые товары</h3>
+            <span class="info-block__name">Рекомендуемые товары</span>
             <div class="info-block__slider">
                 <div class="swiper-container swiper-container_4">
                     <div class="swiper-wrapper swiper-no-swiping">
@@ -580,7 +581,7 @@
                                 <div class="block-product__info">
                                     <span class="block-product__info-name">Букет</span>
                                     <div class="block-product__info__price">
-                                        <span class="block-product__info__price-current">1500 Р</span>
+                                        <span class="block-product__info__price-current">1500<i class="rub">Р</i></span>
                                     </div>
                                     <div class="block-product__info__button">
                                         <span class="block-product__info__button-order">Заказать</span>
@@ -604,7 +605,7 @@
                                 <div class="block-product__info">
                                     <span class="block-product__info-name">Букет</span>
                                     <div class="block-product__info__price">
-                                        <span class="block-product__info__price-current">1500 Р</span>
+                                        <span class="block-product__info__price-current">1500<i class="rub">Р</i></span>
                                     </div>
                                     <div class="block-product__info__button">
                                         <span class="block-product__info__button-order">Заказать</span>
@@ -628,7 +629,7 @@
                                 <div class="block-product__info">
                                     <span class="block-product__info-name">Букет</span>
                                     <div class="block-product__info__price">
-                                        <span class="block-product__info__price-current">1500 Р</span>
+                                        <span class="block-product__info__price-current">1500<i class="rub">Р</i></span>
                                     </div>
                                     <div class="block-product__info__button">
                                         <span class="block-product__info__button-order">Заказать</span>
@@ -652,7 +653,7 @@
                                 <div class="block-product__info">
                                     <span class="block-product__info-name">Букет</span>
                                     <div class="block-product__info__price">
-                                        <span class="block-product__info__price-current">1500 Р</span>
+                                        <span class="block-product__info__price-current">1500<i class="rub">Р</i></span>
                                     </div>
                                     <div class="block-product__info__button">
                                         <span class="block-product__info__button-order">Заказать</span>

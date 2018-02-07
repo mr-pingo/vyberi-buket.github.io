@@ -109,10 +109,16 @@ p{
 }
 .rub{
     display: inline-block;
-    width: 12px;
-    height: 14px;
-    background: url(../../images/rub.png) no-repeat;
-    margin-left: 5px;
+    font-style: normal;
+    font-family: 'Open Sans', sans-serif;
+    border-bottom: 1px solid;
+    line-height: 0.35em;
+    display: inline-block;
+    width: 0.35em;
+    margin-right: 5px;
+    &__cur{
+        display: none;
+    }
 }
 .hidden-block{
     display: block;

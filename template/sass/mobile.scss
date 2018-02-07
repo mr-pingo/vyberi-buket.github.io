@@ -486,6 +486,9 @@
                 margin-bottom: 10px;
                 //max-width: 380px;
                 width: 100%;
+                &:last-child{
+                    margin-left: 0;
+                }
             }
         }
         &__button{
@@ -801,6 +804,7 @@
             }
         }
         &__right-block{
+            max-width: 100%;
             display: flex;
             justify-content: space-between;
         }
@@ -825,8 +829,59 @@
         //padding: 0px 35px;
         //box-sizing: border-box;
     }
-    .info-block__slider{
-        padding: 0px 30px;
+    .info-block{
+        &__slider{
+            padding: 0px 30px;
+        }
+    }
+    .checkbox-form{
+        display: none;
+    }
+    .basket-form{
+        &__elements{
+            &-group{
+                &:nth-child(5){
+                    width: 120px;
+                }
+            }
+            &-delete{
+                width: 120px;
+            }
+        }
+    }
+    .basket-form_2{
+        &__elements{
+            &-group{
+                &:nth-child(2){
+                    justify-content: center;
+                }
+                &:nth-child(3){
+                    justify-content: center;
+                }
+                &:nth-child(4){
+                    max-width: 120px;
+                }
+            }
+            &-button{
+                width: 120px;
+                height: 49px;
+            }
+            &-text_2{
+                line-height: 28px;
+            }
+            &-info{
+                width: 326px;
+            }
+        }
+    }
+    .sale-form{
+        width: 323px;
+        &__poly{
+            width: 173px;
+        }
+        &__button{
+            width: 150px;
+        }
     }
 }
 @media screen and (max-width: 767px){
@@ -989,7 +1044,7 @@
             margin-top: 1px!important;
         }
         &__link{
-            //margin-left: 20px;
+            margin-left: 20px;
             margin-top: 0!important;
         }
     }
@@ -1290,6 +1345,13 @@
                 justify-content: center;
                 align-items: center;
             }
+            &__window{
+                .group-info{
+                    &__link{
+                        margin-left: 0!important;
+                    }
+                }
+            }
         }
     }
     .mobile-block{
@@ -1363,15 +1425,22 @@
             }
         }
     }
-    .order-info__group__window{
-        position: fixed;
-        bottom: 0px;
-        width: 100%;
-        left: 0px;
-        right: 0px;
-        border-radius: 4px 4px 0px 0px;
-        &:before{
-            display: none;
+    .order-info{
+        &__group{
+            &__window{
+                position: fixed;
+                bottom: 0px;
+                width: 100%;
+                left: 0px;
+                right: 0px;
+                border-radius: 4px 4px 0px 0px;
+                &:before{
+                    display: none;
+                }
+                &-close{
+                    display: block;
+                }
+            }
         }
     }
 }

@@ -82,8 +82,8 @@
 
 .filter_2 {
     &__wrap {
-        //width: 415px;
-        height: 79px;
+        width: 416px;
+        //height: 79px;
         display: flex;
         flex-wrap: wrap;
         padding: 0;
@@ -97,7 +97,7 @@
             align-items: center;
             text-align: center;
             list-style: none;
-            width: 80px;
+            width: 70px;
             height: 39px;
             font-family: 'Open Sans', sans-serif;
             font-weight: 600;
@@ -125,6 +125,9 @@
         &__elements {
             display: flex;
             //width: 100%;
+            &:last-child{
+                margin-left: 10px;
+            }
         }
     }
     &__button {

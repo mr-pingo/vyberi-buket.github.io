@@ -26,7 +26,9 @@
         width: 100%;
     }
     &__right-block{
-        
+        max-width: 479px;
+        min-width: 479px;
+        width: 100%;
     }
 }
 .info-block{
@@ -167,6 +169,7 @@
     }
 }
 .info-block_4{
+    width: 416px;
     position: relative;
     margin-left: 63px;
     &__name{
