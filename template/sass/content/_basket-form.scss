@@ -7,35 +7,44 @@
         &:last-child{
             border-bottom: 0px;
         }
+        &__adaptive{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            .basket-form__elements-group{
+                width: 100%;
+                &:nth-child(1){
+                    max-width: 520px;
+                    width: 100%;
+                    padding-left: 30px;
+                    box-sizing: border-box;
+                }
+                &:nth-child(2){
+                    width: 115px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    box-sizing: border-box;
+                }
+                &:nth-child(3){
+                    max-width: 259px;
+                    width: 60%;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                }
+                &:nth-child(4){
+                    max-width: 173px;
+                    width: 100%;
+                }
+            }
+        }
         &-group{
             &:nth-child(1){
                 max-width: 115px;
                 width: 100%;
             }
-            &:nth-child(2){
-                width: 520px;
-                padding-left: 80px;
-                box-sizing: border-box;
-            }
-            &:nth-child(3){
-                min-width: 101px;
-                max-width: 101px;
-                //padding: 0px 15px;
-                margin-right: 13px;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                box-sizing: border-box;
-            }
-            &:nth-child(4){
-                width: 248px;
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-            }
-            &:nth-child(5){
-                width: 173px;
-            }
+            
         }
         &-name{
             font-family: 'Open Sans', sans-serif;
@@ -50,8 +59,10 @@
         &-form{
             background: #f5f5f5;
             border-radius: 4px;
+            box-sizing: border-box;
             padding: 7px;
-            width: 100%;
+            min-width: 101px;
+            max-width: 101px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -82,6 +93,13 @@
                 height: 1px;
                 background: #b3bebe;
             }
+        }
+        &-current_group{
+            display: flex;
+            align-items: center;
+        }
+        &-current_sale{
+            margin-left: 10px;
         }
         &-button{
             cursor: pointer;
@@ -129,6 +147,14 @@
                 background: #d3d2eb;
             }
         }
+        &__header{
+            &-text{
+                margin-top: 5px;
+                display: block;
+                font-size: 14px;
+                color: #b3bebe;
+            }
+        }
     }
 }
 .basket-form_2{
@@ -149,22 +175,27 @@
         }
          &-group{
             &:nth-child(1){
-                width: 635px;
+                max-width: 635px;
+                width: 85%;
+                margin-right: 30px;
             }
             &:nth-child(2){
-                width: 193px;
+                width: 300px;
+                padding-left: 15px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
             }
             &:nth-child(3){
-                width: 168px;
+                max-width: 259px;
+                width: 46%;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                align-items: center;
             }
             &:nth-child(4){
-                max-width: 174px;
+                max-width: 173px; 
                 width: 100%;
                 display: flex;
                 justify-content: flex-end;
@@ -189,6 +220,7 @@
             color: #9494a3;
         }
         &-text_2{
+            padding: 3px 0;
             font-family: 'Open Sans', sans-serif;
             font-weight: 500;
             font-size: 16px;
@@ -201,10 +233,6 @@
             font-size: 14px;
             color: #000;
             letter-spacing: 2px;
-        }
-        &-info{
-            width: 450px;
-            display: inline-block;
         }
         &-price{
             font-family: 'Open Sans', sans-serif;
@@ -229,12 +257,14 @@
         }
     }
 }
+.basket-form-show{
+    display: none!important;
+}
 .sale-form{
     display: flex;
-    width: 418px;
     &__poly{
         outline: none;
-        width: 238px;
+        flex-grow: 1;
         height: 39px;
         box-sizing: border-box;
         border: 1px solid #5b5a8b;
@@ -244,7 +274,7 @@
         color: #000;
     }
     &__button{
-        width: 180px;
+        width: 165px;
         height: 39px;
         background: #5b5a8b;
         border-radius: 0px 4px 4px 0px;
@@ -258,6 +288,9 @@
             background: #5f5ead;
         }
     }
+}
+.mobile-block-del{
+    display: none;
 }
 .sale-form__poly::-webkit-input-placeholder{
     font-family: 'Open Sans', sans-serif;

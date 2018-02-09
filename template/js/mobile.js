@@ -40,7 +40,8 @@ function changes(screen){
             $('.js-select').each(function(){
                 var text = $(this).parents('.js-form-select').find('.checkbox-label').text();
                 $(this).ikSelect('enable');
-                $(this).prepend('<option value="0" class="select-opt" selected disabled>'+text+'</option>');
+                $(this).prepend('<option value="1" class="select-opt" selected disabled>'+text+'</option>');
+                $(this).ikSelect('select', '1');  
                 $(this).ikSelect('reset');
             });
         });

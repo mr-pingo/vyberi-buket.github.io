@@ -732,9 +732,9 @@
             }
             &__window{
                 left: -130px;
-                right: auto;
+                //right: auto;
                 &:before{
-                    right: auto;
+                    //right: auto;
                     left: 277px;
                 }
                 &__wrap{
@@ -839,48 +839,53 @@
     }
     .basket-form{
         &__elements{
-            &-group{
-                &:nth-child(5){
-                    width: 120px;
+            &__adaptive{
+                .basket-form__elements-group{
+                    &:nth-child(2){
+                        margin-right: 0;
+                    }
+                    &:nth-child(4){
+                        max-width: 120px;
+                    }
                 }
             }
             &-delete{
                 width: 120px;
             }
+            &__header{
+                width: 178px;
+            }
         }
     }
     .basket-form_2{
         &__elements{
+            &-button{
+                width: 120px;
+                height: 49px;
+            }
             &-group{
                 &:nth-child(2){
-                    justify-content: center;
+                    justify-content: space-around;
+                    max-width: 115px;
+                    padding: 0;
                 }
                 &:nth-child(3){
-                    justify-content: center;
+                    justify-content: space-around;
+                    width: 41%;
                 }
                 &:nth-child(4){
                     max-width: 120px;
                 }
             }
-            &-button{
-                width: 120px;
-                height: 49px;
-            }
-            &-text_2{
-                line-height: 28px;
-            }
-            &-info{
-                width: 326px;
-            }
         }
     }
     .sale-form{
-        width: 323px;
         &__poly{
-            width: 173px;
+            max-width: 169px;
+            width: 100%;
         }
         &__button{
-            width: 150px;
+            width: 154px;
         }
     }
 }
@@ -1326,6 +1331,7 @@
     .content{
         &__right-block{
             flex-direction: column;
+            min-width: 100%;
         }
         &__left-block{
             width: 100%;
@@ -1404,6 +1410,52 @@
             }
         }
     }
+    .basket-form{
+        &__elements{
+            align-items: stretch;
+            &__adaptive{
+                margin-left: 21px;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-between;
+                .basket-form__elements-group{
+                    &:nth-child(1){
+                        max-width: 100%;
+                        padding-left: 0;
+                    }
+                    &:nth-child(2){
+                        margin: 20px 0px;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                    }
+                    &:nth-child(3){
+                        max-width: 100%;
+                        width: 100%;
+                    }
+                    &:nth-child(4){
+                        max-width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        margin-top: 20px;
+                    }
+                }
+            }
+            &__header{
+                width: 100%;
+                text-align: center;
+            }
+            &-delete{
+                float: none;
+            }
+            &-group{
+                &:nth-child(1){
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+    *::-ms-backdrop, .select-town__list-group { flex-direction: column;}
 }
 @media screen and (max-width: 750px){
     .hidden-block{
@@ -1441,6 +1493,65 @@
                     display: block;
                 }
             }
+        }
+    }
+    .basket-form_2{
+        padding-top: 0;
+        &__elements{
+            &:nth-child(1){
+                flex-direction: column-reverse;
+                border-bottom: 0;
+            }
+            &:nth-child(2){
+                padding-top: 0;
+                flex-direction: column;
+            }
+            &-group{
+                &:nth-child(1){
+                    margin-right: 0;
+                    max-width: 100%;
+                    width: 100%;
+                }
+                &:nth-child(4){
+                    margin-top: 27px;
+                    max-width: 100%;
+                    width: 100%;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 27px;
+                }
+            }
+            &-text_2{
+                padding: 5px 0px;
+            }
+            &-info{
+                display: flex;
+                flex-direction: column;
+                &:last-child{
+                    margin-left: 30px;
+                }
+            }
+            &-price{
+                margin-left: 30px;
+            }
+            &-button{
+                width: 179px;
+                height: 39px;
+            }
+        }
+    }
+    .basket-form-hidden{
+        display: none!important;
+    }
+    .basket-form-show{
+        display: flex!important;
+    }
+    .sale-form{
+        &__poly{
+            max-width: 100%;
+        }
+        &__poly{
+            width: 165px;
         }
     }
 }
@@ -1546,11 +1657,6 @@
     .block-add-comment{
         padding: 35px 10px;
     }
-    /*.socials__link{
-        margin: 0px 2px;
-        width: 32px;
-        height: 32px;
-    }*/
     .content-footer{
         &__group{
             width: 100%;
@@ -1565,6 +1671,45 @@
             .group{
                 width: 100%;
                 display: flex;
+            }
+        }
+    }
+    .basket-form{
+        &__elements{
+            &__header{
+                text-align: left;
+            }
+            &-group{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            &__adaptive{
+                .basket-form__elements-group{
+                    &:nth-child(4){
+                        display: none;
+                    }
+                }
+            }
+            .mobile-block-del{
+                margin-top: 20px;
+                display: flex;
+                width: 100%;
+            }
+        }
+    }
+    .basket-form_2{
+        &__elements{
+            &-button{
+                max-width: 100%;
+                width: 100%;
+            }
+            &:nth-child(2){
+                .basket-form_2__elements-group{
+                    &:last-child{
+                        width: 100%;
+                    }
+                }
             }
         }
     }

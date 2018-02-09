@@ -145,10 +145,10 @@
             }
             &:after{
                 content: '';
-                position: absolute;
+                position: relative;
                 width: 24px;
                 height: 5px;
-                top: 24px;
+                top: 3px;
                 background: url(../../images/sprite.png) no-repeat;
                 background-position: -5px -68px;
             }

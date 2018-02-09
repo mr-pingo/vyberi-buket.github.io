@@ -79,7 +79,6 @@
         }
     }
 }
-
 .filter_2 {
     &__wrap {
         width: 416px;
@@ -231,4 +230,16 @@
             }
         }
     }
+}
+.border_rad-top-left{
+    border-radius: 5px 0px 0px 0px;
+}
+.border_rad-top-right{
+    border-radius: 0px 5px 0px 0px;
+}
+.border_rad-bottom-right{
+    border-radius: 0px 0px 5px 0px;
+}
+.border_rad-bottom-left{
+    border-radius: 0px 0px 0px 5px;
 }
