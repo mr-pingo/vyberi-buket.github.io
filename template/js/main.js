@@ -164,7 +164,7 @@ $(document).ready(function () {
     //-------
     // Popups
     //-------
-    $('.js-photo').on('click', function () {
+    $('.js-photo').on('click', function() {
         var link = $(this).find('.js-photo-link').attr('src');
         var popup = $('<div style="display: none;">\
         <div class="box-modal" id="popup_img">\
@@ -206,7 +206,7 @@ $(document).ready(function () {
             }
         });
     });
-    $('.js-call-back').on('click', function () {
+    $('.js-call-back').on('click', function() {
         var popup = $('<div style="display: none;">\
         <div class="box-modal popup-call-back" id="popup-callback">\
         <div class="box-modal_close arcticmodal-close"></div>\
@@ -238,7 +238,7 @@ $(document).ready(function () {
             }
         });
     });
-    $('.js-select-town').on('click', function () {
+    $('.js-select-town').on('click', function() {
         var popup = $('<div style="display: none;">\
         <div class="box-modal popup-call-back" id="popup-select-town">\
         <div class="box-modal_close arcticmodal-close"></div>\
@@ -292,7 +292,7 @@ $(document).ready(function () {
             }
         });
     });
-    $('.js-buy-one-click').on('click', function () {
+    $('.js-buy-one-click').on('click', function() {
         var popup = $('<div style="display: none;">\
         <div class="box-modal popup-call-back" id="popup-callback">\
         <div class="box-modal_close arcticmodal-close"></div>\
@@ -314,6 +314,23 @@ $(document).ready(function () {
                     </form>\
                 </div>\
             </div>\
+        </div>\
+        </div>\
+        </div>');
+        $('body').append(popup);
+        $('#popup-callback').arcticmodal({
+            afterClose: function (data, el) {
+                $(document).find('#popup-callback').remove();
+            }
+        });
+    });
+    $('.js-sale-form').on('click', function(){
+        var popup = $('<div style="display: none;">\
+        <div class="box-modal popup-call-back" id="popup-callback">\
+        <div class="box-modal_close arcticmodal-close"></div>\
+        <div class="sale-form-show">\
+            <input class="sale-form-show__poly" type="text" placeholder="Введите промокод">\
+            <button class="sale-form-show__button">Получить скидку</button>\
         </div>\
         </div>\
         </div>');
