@@ -31,6 +31,7 @@
                 &:nth-child(3) {
                     width: 100%;
                     display: flex;
+                    flex-grow: 1;
                     align-items: center;
                     flex-direction: column;
                 }
@@ -193,6 +194,7 @@
                 &:nth-child(2) {
                     width: 100%;
                     display: flex;
+                    flex-grow: 1;
                     flex-direction: column;
                     justify-content: space-around;
                     align-items: center;
@@ -278,7 +280,7 @@
     display: none!important;
 }
 .sale-form_text{
-    margin-top: 10px;
+    margin-bottom: 15px;
     display: none;
     position: relative;
     color: #5b5a8b;

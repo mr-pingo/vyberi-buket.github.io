@@ -69,6 +69,27 @@ $(document).ready(function () {
             }
         }
     });
+    var swiper_4 = new Swiper('.swiper-container_4-1', {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: '.slider5-next',
+            prevEl: '.slider5-prev',
+        },
+        breakpoints: {
+            999: {
+                slidesPerView: 3,
+                spaceBetween: 10,
+            },
+            730: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+            },
+            480: {
+                slidesPerView: 1,
+            }
+        }
+    });
     var swiper_5 = new Swiper('.swiper-container_5', {
         slidesPerView: 1,
         navigation: {
@@ -166,22 +187,39 @@ $(document).ready(function () {
     //-------
     $('.js-photo').on('click', function() {
         var link = $(this).find('.js-photo-link').attr('src');
-        var popup = $('<div style="display: none;">\
-        <div class="box-modal" id="popup_img">\
-        <div class="box-modal_close arcticmodal-close"></div>\
-        <div class="images">\
-        <div class="swiper-button-prev product-slider__prev mobile-swiper-button js-prev-slide"></div>\
-        <img class="images__prev" src="'+link+'" alt="">\
-        <div class="swiper-button-next product-slider__next mobile-swiper-button js-next-slide"></div>\
-        </div>\
-        </div>\
-        </div>');
-        $('body').append(popup);
-        $('#popup_img').arcticmodal({
-            afterClose: function (data, el) {
-                $(document).find('#popup_img').remove();
-            }
-        });
+        if($(this).hasClass('js-slider')){
+            var popup = $('<div style="display: none;">\
+            <div class="box-modal" id="popup_img">\
+            <div class="box-modal_close arcticmodal-close"></div>\
+            <div class="images">\
+            <div class="swiper-button-prev product-slider__prev mobile-swiper-button js-prev-slide"></div>\
+            <img class="images__prev" src="'+link+'" alt="">\
+            <div class="swiper-button-next product-slider__next mobile-swiper-button js-next-slide"></div>\
+            </div>\
+            </div>\
+            </div>');
+            $('body').append(popup);
+            $('#popup_img').arcticmodal({
+                afterClose: function (data, el) {
+                    $(document).find('#popup_img').remove();
+                }
+            });
+        }else{
+            var popup = $('<div style="display: none;">\
+            <div class="box-modal" id="popup_img">\
+            <div class="box-modal_close arcticmodal-close"></div>\
+            <div class="images">\
+            <img class="images__prev" src="'+link+'" alt="">\
+            </div>\
+            </div>\
+            </div>');
+            $('body').append(popup);
+            $('#popup_img').arcticmodal({
+                afterClose: function (data, el) {
+                    $(document).find('#popup_img').remove();
+                }
+            });
+        }
         $('.js-next-slide').on('click', function(){
             if($('.gallery__mini__img.active').next('.gallery__mini__img').length > 0){
                 $('.gallery__mini__img.active').removeClass('active').next('.gallery__mini__img').addClass('active');

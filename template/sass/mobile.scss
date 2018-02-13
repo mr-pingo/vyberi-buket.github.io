@@ -1460,8 +1460,6 @@
                     &:nth-child(5){
                         max-width: 100%;
                         width: 100%;
-                        display: flex;
-                        justify-content: center;
                         margin-top: 20px;
                     }
                 }
@@ -1707,23 +1705,6 @@
             .group{
                 width: 100%;
                 display: flex;
-            }
-        }
-    }
-    .basket-form{
-        &__elements{
-            &__header{
-                text-align: left;
-            }
-            &-group{
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-            }
-            .mobile-block-del{
-                margin-top: 20px;
-                display: flex;
-                width: 100%;
             }
         }
     }
