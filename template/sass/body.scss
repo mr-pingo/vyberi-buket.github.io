@@ -96,6 +96,13 @@ p{
     text-align: justify;
     color: #000;
 }
+.link{
+    cursor: pointer;
+    text-decoration: underline;
+    &:hover{
+        text-decoration: none;
+    }
+}
 .top{
     display: none;
     width: 46px;
@@ -127,5 +134,3 @@ p{
 *::-ms-backdrop, .group-info_4 { width: 100%;}
 *::-ms-backdrop, .call-back__wrap__right_block { width: auto!important;}
 *::-ms-backdrop, .order-info__group__window:before { right: 20px!important;}
-*::-ms-backdrop, .basket-form__elements__adaptive :nth-child(3).basket-form__elements-group { width: auto!important;}
-*::-ms-backdrop, .basket-form_2__elements .group :nth-child(2).basket-form_2__elements-group { width: auto!important;}

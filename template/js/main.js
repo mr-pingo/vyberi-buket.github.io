@@ -285,7 +285,6 @@ $(document).ready(function () {
             <div class="select-town__info">Если доставка нужна в другой город, укажите его в поле ниже.</div>\
             <form class="select-town__form" action="">\
                 <input class="select-town__form-poly" type="text" plaseholder="Ваш город">\
-                <button class="select-town__form-button" >Сохранить</button>\
             </form>\
             <div class="select-town__list">\
                 <span class="select-town__list-text">Популярные города:</span>\
@@ -379,6 +378,44 @@ $(document).ready(function () {
             }
         });
     });
+    $('.js-popup-form-text').on('click', function(){
+        var popup = $('<div style="display: none;">\
+        <div class="box-modal popup-call-back" id="popup-callback">\
+        <div class="box-modal_close arcticmodal-close"></div>\
+        <div class="big-form-popup">\
+            <span class="big-form-popup__header">Добавить открытку бесплатно!</span>\
+            <div class="big-form-popup__group">\
+            <textarea class="big-form-popup__textarea" name="message" name="" id="" placeholder="Текст поздравления"></textarea>\
+            <label for="message"></label>\
+            </div>\
+            <button class="big-form-popup__button">Отправить</button>\
+        </div>\
+        </div>\
+        </div>');
+        $('body').append(popup);
+        $('#popup-callback').arcticmodal({
+            afterClose: function (data, el) {
+                $(document).find('#popup-callback').remove();
+            }
+        });
+    });
+    $('.js-popup-text').on('click', function(){
+        var popup = $('<div style="display: none;">\
+        <div class="box-modal popup-call-back" id="popup-callback">\
+        <div class="box-modal_close arcticmodal-close"></div>\
+        <div class="text-block">\
+        <span class="text-block__header">Lorem ipsum dolor sit amet.</span>\
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum dolor pariatur asperiores, totam, ab fugiat alias perspiciatis porro tenetur iste sed hic aliquid, obcaecati quod assumenda? Neque magni quo necessitatibus, aliquam voluptatibus quam, excepturi recusandae in, voluptatem quis nemo quidem ut sint, fugit ducimus. Voluptates tenetur recusandae molestias facilis dolorum ut aperiam suscipit eum nam quaerat id, sint quia obcaecati perferendis dolore omnis aliquid ratione soluta excepturi dolorem illo consequatur, dolores necessitatibus. Incidunt nemo, perspiciatis ipsam dolorum praesentium explicabo voluptates, pariatur, enim fuga, dicta eaque placeat quam optio odio! Magni animi reprehenderit placeat sit voluptates laudantium, quasi neque a debitis?</p>\
+        </div>\
+        </div>\
+        </div>');
+        $('body').append(popup);
+        $('#popup-callback').arcticmodal({
+            afterClose: function (data, el) {
+                $(document).find('#popup-callback').remove();
+            }
+        });
+    });
     //---------
     // Ползунок
     //---------
@@ -405,9 +442,26 @@ $(document).ready(function () {
     //---------
     //Календарь
     //---------
+    $.datepicker.regional['ru'] = {
+        closeText: 'Закрыть',
+        prevText: '&#x3c;Пред',
+        nextText: 'След&#x3e;',
+        currentText: 'Сегодня',
+        monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь',
+        'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+        monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн',
+        'Июл','Авг','Сен','Окт','Ноя','Дек'],
+        dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+        dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+        dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+        dateFormat: 'dd.mm.yy',
+        firstDay: 1,
+        isRTL: false
+    };
+    $.datepicker.setDefaults($.datepicker.regional['ru']);
     $("#datepicker").datepicker({
         showOn: "button",
-        buttonImage: "/images/calendar.png",
+        buttonImage: "./images/calendar.png",
         buttonImageOnly: true,
         buttonText: "Select date"
     });
@@ -486,9 +540,9 @@ $(document).ready(function () {
     //Размер блока
     //------------
     $('.element-block_2').each(function () {
-        var height = '290';
+        var height = '380';
         if($(this).innerHeight() > height){
-            $(this).innerHeight(290).css({'overflow' : 'hidden'});
+            $(this).innerHeight(380).css({'overflow' : 'hidden'});
             $(this).append('<div class="bottom-element-block"><div class="bottom-element-block__group"><span class="bottom-element-block__group-link js-rev">Показать всё</span></div></div>');
         }else{
             $(this).innerHeight();
@@ -503,7 +557,7 @@ $(document).ready(function () {
             }else{
                 $(this).html('Показать всё').parents('.element-block_2').css({'padding-bottom' : '30px'}).innerHeight(height);
                 $(this).parents('.bottom-element-block').css({
-                    'background' : 'url(../../images/bg-rev.png) repeat-x',
+                    'background' : 'url(../test/images/bg-rev.png) repeat-x',//при интеграции поменять тут ссылку
                 });
             }
         });

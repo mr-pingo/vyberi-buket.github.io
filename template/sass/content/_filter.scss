@@ -109,6 +109,28 @@
                 box-shadow: 0px 3px 15px 4px rgba(0, 0, 0, 0.15);
             }
         }
+        &-count_2 {
+            border: 1px solid #a9a8ba;
+            flex-grow: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            list-style: none;
+            width: 70px;
+            height: 39px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+            font-size: 13px;
+            color: #5b5a8b;
+            cursor: pointer;
+            margin-left: -1px;
+            margin-top: -1px;
+            padding-left: 20px;
+            &:hover {
+                box-shadow: 0px 3px 15px 4px rgba(0, 0, 0, 0.15);
+            }
+        }
         .active {
             box-shadow: 0px 3px 15px 4px rgba(0, 0, 0, 0.15);
         }

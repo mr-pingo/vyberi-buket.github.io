@@ -72,11 +72,13 @@
         flex-direction: column;
         &-elements{
             position: relative;
+            display: flex;
         }
     }
 }
 .input-name,
 .input-phone,
+.input-mail,
 .input-text{
     position: relative;
     width: 100%;
@@ -102,6 +104,20 @@
         height: 10px;
         background: url(../../images/sprite.png) no-repeat;
         background-position: -42px 0px;
+    }
+    &:focus{
+        border: 1px solid #55c3c0;
+    }
+}
+.input-mail{
+    &+label{
+        position: absolute;
+        top: 17px;
+        left: 20px;
+        width: 10px;
+        height: 10px;
+        background: url(../../images/sprite.png) no-repeat;
+        background-position: -63px 0px;
     }
     &:focus{
         border: 1px solid #55c3c0;
