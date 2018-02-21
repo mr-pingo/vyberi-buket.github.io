@@ -157,6 +157,12 @@
     border-radius: 4px;
     box-sizing: border-box;
     background: #fff;
+    &__el{
+        margin-top: 30px;
+        &:first-child{
+            margin-top: 0;
+        }
+    }
     &__header{
         text-transform: uppercase;
         font-family: 'Open Sans', sans-serif;

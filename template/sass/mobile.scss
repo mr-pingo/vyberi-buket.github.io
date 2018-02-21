@@ -142,6 +142,11 @@
             }
         }
     }
+    .pay-block{
+        &:last-child{
+            margin-right: 20px;
+        }
+    }
 }
 @media screen and (max-width: 1160px){
     .main-menu{
@@ -692,6 +697,23 @@
             margin-top: 30px;
             //margin-left: 30px;
         }
+    }
+    .info-block_6{
+        &__elements_2{
+            &__group{
+                flex-direction: column;
+                &-left_block{
+                    width: 100%;
+                }
+                &-right_block{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .pay-block-info,
+    .pay-block-info_2{
+        width: 100%;
     }
     .gallery{
         padding-bottom: 20px;
@@ -1894,6 +1916,7 @@
             }
         }
     }
+    *::-ms-backdrop, .reviews-block__elements__right_block {width: 100%!important;}
 }
 @media screen and (max-width: 480px){
     .grid-block{
@@ -2017,6 +2040,7 @@
         }
         &__send{
             &-text{
+                width: 80%;
                 padding: 0px 20px;
             }
         }
@@ -2033,6 +2057,30 @@
             input[type="checkbox"] + label{
                 white-space: normal;
             }
+        }
+    }
+    .info-block_6{
+        &__text_3{
+            width: 100%;
+        }
+    }
+    .sale{
+        min-width: 41px;
+        max-width: 41px;
+        background: #55c3c0;
+    }
+    .info-block_6{
+        &__elements_2{
+            &__group{
+                &-left_block{
+                    
+                }
+            }
+        }
+    }
+    .pay-block{
+        &:nth-child(2n){
+            margin-right: 0;
         }
     }
 }

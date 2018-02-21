@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# product: http://ogp.me/ns/product#">
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:type" content="product" />
-    <meta property="og:url" content="URL адрес карточки товара" />
-    <meta property="og:title" content="название товара из H1" />
-    <meta property="og:image" content="URL адрес картинки товара" />
-    <meta property="og:description" name="description" content="Описание товара из descriptions">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="Url адерс главной">
+    <meta property="og:title" content="Купить цветы с доставкой в Москве и по России">
+    <meta property="og:image" content="URL адрес картинки сайта">
+    <meta property="og:description" name="description" content="Интернет магазина 'Выбери букет' круглосуточно осуществляет доставку цветов по Москве и по России, у нас всегда можно недорого купить свежие цветы и заказать доставку на дом или в офис, время доставки от 1 до 4 часов">
     <meta name="keywords" content="доставка цветов, цветы с доставкой по Москве, купить цветы, заказать доставку цветов, цветы в москве, недорогие цветы Москва">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/gridlex.css">
     <link rel="stylesheet" type="text/css" href="css/swiper.css">
     <link rel="stylesheet" type="text/css" href="css/themes/simple.css">
     <link rel="stylesheet" type="text/css" href="css/jquery.arcticmodal-0.3.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic-ext" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -70,7 +71,7 @@
                         <div class="group-info">
                             <span class="group-info__text">Город доставки</span>
                             <i class="group-info__icon"></i>
-                            <span class="group-info__link">Александровск-Сахалинский</span>
+                            <span class="group-info__link js-select-town">Александровск-Сахалинский</span>
                         </div>
                     </div>
                     <div class="header__wrap-group js-header-wrap-group--">
@@ -110,6 +111,7 @@
                             <div class="group-info_4">
                                 <div class="group-info_4__elements">
                                     <span class="group-info_4__elements-button js-call-back">Обратный звонок</span>
+                                    <i class="group-info_4__elements-icon js-call-back" title="Обратный звонок"></i>
                                 </div>
                             </div>
                             <div class="group-info_5">
@@ -117,7 +119,7 @@
                                     <i class="group-info_5__elements-icons">2</i>
                                     <div class="group-info_5__elements-group">
                                         <span class="group-info_5__elements-text">Корзина</span>
-                                        <span class="group-info_5__elements-count">22 500 <i>&#8381;</i></span>
+                                        <span class="group-info_5__elements-count">22 500<i class="rub">Р</i></span>
                                     </div>
                                 </a>
                             </div>
@@ -247,124 +249,150 @@
     </header>
 
     <div class="content">
-        <h1 class="content__name">Отзывы клиентов</h1>
-        <div class="reviews-block">
-            <div class="reviews-block__elements">
-                <div class="reviews-block__elements__left_block">
-                    <div class="block-product">
-                        <a class="block-product__img" href="">
-                            <div class="block-product__img__sticker">
-                                <span class="block-product__img__sticker-hit">хит</span>
+        <h1 class="content__name">Заказ оформлен</h1>
+        <div class="info-block_6">
+            <div class="info-block_6-group">
+                <span class="info-block_6__text">Ваш заказ <span class="info-block_6__price">№ 010101</span> в Петропавловск-Камчатский, на сумму </span>
+                <span class="info-block_6__price">3000<i class="rub">Р</i></span>
+                <span class="info-block_6__text">оформлен!</span>
+            </div>
+            <div class="info-block_6-group_2">
+                <span class="info-block_6__text_2">В течении 3 минут с вами свяжется менеджер!</span>
+                <span class="info-block_6__text_3">Вы уже сейчас можете оплатить заказ! Для этого выберите удобный для вас способ оплаты. Если у вас остались какие-то вопросы, дождитесь звонка менеджера, и он ответит на все ваши вопросы.</span>
+            </div>
+            <div class="info-block_6__elements_2">
+                <div class="info-block_6__elements_2-header">Банковскими картами</div>
+                <div class="info-block_6__elements_2__group">
+                    <div class="info-block_6__elements_2__group-left_block">
+                        <div class="pay-block">
+                            <a href="" class="pay-block__wrapper">
+                                <img class="pay-block__wrapper-img" src="./images/pay/visa.png" alt="">
+                            </a>
+                            <div class="pay-block__text">Visa / Mastercard</div>
+                        </div>
+                        <div class="pay-block">
+                            <a href="" class="pay-block__wrapper">
+                                <img class="pay-block__wrapper-img" src="./images/pay/sber.png" alt="">
+                            </a>
+                            <div class="pay-block__text">Карта Сбербанк</div>
+                        </div>
+                        <div class="pay-block">
+                            <a href="" class="pay-block__wrapper">
+                                <img class="pay-block__wrapper-img" src="./images/pay/alfa.png" alt="">
+                            </a>
+                            <div class="pay-block__text">Альфа-Клик</div>
+                        </div>
+                        <div class="pay-block">
+                            <a href="" class="pay-block__wrapper">
+                                <img class="pay-block__wrapper-img" src="./images/pay/pay.png" alt="">
+                            </a>
+                            <div class="pay-block__text">Payonlne.ru</div>
+                        </div>
+                    </div>
+                    <div class="info-block_6__elements_2__group-right_block">
+                        <div class="pay-block-info">
+                            <div class="pay-block-info__left_block">
+                                <i class="icon-pay-block"></i>
                             </div>
-                            <div class="block-product__img__info">
-                                <span class="block-product__img__info-text">60x30</span>
-                                <span class="block-product__img__info-text">см</span>
+                            <div class="pay-block-info__right_block">
+                                <div class="pay-block-info__right_block-header">Зачисление платежа моментально</div>
+                                <div class="pay-block-info__right_block-description">Мы незамедлительно сообщим Вам о поступлении денежных средств на счет!</div>
                             </div>
-                            <img class="block-product__img-prev" src="./images/infoblock-img/byket.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info-block_6__elements_2">
+                <div class="info-block_6__elements_2-header">Наличными в банкоматах</div>
+                <div class="info-block_6__elements_2__group">
+                    <div class="info-block_6__elements_2__group-left_block">
+                        <div class="pay-block">
+                            <a href="" class="pay-block__wrapper">
+                                <img class="pay-block__wrapper-img" src="./images/pay/sber-2.png" alt="">
+                            </a>
+                            <div class="pay-block__text">Сбербанк</div>
+                        </div>
+                        <div class="pay-block">
+                            <a href="" class="pay-block__wrapper">
+                                <img class="pay-block__wrapper-img" src="./images/pay/bytik.png" alt="">
+                            </a>
+                            <div class="pay-block__text">Связной и Евросеть</div>
+                        </div>
+                        <div class="pay-block">
+                            <a href="" class="pay-block__wrapper">
+                                <img class="pay-block__wrapper-img" src="./images/pay/term.png" alt="">
+                            </a>
+                            <div class="pay-block__text">Терминалы</div>
+                        </div>
+                        <div class="pay-block">
+                            <a href="" class="pay-block__wrapper">
+                                <img class="pay-block__wrapper-img" src="./images/pay/man.png" alt="">
+                            </a>
+                            <div class="pay-block__text">При получении</div>
+                        </div>
+                    </div>
+                    <div class="info-block_6__elements_2__group-right_block">
+                        <div class="pay-block-info_2">
+                            <div class="pay-block-info__left_block">
+                                <i class="icon-pay-block_2"></i>
+                            </div>
+                            <div class="pay-block-info__right_block">
+                                <div class="pay-block-info__right_block-header">Вы можете на нас положиться</div>
+                                <div class="pay-block-info__right_block-description">Мы используем только защищенные способы приема денежных средств.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info-block_6__elements_3">
+                <div class="info-block_6__elements_3-header">Электронные платежные системы</div>
+                <div class="info-block_6__elements_3__group">
+                    <div class="pay-block">
+                        <a href="" class="pay-block__wrapper">
+                            <img class="pay-block__wrapper-img" src="./images/pay/tel.png" alt="">
                         </a>
-                        <div class="block-product__info">
-                            <span class="block-product__info-name">Букет</span>
-                            <div class="block-product__info__price">
-                                <span class="block-product__info__price-current">1500<i class="rub">Р</i></span>
-                            </div>
-                            <div class="block-product__info__button">
-                                <span class="block-product__info__button-order">Заказать</span>
-                                <span class="block-product__info__button-buy_one_click js-buy-one-click">Купить в 1 клик</span>
-                            </div>
-                        </div>
+                        <div class="pay-block__text">С телефона</div>
                     </div>
-                </div>
-                <div class="reviews-block__elements__right_block">
-                    <div class="element-block_2">
-                        <div class="element-block_2__group_el">
-                            <div class="element-block_2__el">
-                                <div class="element-block_2__group">
-                                    <span class="element-block_2__group-name">Иван Иванов</span>
-                                    <div class="element-block_2__group-elements">
-                                        <img src="./images/rate.png" alt="">
-                                        <span class="element-block_2__group-date">27/10/2017</span>
-                                    </div>
-                                </div>
-                                <h2 class="element-block_2__header">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam voluptas sit vitae molestias atque dignissimos.</h2>
-                                <p class="element-block_2__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit culpa impedit soluta repudiandae, molestiae debitis pariatur mollitia maiores voluptatem maxime exercitationem qui earum, quaerat itaque possimus non quos quisquam hic. Eos voluptatum reiciendis sed asperiores error omnis distinctio, natus ea animi quo, iure voluptas perspiciatis!</p>
-                            </div>
-                            <div class="element-block_2__el">
-                                <div class="element-block_2__group">
-                                    <span class="element-block_2__group-name">Иван Иванов</span>
-                                    <div class="element-block_2__group-elements">
-                                        <img src="./images/rate.png" alt="">
-                                        <span class="element-block_2__group-date">27/10/2017</span>
-                                    </div>
-                                </div>
-                                <h2 class="element-block_2__header">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam voluptas sit vitae molestias atque dignissimos.</h2>
-                                <p class="element-block_2__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit culpa impedit soluta repudiandae, molestiae debitis pariatur mollitia maiores voluptatem maxime exercitationem qui earum, quaerat itaque possimus non quos quisquam hic. Eos voluptatum reiciendis sed asperiores error omnis distinctio, natus ea animi quo, iure voluptas perspiciatis! Praesentium explicabo sequi ratione. Doloribus, possimus. Cumque officia, dolorum similique impedit nihil excepturi quidem repellendus illum iste natus consequuntur blanditiis, atque, nesciunt vel inventore porro molestias quo. Cumque accusantium, odit sunt nulla iure laudantium ipsam, quisquam modi enim asperiores nihil voluptate veritatis! Praesentium explicabo sequi ratione. Doloribus, possimus. Cumque officia, dolorum similique impedit nihil excepturi quidem repellendus illum iste natus consequuntur blanditiis, atque, nesciunt vel inventore porro molestias quo. Cumque accusantium, odit sunt nulla iure laudantium ipsam, quisquam modi enim asperiores nihil voluptate veritatis!</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr class="info-block_5__hr">
-            <div class="reviews-block__elements">
-                <div class="reviews-block__elements__left_block">
-                    <div class="block-product">
-                        <a class="block-product__img" href="">
-                            <div class="block-product__img__sticker">
-                                <span class="block-product__img__sticker-hit">хит</span>
-                            </div>
-                            <div class="block-product__img__info">
-                                <span class="block-product__img__info-text">60x30</span>
-                                <span class="block-product__img__info-text">см</span>
-                            </div>
-                            <img class="block-product__img-prev" src="./images/infoblock-img/byket.jpg" alt="">
+                    <div class="pay-block">
+                        <a href="" class="pay-block__wrapper">
+                            <img class="pay-block__wrapper-img" src="./images/pay/paypal.png" alt="">
                         </a>
-                        <div class="block-product__info">
-                            <span class="block-product__info-name">Букет</span>
-                            <div class="block-product__info__price">
-                                <span class="block-product__info__price-current">1500<i class="rub">Р</i></span>
-                            </div>
-                            <div class="block-product__info__button">
-                                <span class="block-product__info__button-order">Заказать</span>
-                                <span class="block-product__info__button-buy_one_click js-buy-one-click">Купить в 1 клик</span>
-                            </div>
-                        </div>
+                        <div class="pay-block__text">PayPal / Cards</div>
+                    </div>
+                    <div class="pay-block">
+                        <a href="" class="pay-block__wrapper">
+                            <img class="pay-block__wrapper-img" src="./images/pay/qiwi.png" alt="">
+                        </a>
+                        <div class="pay-block__text">Qiwi - кошелёк</div>
+                    </div>
+                    <div class="pay-block">
+                        <a href="" class="pay-block__wrapper">
+                            <img class="pay-block__wrapper-img" src="./images/pay/yandex.png" alt="">
+                        </a>
+                        <div class="pay-block__text">Яндекс Деньги</div>
+                    </div>
+                    <div class="pay-block">
+                        <a href="" class="pay-block__wrapper">
+                            <img class="pay-block__wrapper-img" src="./images/pay/web.png" alt="">
+                        </a>
+                        <div class="pay-block__text">WebMoney</div>
+                    </div>
+                    <div class="pay-block">
+                        <a href="" class="pay-block__wrapper">
+                            <img class="pay-block__wrapper-img" src="./images/pay/gold.png" alt="">
+                        </a>
+                        <div class="pay-block__text">Золотая корона</div>
+                    </div>
+                    <div class="pay-block">
+                        <a href="" class="pay-block__wrapper">
+                            <img class="pay-block__wrapper-img" src="./images/pay/blank.png" alt="">
+                        </a>
+                        <div class="pay-block__text">Расчетный счет</div>
                     </div>
                 </div>
-                <div class="reviews-block__elements__right_block">
-                    <div class="element-block_2">
-                        <div class="element-block_2__group_el">
-                            <div class="element-block_2__el">
-                                <div class="element-block_2__group">
-                                    <span class="element-block_2__group-name">Иван Иванов</span>
-                                    <div class="element-block_2__group-elements">
-                                        <img src="./images/rate.png" alt="">
-                                        <span class="element-block_2__group-date">27/10/2017</span>
-                                    </div>
-                                </div>
-                                <h2 class="element-block_2__header">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam voluptas sit vitae molestias atque dignissimos.</h2>
-                                <p class="element-block_2__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit culpa impedit soluta repudiandae, molestiae debitis pariatur mollitia maiores voluptatem maxime exercitationem qui earum, quaerat itaque possimus non quos quisquam hic.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="page-navigation">
-            <div class="page-navigation__first">
-                <a class="page-navigation__first-link" href="">&#8249;&#8249;</a>
-                <a class="page-navigation__first-link" href="">&#8249;</a>
-            </div>
-            <a class="page-navigation__link" href="">1</a>
-            <span class="page-navigation__link active">2</span>
-            <a class="page-navigation__link" href="">3</a>
-            <a class="page-navigation__link" href="">4</a>
-            <a class="page-navigation__link" href="">5</a>
-            <div class="page-navigation__last">
-                <a class="page-navigation__last-link" href="">&#8250;</a>
-                <a class="page-navigation__last-link" href="">&#8250;&#8250;</a>
             </div>
         </div>
     </div>
-
     <footer class="footer">
         <div class="menu-footer">
             <ul class="menu-footer__wrap">

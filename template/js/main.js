@@ -536,30 +536,57 @@ $(document).ready(function () {
     $('.js-top').click(function() {
         $('body,html').animate({scrollTop:0},800);
     });
-    //------------
-    //Размер блока
-    //------------
-    $('.element-block_2').each(function () {
+    show_all_on_resize();
+});
+$(window).on('resize', show_all_on_resize);
+//------------
+//Размер блока
+//------------
+function show_all_on_resize(){
+    $('.element-block_2__group_el').each(function () {
         var height = '380';
-        if($(this).innerHeight() > height){
-            $(this).innerHeight(380).css({'overflow' : 'hidden'});
-            $(this).append('<div class="bottom-element-block"><div class="bottom-element-block__group"><span class="bottom-element-block__group-link js-rev">Показать всё</span></div></div>');
-        }else{
-            $(this).innerHeight();
-        }
-        $(this).on('click', '.js-rev', function(){
-            $(this).toggleClass('active');
-            if($(this).hasClass('active')){
-                $(this).html('Скрыть всё').parents('.element-block_2').css({'padding-bottom' : '50px'}).innerHeight('100%');
-                $(this).parents('.bottom-element-block').css({
-                    'background' : 'none',
-                });
-            }else{
-                $(this).html('Показать всё').parents('.element-block_2').css({'padding-bottom' : '30px'}).innerHeight(height);
-                $(this).parents('.bottom-element-block').css({
-                    'background' : 'url(../test/images/bg-rev.png) repeat-x',//при интеграции поменять тут ссылку
+        if($(this).parents('.element-block_2').innerHeight() > height){
+            $(this).parents('.element-block_2').innerHeight(height).css({'overflow' : 'hidden'});
+            if($(this).parents('.element-block_2').find('.bottom-element-block').length == 0){
+                $(this).parents('.element-block_2').append('<div class="bottom-element-block"><div class="bottom-element-block__group"><span class="bottom-element-block__group-link js-rev">Показать всё</span></div></div>');
+                $(this).parents('.element-block_2').on('click', '.js-rev', function(){
+                    $(this).toggleClass('active');
+                    if($(this).hasClass('active')){
+                        $(this).html('Скрыть всё').parents('.element-block_2').css({'padding-bottom' : '50px'}).innerHeight('100%');
+                        $(this).parents('.bottom-element-block').css({
+                            'background' : 'none',
+                        });
+                    }else{
+                        $(this).html('Показать всё').parents('.element-block_2').css({'padding-bottom' : '30px'}).innerHeight(height);
+                        $(this).parents('.bottom-element-block').css({
+                            'background' : 'url(../images/bg-rev.png) repeat-x',//при интеграции поменять тут ссылку
+                        });
+                    }
                 });
             }
-        });
+        }else{
+            $(this).parents('.element-block_2').innerHeight();
+        }
+        if($(this).innerHeight() < 300){
+            $(this).parents('.element-block_2').find('.bottom-element-block').remove();
+        }else{
+            if($(this).parents('.element-block_2').find('.bottom-element-block').length == 0){
+                $(this).parents('.element-block_2').append('<div class="bottom-element-block"><div class="bottom-element-block__group"><span class="bottom-element-block__group-link js-rev">Показать всё</span></div></div>');
+                $(this).parents('.element-block_2').on('click', '.js-rev', function(){
+                    $(this).toggleClass('active');
+                    if($(this).hasClass('active')){
+                        $(this).html('Скрыть всё').parents('.element-block_2').css({'padding-bottom' : '50px'}).innerHeight('100%');
+                        $(this).parents('.bottom-element-block').css({
+                            'background' : 'none',
+                        });
+                    }else{
+                        $(this).html('Показать всё').parents('.element-block_2').css({'padding-bottom' : '30px'}).innerHeight(height);
+                        $(this).parents('.bottom-element-block').css({
+                            'background' : 'url(../images/bg-rev.png) repeat-x',//при интеграции поменять тут ссылку
+                        });
+                    }
+                });
+            }
+        }
     });
-});
+}

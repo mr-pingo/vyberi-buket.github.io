@@ -1,6 +1,5 @@
 html, body{
-    min-height: 100%; 
-    height: auto!important;
+    min-height: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -130,6 +129,7 @@ p{
 .hidden-block{
     display: block;
 }
+*::-ms-backdrop, html, body { height: auto!important;}
 *::-ms-backdrop, .search { width: 100%;}
 *::-ms-backdrop, .group-info_4 { width: 100%;}
 *::-ms-backdrop, .call-back__wrap__right_block { width: auto!important;}
