@@ -8,7 +8,8 @@
             padding: 40px 0px;
             display: flex;
             &__left_block{
-                width: 100%;
+                max-width: 345px;
+                min-width: 345px;
                 &__elements{
                     display: flex;
                     flex-direction: column;
@@ -16,6 +17,23 @@
             }
             &__right_block{
                 width: 100%;
+            }
+        }
+        &__group_2{
+            padding-top: 40px;
+            display: flex;
+            &__left_block{
+                max-width: 357px;
+                min-width: 357px;
+                margin-right: 15px;
+            }
+            &__right_block{
+                width: 100%;
+                margin-left: 15px;
+                .page-navigation{
+                    margin-top: 30px;
+                    margin-bottom: 0;
+                }
             }
         }
         &__info{
@@ -388,15 +406,15 @@
             margin: 20px 0px;
         }
         &__group{
+            margin-top: 30px;
             display: flex;
-            justify-content: space-between;
             &-left_block{
-                display: flex;
-                flex-wrap: wrap;
-                margin-right: 20px;
+                width: 100%;
+                margin-right: 15px;
             }
             &-right_block{
-                
+                margin-left: 15px;
+                width: 100%;
             }
         }
     }
@@ -457,7 +475,7 @@
     background: url(../../images/icon-2.png) no-repeat;
 }
 .pay-block-info{
-    width: 405px;
+    width: 100%;
     height: 181px;
     border-radius: 4px;
     background: #f0f9f9;
@@ -487,7 +505,7 @@
     }
 }
 .pay-block-info_2{
-    width: 405px;
+    width: 100%;
     height: 181px;
     border-radius: 4px;
     background: #f2f1f9;
@@ -540,6 +558,35 @@ hr.info-block_5__hr{
         &__right_block{
             width: 100%;
         }
+    }
+}
+.info-block_7{
+    width: 100%;
+    &__images{
+        max-width: 100%;
+        height: 180px;
+        border-radius: 4px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-prev{
+            
+        }
+    }
+    &__header{
+        display: inline-block;
+        margin: 20px 0px;
+        font-size: 16px;
+        color: #4ab1ae;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+    &__description{
+        font-size: 14px;
+        line-height: 22px;
+        color: #000;
     }
 }
 *::-ms-backdrop, .reviews-block__elements__right_block { max-width: auto!important; width: 55%; flex-grow: 1!important;}

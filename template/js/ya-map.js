@@ -6,9 +6,8 @@ ymaps.ready(init);
             center: [55.74469931, 37.61659984],
             zoom: 16
         });
-        myMap.controls.remove('typeSelector').remove('trafficControl').remove('searchControl').remove('rulerControl');
+        myMap.controls.remove('typeSelector').remove('trafficControl').remove('rulerControl');
         myMap.behaviors.disable([
-            'drag',
             'scrollZoom'
         ]);
         myPin = new ymaps.GeoObjectCollection({}, {

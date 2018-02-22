@@ -326,41 +326,39 @@
             <div class="block-add-comment">
                 <span class="block-add-comment__name">Обратная связь</span>
                 <form action="url">
-                    <div class="block-add-comment__wrap">
-                        <div class="grid-2_sm-1">
-                            <div class="col">
-                                <div class="block-add-comment__wrap-elements">
-                                    <input class="input-name" id="name" name="name" type="text" placeholder="Имя">
-                                    <label for="name"></label>
+                    <div class="block-add-comment__wrap_2">
+                        <div class="block-add-comment__wrap_2__group">
+                            <div class="block-add-comment__wrap_2__group__left_block">
+                                <div class="block-add-comment__wrap_2__group__left_block-elements">
+                                    <div class="block-add-comment__wrap-elements">
+                                        <input class="input-name" id="name" name="name" type="text" placeholder="Имя" required>
+                                        <label for="name"></label>
+                                    </div>
+                                </div>
+                                <div class="block-add-comment__wrap_2__group__left_block-elements">
+                                    <div class="block-add-comment__wrap-elements">
+                                        <input class="input-phone" id="phone" name="phone" type="text" placeholder="Телефон" required>
+                                        <label for="phone"></label>
+                                    </div>
+                                </div>
+                                <div class="block-add-comment__wrap_2__group__left_block-elements">
+                                    <div class="block-add-comment__wrap-elements">
+                                        <input class="input-mail" id="mail" name="mail" type="text" placeholder="E-mail" required>
+                                        <label for="mail"></label>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col">
-                                <div class="block-add-comment__wrap-elements">
-                                    <input class="input-phone" id="phone" name="phone" type="text" placeholder="Телефон">
-                                    <label for="phone"></label>
+                            <div class="block-add-comment__wrap_2__group__right_block">
+                                <div class="block-add-comment__wrap_2__group__right_block-elements">
+                                    <div class="block-add-comment__wrap-elements">
+                                        <textarea class="textarea" id="message_2" name="message" cols="30" rows="10" placeholder="Комментарий"></textarea>
+                                        <label for="message_2"></label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="grid">
-                            <div class="col">
-                                <div class="block-add-comment__wrap-elements">
-                                    <input class="input-text" id="message" name="message" type="text" placeholder="Заголовок отзыва">
-                                    <label for="message"></label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="grid">
-                            <div class="col">
-                                <div class="block-add-comment__wrap-elements">
-                                    <textarea class="textarea" id="message_2" name="message" cols="30" rows="10" placeholder="Комментарий"></textarea>
-                                    <label for="message_2"></label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="grid-2_sm-1">
-                            <div class="col">
-                                <button class="submit">Отправить</button>
-                            </div>
+                        <div class="block-add-comment__wrap_2__group">
+                            <button class="submit">Отправить</button>
                         </div>
                     </div>
                 </form>

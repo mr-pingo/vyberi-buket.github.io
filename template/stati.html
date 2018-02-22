@@ -15,17 +15,19 @@
     <link rel="stylesheet" type="text/css" href="css/swiper.css">
     <link rel="stylesheet" type="text/css" href="css/themes/simple.css">
     <link rel="stylesheet" type="text/css" href="css/jquery.arcticmodal-0.3.css">
-    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic-ext" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
+    </script>
     <script src="js/mobile.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/jquery.arcticmodal-0.3.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/jquery.ikSelect.min.js"></script>
+    <script src="js/ya-map.js"></script>
     <script src="js/main.js"></script>
     <title>Купить цветы с доставкой в Москве и по России</title>
 </head>
@@ -110,7 +112,7 @@
                             </div>
                             <div class="group-info_4">
                                 <div class="group-info_4__elements">
-                                    <span class="group-info_4__elements-button js-call-back">Обратный звонок</span>
+                                    <span class="group-info_4__elements-button js-call-back">Обратная звонок</span>
                                     <i class="group-info_4__elements-icon js-call-back" title="Обратный звонок"></i>
                                 </div>
                             </div>
@@ -248,180 +250,220 @@
         </ol>
     </header>
 
-    <div class="content">
-        <h1 class="content__name">Оформление заказа</h1>
-        <div class="info-block_6">
-            <div class="info-block_6-group">
-                <span class="info-block_6__text">Ваш заказ в Петропавловск-Камчатский, на сумму </span>
-                <span class="info-block_6__price">3000<i class="rub">Р</i></span>
+    <div class="content" itemscope itemtype="http://schema.org/Product">
+        <h1 class="content__name">Статьи</h1>
+        <div class="content__wrapper">
+            <div class="content__wrapper__group_2">
+                <div class="content__wrapper__group_2__left_block">
+                    <div class="section_main">
+                        <div class="section_main__header">Рубрики статей</div>
+                        <div class="section_main__group">
+                            <ul class="section_main__wrapper">
+                                <li class="section_main__wrapper__list js-section">
+                                    <span class="section_main__wrapper__list-header">Раздел первый</span>
+                                    <ul class="section_main__wrapper__list__hidden js-section-hidden">
+                                        <li class="section_main__wrapper__list__hidden__list">
+                                            <a class="section_main__wrapper__list__hidden__list-link" href="">Lorem ipsum dolor.</a>
+                                        </li>
+                                        <li class="section_main__wrapper__list__hidden__list">
+                                            <a class="section_main__wrapper__list__hidden__list-link" href="">Lorem ipsum dolor sit amet, consectetur.</a>
+                                        </li>
+                                        <li class="section_main__wrapper__list__hidden__list">
+                                            <a class="section_main__wrapper__list__hidden__list-link" href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius ex, quaerat consequuntur.</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="section_main__wrapper__list js-section">
+                                    <span class="section_main__wrapper__list-header">Раздел второй</span>
+                                    <ul class="section_main__wrapper__list__hidden js-section-hidden">
+                                        <li class="section_main__wrapper__list__hidden__list">
+                                            <a class="section_main__wrapper__list__hidden__list-link" href="">Lorem ipsum dolor.</a>
+                                        </li>
+                                        <li class="section_main__wrapper__list__hidden__list">
+                                            <a class="section_main__wrapper__list__hidden__list-link" href="">Lorem ipsum dolor sit amet, consectetur.</a>
+                                        </li>
+                                        <li class="section_main__wrapper__list__hidden__list">
+                                            <a class="section_main__wrapper__list__hidden__list-link" href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius ex, quaerat consequuntur.</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="section_main__wrapper__list js-section">
+                                    <span class="section_main__wrapper__list-header">Раздел третий</span>
+                                    <ul class="section_main__wrapper__list__hidden js-section-hidden">
+                                        <li class="section_main__wrapper__list__hidden__list">
+                                            <a class="section_main__wrapper__list__hidden__list-link" href="">Lorem ipsum dolor.</a>
+                                        </li>
+                                        <li class="section_main__wrapper__list__hidden__list">
+                                            <a class="section_main__wrapper__list__hidden__list-link" href="">Lorem ipsum dolor sit amet, consectetur.</a>
+                                        </li>
+                                        <li class="section_main__wrapper__list__hidden__list">
+                                            <a class="section_main__wrapper__list__hidden__list-link" href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius ex, quaerat consequuntur.</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="section_main__wrapper__list js-section">
+                                    <span class="section_main__wrapper__list-header">Раздел четвертый</span>
+                                    <ul class="section_main__wrapper__list__hidden js-section-hidden">
+                                        <li class="section_main__wrapper__list__hidden__list">
+                                            <a class="section_main__wrapper__list__hidden__list-link" href="">Lorem ipsum dolor.</a>
+                                        </li>
+                                        <li class="section_main__wrapper__list__hidden__list">
+                                            <a class="section_main__wrapper__list__hidden__list-link" href="">Lorem ipsum dolor sit amet, consectetur.</a>
+                                        </li>
+                                        <li class="section_main__wrapper__list__hidden__list">
+                                            <a class="section_main__wrapper__list__hidden__list-link" href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius ex, quaerat consequuntur.</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="section_main__wrapper__list js-section">
+                                    <span class="section_main__wrapper__list-header">Раздел пятый</span>
+                                    <ul class="section_main__wrapper__list__hidden js-section-hidden">
+                                        <li class="section_main__wrapper__list__hidden__list">
+                                            <a class="section_main__wrapper__list__hidden__list-link" href="">Lorem ipsum dolor.</a>
+                                        </li>
+                                        <li class="section_main__wrapper__list__hidden__list">
+                                            <a class="section_main__wrapper__list__hidden__list-link" href="">Lorem ipsum dolor sit amet, consectetur.</a>
+                                        </li>
+                                        <li class="section_main__wrapper__list__hidden__list">
+                                            <a class="section_main__wrapper__list__hidden__list-link" href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius ex, quaerat consequuntur.</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="section_main__wrapper">
+                                <li class="section_main__wrapper__list js-section">
+                                    <span class="section_main__wrapper__list-header">Раздел первый</span>
+                                    <ul class="section_main__wrapper__list__hidden js-section-hidden">
+                                        <li class="section_main__wrapper__list__hidden__list">
+                                            <a class="section_main__wrapper__list__hidden__list-link" href="">Lorem ipsum dolor.</a>
+                                        </li>
+                                        <li class="section_main__wrapper__list__hidden__list">
+                                            <a class="section_main__wrapper__list__hidden__list-link" href="">Lorem ipsum dolor sit amet, consectetur.</a>
+                                        </li>
+                                        <li class="section_main__wrapper__list__hidden__list">
+                                            <a class="section_main__wrapper__list__hidden__list-link" href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius ex, quaerat consequuntur.</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="section_main__wrapper__list js-section">
+                                    <span class="section_main__wrapper__list-header">Раздел второй</span>
+                                    <ul class="section_main__wrapper__list__hidden js-section-hidden">
+                                        <li class="section_main__wrapper__list__hidden__list">
+                                            <a class="section_main__wrapper__list__hidden__list-link" href="">Lorem ipsum dolor.</a>
+                                        </li>
+                                        <li class="section_main__wrapper__list__hidden__list">
+                                            <a class="section_main__wrapper__list__hidden__list-link" href="">Lorem ipsum dolor sit amet, consectetur.</a>
+                                        </li>
+                                        <li class="section_main__wrapper__list__hidden__list">
+                                            <a class="section_main__wrapper__list__hidden__list-link" href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius ex, quaerat consequuntur.</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="section_main__wrapper__list js-section">
+                                    <span class="section_main__wrapper__list-header">Раздел третий</span>
+                                    <ul class="section_main__wrapper__list__hidden js-section-hidden">
+                                        <li class="section_main__wrapper__list__hidden__list">
+                                            <a class="section_main__wrapper__list__hidden__list-link" href="">Lorem ipsum dolor.</a>
+                                        </li>
+                                        <li class="section_main__wrapper__list__hidden__list">
+                                            <a class="section_main__wrapper__list__hidden__list-link" href="">Lorem ipsum dolor sit amet, consectetur.</a>
+                                        </li>
+                                        <li class="section_main__wrapper__list__hidden__list">
+                                            <a class="section_main__wrapper__list__hidden__list-link" href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius ex, quaerat consequuntur.</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="section_main__wrapper__list js-section">
+                                    <span class="section_main__wrapper__list-header">Раздел четвертый</span>
+                                    <ul class="section_main__wrapper__list__hidden js-section-hidden">
+                                        <li class="section_main__wrapper__list__hidden__list">
+                                            <a class="section_main__wrapper__list__hidden__list-link" href="">Lorem ipsum dolor.</a>
+                                        </li>
+                                        <li class="section_main__wrapper__list__hidden__list">
+                                            <a class="section_main__wrapper__list__hidden__list-link" href="">Lorem ipsum dolor sit amet, consectetur.</a>
+                                        </li>
+                                        <li class="section_main__wrapper__list__hidden__list">
+                                            <a class="section_main__wrapper__list__hidden__list-link" href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius ex, quaerat consequuntur.</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="section_main__wrapper__list js-section">
+                                    <span class="section_main__wrapper__list-header">Раздел пятый</span>
+                                    <ul class="section_main__wrapper__list__hidden js-section-hidden">
+                                        <li class="section_main__wrapper__list__hidden__list">
+                                            <a class="section_main__wrapper__list__hidden__list-link" href="">Lorem ipsum dolor.</a>
+                                        </li>
+                                        <li class="section_main__wrapper__list__hidden__list">
+                                            <a class="section_main__wrapper__list__hidden__list-link" href="">Lorem ipsum dolor sit amet, consectetur.</a>
+                                        </li>
+                                        <li class="section_main__wrapper__list__hidden__list">
+                                            <a class="section_main__wrapper__list__hidden__list-link" href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius ex, quaerat consequuntur.</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__wrapper__group_2__right_block">
+                    <div class="grid-2_xs-1">
+                        <div class="col">
+                            <div class="info-block_7">
+                                <a class="info-block_7__images" href="">
+                                    <img class="info-block_7__images-prev" src="./images/infoblock-img/stati.png" alt="">
+                                </a>
+                                <a class="info-block_7__header" href="">Эксперт спрогнозировал 2−3 кратное подорожание цветов в РФ</a>
+                                <div class="info-block_7__description">Он считает, что компенсировать запрещенные цветы отечественной продукцией в ближайшие годы нереально.</div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="info-block_7">
+                                <a class="info-block_7__images" href="">
+                                    <img class="info-block_7__images-prev" src="./images/infoblock-img/stati-2.png" alt="">
+                                </a>
+                                <a class="info-block_7__header" href="">Эксперт спрогнозировал 2−3 кратное подорожание цветов в РФ</a>
+                                <div class="info-block_7__description">Он считает, что компенсировать запрещенные цветы отечественной продукцией в ближайшие годы нереально.</div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="info-block_7">
+                                <a class="info-block_7__images" href="">
+                                    <img class="info-block_7__images-prev" src="./images/infoblock-img/stati-3.png" alt="">
+                                </a>
+                                <a class="info-block_7__header" href="">Эксперт спрогнозировал 2−3 кратное подорожание цветов в РФ</a>
+                                <div class="info-block_7__description">Он считает, что компенсировать запрещенные цветы отечественной продукцией в ближайшие годы нереально.</div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="info-block_7">
+                                <a class="info-block_7__images" href="">
+                                    <img class="info-block_7__images-prev" src="./images/infoblock-img/stati-4.png" alt="">
+                                </a>
+                                <a class="info-block_7__header" href="">Эксперт спрогнозировал 2−3 кратное подорожание цветов в РФ</a>
+                                <div class="info-block_7__description">Он считает, что компенсировать запрещенные цветы отечественной продукцией в ближайшие годы нереально.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-navigation">
+                        <div class="page-navigation__first">
+                            <a class="page-navigation__first-link" href="">&#8249;&#8249;</a>
+                            <a class="page-navigation__first-link" href="">&#8249;</a>
+                        </div>
+                        <a class="page-navigation__link" href="">1</a>
+                        <span class="page-navigation__link active">2</span>
+                        <a class="page-navigation__link" href="">3</a>
+                        <a class="page-navigation__link" href="">4</a>
+                        <a class="page-navigation__link" href="">5</a>
+                        <div class="page-navigation__last">
+                            <a class="page-navigation__last-link" href="">&#8250;</a>
+                            <a class="page-navigation__last-link" href="">&#8250;&#8250;</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="info-block_6__list_product">
-                <ul class="info-block_6__list_product-group">
-                    <li class="info-block_6__list_product-elements">
-                        <div class="info-block_6__list_product__img js-photo">
-                            <img class="info-block_6__list_product__img-prev js-photo-link" src="./images/infoblock-img/byket.jpg" alt="">
-                        </div>
-                        <div class="info-block_6__list_product-group_el">
-                            <a class="info-block_6__list_product-name" href="">Букет необыкновенные бабочки</a>
-                            <span class="info-block_6__list_product-price">1 500<i class="rub">Р</i></span>
-                        </div>
-                    </li>
-                    <li class="info-block_6__list_product-elements">
-                        <div class="info-block_6__list_product__img js-photo">
-                            <img class="info-block_6__list_product__img-prev js-photo-link" src="./images/infoblock-img/byket.jpg" alt="">
-                        </div>
-                        <div class="info-block_6__list_product-group_el">
-                            <a class="info-block_6__list_product-name" href="">Букет необыкновенные бабочки</a>
-                            <span class="info-block_6__list_product-price">1 500<i class="rub">Р</i></span>
-                        </div>
-                    </li>
-                    <li class="info-block_6__list_product-elements">
-                        <div class="info-block_6__list_product__img js-photo">
-                            <img class="info-block_6__list_product__img-prev js-photo-link" src="./images/infoblock-img/byket.jpg" alt="">
-                        </div>
-                        <div class="info-block_6__list_product-group_el">
-                            <a class="info-block_6__list_product-name" href="">Букет необыкновенные бабочки</a>
-                            <span class="info-block_6__list_product-price">1 500<i class="rub">Р</i></span>
-                        </div>
-                    </li>
-                    <li class="info-block_6__list_product-elements">
-                        <div class="info-block_6__list_product__img js-photo">
-                            <img class="info-block_6__list_product__img-prev js-photo-link" src="./images/infoblock-img/byket.jpg" alt="">
-                        </div>
-                        <div class="info-block_6__list_product-group_el">
-                            <a class="info-block_6__list_product-name" href="">Букет необыкновенные бабочки</a>
-                            <span class="info-block_6__list_product-price">1 500<i class="rub">Р</i></span>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="mini-form">
-                <div class="mini-form__elements">
-                    <div class="checkbox-form">
-                        <input id="check1" type="checkbox" class="checkbox" />
-                        <label for="check1" class="checkbox-label"><i class="checkbox-img"></i>Сделать фото при получении</label>
-                    </div>
-                </div>
-                <div class="mini-form__elements">
-                    <div class="mini-form__elements-group">
-                        <span class="mini-form__elements-button" title="Удалить"></span>
-                        <i class="mini-form__elements-text_icon"></i>
-                        <span class="mini-form__elements-text js-popup-form-text">Открытка добавлена</span>
-                    </div>
-                </div>
-            </div>
-            <form class="big-form" action="url">
-                <div class="big-form__elements">
-                    <span class="big-form__elements-name">Отправитель</span>
-                    <div class="big-form__elements-group">
-                        <div class="block-add-comment__wrap-elements">
-                            <input class="input-phone" name="phone" type="text" placeholder="Телефон">
-                            <label for="phone"></label>
-                        </div>
-                        <div class="block-add-comment__wrap-elements">
-                            <input class="input-name" name="name" type="text" placeholder="Имя">
-                            <label for="name"></label>
-                        </div>
-                        <div class="block-add-comment__wrap-elements">
-                            <input class="input-mail" name="message" type="text" placeholder="E-mail">
-                            <label for="message"></label>
-                        </div>
-                    </div>
-                    <div class="checkbox-form">
-                        <input id="check2" type="checkbox" class="checkbox" />
-                        <label for="check2" class="checkbox-label">Я сам буду получать заказ</label>
-                    </div>
-                </div>
-                <div class="big-form__elements">
-                    <span class="big-form__elements-name">Получатель</span>
-                    <div class="big-form__group">
-                        <div class="big-form__elements-group">
-                            <div class="block-add-comment__wrap-elements">
-                                <input class="input-phone" name="phone" type="text" placeholder="Телефон">
-                                <label for="phone"></label>
-                            </div>
-                            <div class="block-add-comment__wrap-elements">
-                                <input class="input-name" name="name" type="text" placeholder="Имя">
-                                <label for="name"></label>
-                            </div>
-                        </div>
-                        <div class="big-form__elements-group_3">
-                            <div class="checkbox-form">
-                                <input id="check5" type="checkbox" class="checkbox" />
-                                <label for="check5" class="checkbox-label">Не говорить получателю про цветы</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="big-form__elements">
-                    <span class="big-form__elements-name">Дата и время доставки</span>
-                    <div class="big-form__group">
-                        <div class="big-form__elements-group">
-                            <div class="date-poly">
-                                <input class="date-poly__wrap" type="text" id="datepicker">
-                            </div>
-                            <div class="slider-range">
-                                <p>
-                                    <span id="amount"></span>
-                                    <span>- доставка 0 Р</span>
-                                </p>
-                                <div class="slider-range__hidden">
-                                    <div class="slider-range__wrap" id="slider-range"></div>
-                                </div>
-                                <div class="slider-time">
-                                    <span>00:00</span>
-                                    <span>03:00</span>
-                                    <span>06:00</span>
-                                    <span>09:00</span>
-                                    <span>12:00</span>
-                                    <span>15:00</span>
-                                    <span>18:00</span>
-                                    <span>21:00</span>
-                                    <span>24:00</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="big-form__elements-group_3">
-                            <div class="checkbox-form">
-                                <input id="check3" type="checkbox" class="checkbox" />
-                                <label for="check3" class="checkbox-label">Уточнить дату и время у получателя</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="big-form__elements">
-                    <span class="big-form__elements-name">Адрес доставки</span>
-                    <div class="big-form__group">
-                        <div class="big-form__elements-group">
-                            <div class="block-add-comment__wrap-elements">
-                                <div class="group">
-                                    <textarea class="textarea" name="message" id="" placeholder="Например: Москва"></textarea>
-                                    <label for="message"></label>
-                                </div>
-                                <div class="checkbox-form">
-                                    <input id="check4" type="checkbox" class="checkbox" />
-                                    <label for="check4" class="checkbox-label">Уточнить адрес у получателя</label>
-                                </div>
-                            </div>
-                            <div class="group">
-                                <a class="big-form__elements-back_button" href="./basket.html"><i class="back"></i>Вернуться в корзину</a>
-                                <div class="big-form__elements-group_2">
-                                    <div class="big-form__send">
-                                       <div class="big-form__send-group">
-                                            <button class="big-form__send-button">Оформить заказ</button>
-                                        </div>
-                                        <div class="big-form__send-group">
-                                           <span class="big-form__send-text">оформив заказ вы соглашаетесь с <span class="link js-popup-text">условиями оферты</span></span> 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </form>
         </div>
     </div>
+
     <footer class="footer">
         <div class="menu-footer">
             <ul class="menu-footer__wrap">

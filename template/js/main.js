@@ -124,7 +124,7 @@ $(document).ready(function () {
             $('.js-main-list').removeClass('active');
         }
     });
-    $('.js-choice-select').on('click', function() {
+    $('.js-choice-select').on('click', function () {
         var text = $(this).html();
         $(this).parents('.js-main-list').find('.js-filter-list').addClass('filter-select');
         $(this).parents('.js-main-list').find('.js-choice').html(text);
@@ -132,7 +132,7 @@ $(document).ready(function () {
     //--------
     // Gallery
     //--------
-    $('.js-gallery').on('click', function() {
+    $('.js-gallery').on('click', function () {
         $('.js-gallery').removeClass('active');
         $(this).addClass('active');
         var link = $(this).children('img').attr('src');
@@ -141,27 +141,34 @@ $(document).ready(function () {
     //-------------------------
     //Переключатель изображений
     //-------------------------
-    $('.js-next-slide').on('click', function(){
-        if($('.gallery__mini__img.active').next('.gallery__mini__img').length > 0){
+    $('.js-next-slide').on('click', function () {
+        if ($('.gallery__mini__img.active').next('.gallery__mini__img').length > 0) {
             $('.gallery__mini__img.active').removeClass('active').next('.gallery__mini__img').addClass('active');
             var link = $('.gallery__mini__img.active').children('.gallery__mini__img-prev').attr('src');
             $('body').find('.js-photo-link').attr('src', link);
-        }else{
+        } else {
             $('.gallery__mini__img').removeClass('active').eq(0).addClass('active');
             var link = $('.gallery__mini__img.active').children('.gallery__mini__img-prev').attr('src');
             $('body').find('.js-photo-link').attr('src', link);
         }
     });
-     $('.js-prev-slide').on('click', function(){
-        if($('.gallery__mini__img.active').prev('.gallery__mini__img').length > 0){
+    $('.js-prev-slide').on('click', function () {
+        if ($('.gallery__mini__img.active').prev('.gallery__mini__img').length > 0) {
             $('.gallery__mini__img.active').removeClass('active').prev('.gallery__mini__img').addClass('active');
             var link = $('.gallery__mini__img.active').children('.gallery__mini__img-prev').attr('src');
             $('body').find('.js-photo-link').attr('src', link);
-        }else{
+        } else {
             $('.gallery__mini__img').removeClass('active').eq($('.gallery__mini__img').length - 1).addClass('active');
             var link = $('.gallery__mini__img.active').children('.gallery__mini__img-prev').attr('src');
             $('body').find('.js-photo-link').attr('src', link);
         }
+    });
+    //----------------------
+    //Развертывание разделов
+    //----------------------
+    $('.js-section').on('click', function(){
+        $(this).toggleClass('active'); 
+        $(this).find('.js-section-hidden').slideToggle();
     });
     //--------------------
     // Выбор кол-во цветов
@@ -176,24 +183,24 @@ $(document).ready(function () {
     $('select').ikSelect();
     $('.js-select').ikSelect('disable');
     $('.checkbox').on('click', function () {
-        if($(this).prop('checked')){
+        if ($(this).prop('checked')) {
             $(this).parents('.js-form-select').find('.js-select').ikSelect('enable');
-        }else{
+        } else {
             $(this).parents('.js-form-select').find('.js-select').ikSelect('disable');
         }
     });
     //-------
     // Popups
     //-------
-    $('.js-photo').on('click', function() {
+    $('.js-photo').on('click', function () {
         var link = $(this).find('.js-photo-link').attr('src');
-        if($(this).hasClass('js-slider')){
+        if ($(this).hasClass('js-slider')) {
             var popup = $('<div style="display: none;">\
             <div class="box-modal" id="popup_img">\
             <div class="box-modal_close arcticmodal-close"></div>\
             <div class="images">\
             <div class="swiper-button-prev product-slider__prev mobile-swiper-button js-prev-slide"></div>\
-            <img class="images__prev" src="'+link+'" alt="">\
+            <img class="images__prev" src="' + link + '" alt="">\
             <div class="swiper-button-next product-slider__next mobile-swiper-button js-next-slide"></div>\
             </div>\
             </div>\
@@ -204,12 +211,12 @@ $(document).ready(function () {
                     $(document).find('#popup_img').remove();
                 }
             });
-        }else{
+        } else {
             var popup = $('<div style="display: none;">\
             <div class="box-modal" id="popup_img">\
             <div class="box-modal_close arcticmodal-close"></div>\
             <div class="images">\
-            <img class="images__prev" src="'+link+'" alt="">\
+            <img class="images__prev" src="' + link + '" alt="">\
             </div>\
             </div>\
             </div>');
@@ -220,31 +227,31 @@ $(document).ready(function () {
                 }
             });
         }
-        $('.js-next-slide').on('click', function(){
-            if($('.gallery__mini__img.active').next('.gallery__mini__img').length > 0){
+        $('.js-next-slide').on('click', function () {
+            if ($('.gallery__mini__img.active').next('.gallery__mini__img').length > 0) {
                 $('.gallery__mini__img.active').removeClass('active').next('.gallery__mini__img').addClass('active');
                 var link = $('.gallery__mini__img.active').children('.gallery__mini__img-prev').attr('src');
                 $('body').find('.images__prev').attr('src', link);
-            }else{
+            } else {
                 $('.gallery__mini__img').removeClass('active').eq(0).addClass('active');
                 var link = $('.gallery__mini__img.active').children('.gallery__mini__img-prev').attr('src');
                 $('body').find('.images__prev').attr('src', link);
             }
         });
-         $('.js-prev-slide').on('click', function(){
-            if($('.gallery__mini__img.active').prev('.gallery__mini__img').length > 0){
+        $('.js-prev-slide').on('click', function () {
+            if ($('.gallery__mini__img.active').prev('.gallery__mini__img').length > 0) {
                 $('.gallery__mini__img.active').removeClass('active').prev('.gallery__mini__img').addClass('active');
                 $('.gallery__mini__img.active').removeClass('active').prev('.gallery__mini__img').addClass('active');
                 var link = $('.gallery__mini__img.active').children('.gallery__mini__img-prev').attr('src');
                 $('body').find('.images__prev').attr('src', link);
-            }else{
+            } else {
                 $('.gallery__mini__img').removeClass('active').eq($('.gallery__mini__img').length - 1).addClass('active');
                 var link = $('.gallery__mini__img.active').children('.gallery__mini__img-prev').attr('src');
                 $('body').find('.images__prev').attr('src', link);
             }
         });
     });
-    $('.js-call-back').on('click', function() {
+    $('.js-call-back').on('click', function () {
         var popup = $('<div style="display: none;">\
         <div class="box-modal popup-call-back" id="popup-callback">\
         <div class="box-modal_close arcticmodal-close"></div>\
@@ -276,7 +283,7 @@ $(document).ready(function () {
             }
         });
     });
-    $('.js-select-town').on('click', function() {
+    $('.js-select-town').on('click', function () {
         var popup = $('<div style="display: none;">\
         <div class="box-modal popup-call-back" id="popup-select-town">\
         <div class="box-modal_close arcticmodal-close"></div>\
@@ -329,7 +336,7 @@ $(document).ready(function () {
             }
         });
     });
-    $('.js-buy-one-click').on('click', function() {
+    $('.js-buy-one-click').on('click', function () {
         var popup = $('<div style="display: none;">\
         <div class="box-modal popup-call-back" id="popup-callback">\
         <div class="box-modal_close arcticmodal-close"></div>\
@@ -361,7 +368,7 @@ $(document).ready(function () {
             }
         });
     });
-    $('.js-sale-form').on('click', function(){
+    $('.js-sale-form').on('click', function () {
         var popup = $('<div style="display: none;">\
         <div class="box-modal popup-call-back" id="popup-callback">\
         <div class="box-modal_close arcticmodal-close"></div>\
@@ -378,7 +385,7 @@ $(document).ready(function () {
             }
         });
     });
-    $('.js-popup-form-text').on('click', function(){
+    $('.js-popup-form-text').on('click', function () {
         var popup = $('<div style="display: none;">\
         <div class="box-modal popup-call-back" id="popup-callback">\
         <div class="box-modal_close arcticmodal-close"></div>\
@@ -399,7 +406,7 @@ $(document).ready(function () {
             }
         });
     });
-    $('.js-popup-text').on('click', function(){
+    $('.js-popup-text').on('click', function () {
         var popup = $('<div style="display: none;">\
         <div class="box-modal popup-call-back" id="popup-callback">\
         <div class="box-modal_close arcticmodal-close"></div>\
@@ -447,13 +454,13 @@ $(document).ready(function () {
         prevText: '&#x3c;Пред',
         nextText: 'След&#x3e;',
         currentText: 'Сегодня',
-        monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь',
-        'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
-        monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн',
-        'Июл','Авг','Сен','Окт','Ноя','Дек'],
-        dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
-        dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
-        dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+        monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
+        'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+        monthNamesShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн',
+        'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
+        dayNames: ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'],
+        dayNamesShort: ['вск', 'пнд', 'втр', 'срд', 'чтв', 'птн', 'сбт'],
+        dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
         dateFormat: 'dd.mm.yy',
         firstDay: 1,
         isRTL: false
@@ -471,13 +478,13 @@ $(document).ready(function () {
     $('.js-toggle-search').on('click', function () {
         $(this).toggleClass('active');
         if ($(this).hasClass('active')) {
-            $('body').css('overflow','hidden');
+            $('body').css('overflow', 'hidden');
             $('body').find('.js-open-search').css('display', 'block');
             $('body').append('<div class="bg-fone"></div>');
             $('.header').addClass('hover');
             $('.bg-fone').addClass('hover');
         } else {
-            $('body').css('overflow','auto');
+            $('body').css('overflow', 'auto');
             $('body').find('.js-open-search').css('display', 'none');
             $('.bg-fone').remove();
             $('.header').removeClass('hover');
@@ -526,63 +533,96 @@ $(document).ready(function () {
     //-----------
     //Скролл топ
     //-----------
-    $(window).scroll(function() {
-        if($(this).scrollTop() != 0) {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() != 0) {
             $('.js-top').fadeIn();
-        }else{
+        } else {
             $('.js-top').fadeOut();
         }
     });
-    $('.js-top').click(function() {
-        $('body,html').animate({scrollTop:0},800);
+    $('.js-top').click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 800);
     });
     show_all_on_resize();
+    tool_tip();
 });
 $(window).on('resize', show_all_on_resize);
+//-------
+//Tooltip
+//-------
+function tool_tip() {
+    $('[data-tooltip]').mousemove(function (eventObject) {
+        $data_tooltip = $(this).attr('data-tooltip');
+        $('.tooltip').html($data_tooltip)
+            .css({
+                "top": eventObject.pageY + 10,
+                "left": eventObject.pageX + 15
+            })
+            .show();
+    }).mouseout(function () {
+        $('.tooltip').hide().html('')
+            .css({
+                'top': 0,
+                'left': 0
+            });
+    });
+}
 //------------
 //Размер блока
 //------------
-function show_all_on_resize(){
+function show_all_on_resize() {
     $('.element-block_2__group_el').each(function () {
         var height = '380';
-        if($(this).parents('.element-block_2').innerHeight() > height){
-            $(this).parents('.element-block_2').innerHeight(height).css({'overflow' : 'hidden'});
-            if($(this).parents('.element-block_2').find('.bottom-element-block').length == 0){
+        if ($(this).parents('.element-block_2').innerHeight() > height) {
+            $(this).parents('.element-block_2').innerHeight(height).css({
+                'overflow': 'hidden'
+            });
+            if ($(this).parents('.element-block_2').find('.bottom-element-block').length == 0) {
                 $(this).parents('.element-block_2').append('<div class="bottom-element-block"><div class="bottom-element-block__group"><span class="bottom-element-block__group-link js-rev">Показать всё</span></div></div>');
-                $(this).parents('.element-block_2').on('click', '.js-rev', function(){
+                $(this).parents('.element-block_2').on('click', '.js-rev', function () {
                     $(this).toggleClass('active');
-                    if($(this).hasClass('active')){
-                        $(this).html('Скрыть всё').parents('.element-block_2').css({'padding-bottom' : '50px'}).innerHeight('100%');
+                    if ($(this).hasClass('active')) {
+                        $(this).html('Скрыть всё').parents('.element-block_2').css({
+                            'padding-bottom': '50px'
+                        }).innerHeight('100%');
                         $(this).parents('.bottom-element-block').css({
-                            'background' : 'none',
+                            'background': 'none',
                         });
-                    }else{
-                        $(this).html('Показать всё').parents('.element-block_2').css({'padding-bottom' : '30px'}).innerHeight(height);
+                    } else {
+                        $(this).html('Показать всё').parents('.element-block_2').css({
+                            'padding-bottom': '30px'
+                        }).innerHeight(height);
                         $(this).parents('.bottom-element-block').css({
-                            'background' : 'url(../images/bg-rev.png) repeat-x',//при интеграции поменять тут ссылку
+                            'background': 'url(../images/bg-rev.png) repeat-x', //при интеграции поменять тут ссылку
                         });
                     }
                 });
             }
-        }else{
+        } else {
             $(this).parents('.element-block_2').innerHeight();
         }
-        if($(this).innerHeight() < 300){
+        if ($(this).innerHeight() < 300) {
             $(this).parents('.element-block_2').find('.bottom-element-block').remove();
-        }else{
-            if($(this).parents('.element-block_2').find('.bottom-element-block').length == 0){
+        } else {
+            if ($(this).parents('.element-block_2').find('.bottom-element-block').length == 0) {
                 $(this).parents('.element-block_2').append('<div class="bottom-element-block"><div class="bottom-element-block__group"><span class="bottom-element-block__group-link js-rev">Показать всё</span></div></div>');
-                $(this).parents('.element-block_2').on('click', '.js-rev', function(){
+                $(this).parents('.element-block_2').on('click', '.js-rev', function () {
                     $(this).toggleClass('active');
-                    if($(this).hasClass('active')){
-                        $(this).html('Скрыть всё').parents('.element-block_2').css({'padding-bottom' : '50px'}).innerHeight('100%');
+                    if ($(this).hasClass('active')) {
+                        $(this).html('Скрыть всё').parents('.element-block_2').css({
+                            'padding-bottom': '50px'
+                        }).innerHeight('100%');
                         $(this).parents('.bottom-element-block').css({
-                            'background' : 'none',
+                            'background': 'none',
                         });
-                    }else{
-                        $(this).html('Показать всё').parents('.element-block_2').css({'padding-bottom' : '30px'}).innerHeight(height);
+                    } else {
+                        $(this).html('Показать всё').parents('.element-block_2').css({
+                            'padding-bottom': '30px'
+                        }).innerHeight(height);
                         $(this).parents('.bottom-element-block').css({
-                            'background' : 'url(../images/bg-rev.png) repeat-x',//при интеграции поменять тут ссылку
+                            'background': 'url(../images/bg-rev.png) repeat-x', //при интеграции поменять тут ссылку
                         });
                     }
                 });

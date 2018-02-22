@@ -156,11 +156,15 @@
         border-top: 1px solid #d4dede;
         transition: all 0.5s;
         text-align: center;
-        padding: 22px 20px;
+        padding: 10px 20px 22px 20px;
         box-sizing: border-box;
         &-name{
-            display: block;
-            margin-bottom: 15px;
+            height: 36px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 10px;
             font-family: 'Open Sans', sans-serif;
             font-weight: 500;
             font-size: 16px;
@@ -193,7 +197,7 @@
             }
         }
         &__button{
-            margin-top: 26px;
+            margin-top: 15px;
             display: flex;
             justify-content: space-between;
             &-order{
