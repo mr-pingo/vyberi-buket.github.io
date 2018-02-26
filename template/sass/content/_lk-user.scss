@@ -1,0 +1,99 @@
+.lk-user{
+    margin-top: 40px;
+    width: 100%;
+    &__header{
+        width: 100%;
+        text-align: center;
+        font-size: 16px;
+        line-height: 24px;
+        color: #000;
+    }
+    &__form{
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        &__wrapper{
+            height: 49px;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            &-list{
+                height: 49px;
+                padding: 0px 38px;
+                list-style: none;
+                background: #55c3c0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                font-size: 13px;
+                text-transform: uppercase;
+                color: #fff;
+                border-right: 1px solid #48b0ad;
+                cursor: pointer;
+                &:last-child{
+                    border-right: 0;
+                }
+                &:hover{
+                    background: #48b0ad;
+                    color: #c0fffd;
+                }
+                &.active{
+                    background: #48b0ad;
+                    color: #c0fffd;
+                }
+            }
+        }
+    }
+    &__elements{
+        &__tabs{
+            
+        }
+    }
+}
+.lk-table{
+    margin-top: 50px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #d4dede;
+    tr{
+        th{
+            height: 60px;
+            border: 0px;
+            background: #6c9397;
+            font-size: 14px;
+            color: #fff;
+            font-weight: 500;
+            padding: 0px 10px;
+            text-align: center;
+            box-sizing: border-box;
+            &:nth-child(2){
+                text-align: left;
+            }
+        }
+    }
+    tr{
+        background: #fff;
+        &:nth-child(2n){
+            background: #edf6f7;
+        }
+        td{
+            padding: 0px 10px;
+            font-size: 14px;
+            text-align: center;
+            box-sizing: border-box;
+            height: 52px;
+            &:nth-child(2){
+                text-align: left;
+            }
+             a{
+                color: #4ab1ae;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

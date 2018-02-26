@@ -96,8 +96,16 @@ p{
     color: #000;
 }
 .p-0{
-    padding: 0px;
-    border-bottom: 0px;
+    padding: 0px!important;
+    border-bottom: 0px!important;
+}
+.p-0-hidden{
+    span{
+        display: none!important;
+    }
+    div{
+        display: none!important;
+    }
 }
 .m-30{
     margin-top: 30px;
