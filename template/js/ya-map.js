@@ -11,10 +11,7 @@ ymaps.ready(init);
             'scrollZoom'
         ]);
         myPin = new ymaps.GeoObjectCollection({}, {
-            iconLayout: 'default#image',
-            //iconImageHref: 'images/yaicon.svg',
-            //iconImageSize: [36, 20],
-            //iconImageOffset: [-22, -42]
+            iconLayout: 'default#image'
         });
         myPlacemark = new ymaps.Placemark([55.74469931, 37.61659984], { 
             balloonContentHeader: '',//логотип

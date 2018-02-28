@@ -109,7 +109,7 @@
                             </div>
                             <div class="group-info_4">
                                 <div class="group-info_4__elements">
-                                    <span class="group-info_4__elements-button js-call-back">Обратный звонок</span>
+                                    <span class="group-info_4__elements-button js-call-back">Обратная звонок</span>
                                     <i class="group-info_4__elements-icon js-call-back" title="Обратный звонок"></i>
                                 </div>
                             </div>
@@ -118,7 +118,7 @@
                                     <i class="group-info_5__elements-icons">2</i>
                                     <div class="group-info_5__elements-group">
                                         <span class="group-info_5__elements-text">Корзина</span>
-                                        <span class="group-info_5__elements-count">22 500<i class="rub"></i></span>
+                                        <span class="group-info_5__elements-count">22 500<i class="rub">Р</i></span>
                                     </div>
                                 </a>
                             </div>
@@ -227,57 +227,106 @@
             </nav>
             <hr class="info-block_5__hr js-hr--">
         </div>
+        <ol class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li class="breadcrumbs__list" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a class="breadcrumbs__list__link" itemprop="item" href=""> 
+                        <span class="breadcrumbs__list__link-text" itemprop="name">Главная</span>
+                    </a>
+                <meta itemprop="position" content="1" />
+            </li>
+            <li class="breadcrumbs__list" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <span class="breadcrumbs__list__link-text active" itemprop="name">Личный кабинет пользователя</span>
+                <meta itemprop="position" content="3" />
+            </li>
+        </ol>
     </header>
-    
-    
+
+
     <div class="content">
-       <div class="box-modal popup-call-back" id="popup-select-town">
-        <div class="box-modal_close arcticmodal-close"></div>
-        <div class="select-town">
-            <div class="select-town__header">Вы находитесь в городе <span class="select-town__header-name">Владимир</span></div>
-            <div class="select-town__info">Если <span class="select-town__info-name">Владимир</span> не Ваш город, то для отображения верной стоимости и сроков доставки укажите Ваш город в поле ниже.</div>
-            <form class="select-town__form" action="">
-                <input class="select-town__form-poly" type="text" plaseholder="Ваш город">
-                <button class="select-town__form-button" >Сохранить</button>
-            </form>
-            <div class="select-town__list">
-                <span class="select-town__list-text">Популярные города:</span>
-                <div class="select-town__list-group">
-                    <ul class="select-town__list__elements">
-                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Москва</a></li>
-                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Санкт-Петербург</a></li>
-                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Новосибирск</a></li>
-                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Екатеринбург</a></li>
-                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Нижний Новгород</a></li>
-                    </ul>
-                    <ul class="select-town__list__elements">
-                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Казань</a></li>
-                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Челябинск</a></li>
-                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Омск</a></li>
-                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Самара</a></li>
-                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Ростов-на-Дону</a></li>
-                    </ul>
-                    <ul class="select-town__list__elements">
-                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Уфа</a></li>
-                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Красноярск</a></li>
-                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Пермь</a></li>
-                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Воронеж</a></li>
-                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Волгоград</a></li>
-                    </ul>
-                    <ul class="select-town__list__elements">
-                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Краснодар</a></li>
-                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Саратов</a></li>
-                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Тюмень</a></li>
-                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Тольятти</a></li>
-                        <li class="select-town__list__elements__link"><a class="select-town__list__elements__link-name" href="">г. Ижевск</a></li>
-                    </ul>
-                </div>
-            </div>
+        <h1 class="content__name">Тестовая страница</h1>
+        <div class="content__wrapper">
+            <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, vitae!</h1>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, minus!</h2>
+            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, laudantium.</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, autem magni doloribus veritatis est provident voluptates incidunt officia totam dolorem, asperiores culpa? Aliquam labore ut voluptatem deleniti explicabo? Labore fuga omnis autem ipsum delectus nihil beatae provident ea magni hic excepturi, dicta est dolorem quis esse animi, nisi dolor at. Praesentium necessitatibus tempora suscipit hic eveniet aut id ex, dolorem neque repudiandae, corporis nemo fugit omnis, officiis architecto maxime vitae dolor quae? Vero minus qui, deserunt velit maiores expedita itaque cupiditate totam ratione dolorum corrupti voluptatum nam sed nemo voluptate quisquam voluptas eius cumque atque quos distinctio laboriosam culpa ea.</p>
+            <ul>
+                <li>Lorem ipsum dolor.</li>
+                <li>Lorem ipsum dolor.</li>
+                <li>Lorem ipsum dolor.</li>
+                <li>Lorem ipsum dolor.</li>
+            </ul>
+            <ol>
+                <li>Lorem ipsum.</li>
+                <li>Lorem ipsum.</li>
+                <li>Lorem ipsum.</li>
+            </ol>
+            <img src="./images/infoblock-img/image.jpg" alt="">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</th>
+                        <th>Lorem ipsum dolor.</th>
+                        <th>Lorem ipsum dolor sit amet, consectetur.</th>
+                        <th>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At.</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                    <td>Lorem ipsum dolor sit amet.</td>
+                    <td>Lorem ipsum dolor sit amet, consectetur.</td>
+                    <td>Lorem ipsum.</td>
+                </tr>
+                <tr>
+                    <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                    <td>Lorem ipsum dolor sit amet.</td>
+                    <td>Lorem ipsum dolor sit amet, consectetur.</td>
+                    <td>Lorem ipsum.</td>
+                </tr>
+                <tr>
+                    <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                    <td>Lorem ipsum dolor sit amet.</td>
+                    <td>Lorem ipsum dolor sit amet, consectetur.</td>
+                    <td>Lorem ipsum.</td>
+                </tr>
+                <tr>
+                    <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                    <td>Lorem ipsum dolor sit amet.</td>
+                    <td>Lorem ipsum dolor sit amet, consectetur.</td>
+                    <td>Lorem ipsum.</td>
+                </tr>
+            </table>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Lorem ipsum dolor </th>
+                        <th>Lorem ipsum dolor.</th>
+                        <th>Lorem ipsum dolor sit amet, consectetur.</th>
+                        <th>Lorem ipsum dolor</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>Lorem ipsum dolor</td>
+                    <td>Lorem ipsum dolor sit amet.</td>
+                    <td>Lorem ipsum dolor sit amet, consectetur.</td>
+                    <td>Lorem ipsum.</td>
+                </tr>
+                <tr>
+                    <td>Lorem ipsum dolor sit amet.</td>
+                    <td>Lorem ipsum dolor sit amet.</td>
+                    <td>Lorem ipsum dolor sit amet, consectetur.</td>
+                    <td>Lorem ipsum.</td>
+                </tr>
+                <tr>
+                    <td>Lorem ipsum dolor</td>
+                    <td>Lorem ipsum dolor sit amet.</td>
+                    <td>Lorem ipsum dolor sit amet, consectetur.</td>
+                    <td>Lorem ipsum.</td>
+                </tr>
+            </table>
         </div>
-        </div>
-        
     </div>
-    <!--dfooter class="footer">
+
+    <footer class="footer">
         <div class="menu-footer">
             <ul class="menu-footer__wrap">
                 <li class="menu-footer__wrap__list">
@@ -307,6 +356,7 @@
             </ul>
         </div>
         <div class="footer__wrap">
+            <hr class="info-block_5__hr">
             <div class="footer__wrap__elements js-footer-el--">
                 <a class="footer-logo" href="">
                     <img class="footer-logo__prev" src="./images/logo.png" alt="">
@@ -327,7 +377,7 @@
                                 <a class="bottom-menu__list-link" href="">Оплата</a>
                             </li>
                             <li class="bottom-menu__list">
-                                <a class="bottom-menu__list-link" href="">Партнерская программа</a>
+                                <a class="bottom-menu__list-link" href="">Программа</a>
                             </li>
                             <li class="bottom-menu__list">
                                 <a class="bottom-menu__list-link" href="">Гарантии</a>
@@ -362,7 +412,7 @@
             <div class="footer__wrap__elements js-footer-el_3--">
                 <div class="footer__info js-footer-info--">
                     <div class="footer-address js-footer-address--">
-                        <div class="group"><a class="footer-address__phone" href="tel:80000000000">8-000-000-0000</a>,<span class="br-mobile"><br></span> Ежедневно: с 10<sup>00</sup> до 20<sup>00</sup></div>
+                        <div class="group"><a class="footer-address__phone" href="tel:80000000000">8-000-000-0000</a><span class="br-mobile"><br></span> Ежедневно: с 10<sup>00</sup> до 20<sup>00</sup></div>
                         <div class="group">г. Москва, ул. Московская, д.0.<br>
                             <a class="footer-address__mail" href="mail:namecompany@mail.ru">namecompany@mail.ru</a></div>
                     </div>
@@ -383,7 +433,8 @@
                 </div>
             </div>
         </div>
-    </footer-->
+    </footer>
+    <div class="top js-top"></div>
 </body>
 
 </html>

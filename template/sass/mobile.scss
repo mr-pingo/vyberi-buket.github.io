@@ -1971,6 +1971,18 @@
             }
         }
     }
+    .lk-form{
+        padding: 40px 15px;
+        &__elements{
+            flex-direction: column;
+            &-left_block{
+                margin-right: 0;
+            }
+            &-right_block{
+                margin-left: 0;
+            }
+        }
+    }
 }
 @media screen and (max-width: 750px){
     .hidden-block{

@@ -105,6 +105,11 @@ $(document).ready(function () {
             }
         }
     });
+    $('.js-eye').on('click', function(){
+        $(this).toggleClass('active');
+        var type = $('.js-password').attr('type') == "text" ? "password" : 'text';
+        $('.js-password').prop('type', type);
+    });
     //-------
     // Filter
     //-------
@@ -167,8 +172,17 @@ $(document).ready(function () {
     //Развертывание разделов
     //----------------------
     $('.js-section').on('click', function(){
-        $(this).toggleClass('active'); 
+        $(this).toggleClass('active');
         $(this).find('.js-section-hidden').slideToggle();
+    });
+    $('.js-show-all').on('click', function(){
+        $(this).toggleClass('active');
+        $(this).parents('.js-map-list').find('.hidden').toggle();
+        if($(this).hasClass('active')){
+            $(this).text('Скрыть');
+        }else{
+            $(this).text('Показать еще');
+        }
     });
     //--------------------
     // Выбор кол-во цветов
@@ -547,6 +561,7 @@ $(document).ready(function () {
     });
     show_all_on_resize();
     tool_tip();
+    tab();
 });
 $(window).on('resize', show_all_on_resize);
 //-------
@@ -628,5 +643,12 @@ function show_all_on_resize() {
                 });
             }
         }
+    });
+}
+function tab() {
+    $('.tab ul li').on('click',function(){
+        $(this).siblings().removeClass('active_tab');
+        $(this).addClass('active_tab');
+        $('.'+$(this).data('target')).addClass('active').siblings().removeClass('active');
     });
 }
