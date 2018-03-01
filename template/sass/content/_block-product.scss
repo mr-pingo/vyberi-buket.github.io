@@ -16,6 +16,7 @@
             border-bottom: none;
             height: 210px;
             &-prev{
+                //width: 60%;
                 transition: all 0.3s;
             }
         }
@@ -36,7 +37,7 @@
         transition: all 0.5s;
         &-prev{
             transition: all 0.5s;
-            width: 80%;
+            width: auto;
         }
         &__sticker{
             position: absolute;

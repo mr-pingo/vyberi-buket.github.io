@@ -659,7 +659,6 @@
         &:hover{
             .block-product__img{
                 height: 240px;
-            
             }
             .block-product__info{
                 padding-top: 10px;
@@ -1950,7 +1949,11 @@
                 flex-direction: row;
                 background: #edf6f7;
                 &:before{
-                    width: 75px;
+                    max-width: 120px;
+                    width: 100%;
+                    height: 52px;
+                    display: flex;
+                    align-items: center;
                     content: attr(data-label);
                     float: left;
                     padding-right: 40px;
@@ -1962,11 +1965,6 @@
                 }
                 &:nth-child(2n){
                     background: #fff;
-                }
-                &:nth-child(2){
-                    display: table-cell;
-                    vertical-align: middle;
-                    margin: auto;
                 }
             }
         }
@@ -2228,22 +2226,44 @@
             margin-right: 0;
         }
     }
+    .lk-table{
+        tr{
+            td{
+                &:before{
+                    max-width: 60px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 377px){
+    .info-block_6{
+        &__elements_3{
+            &__group{
+                justify-content: center;
+            }
+        }
+    }
+    .pay-block{
+        width: 200px;
+        margin-left: 20px;
+        &:nth-child(2n){
+            margin-right: 20px;
+        }
+        &__wrapper{
+            width: 200px;
+            height: 200px;
+        }
+    }
 }
 @media screen and (max-width: 345px){
     .group-info_5{
         &__elements{
             &-icons{
-                width: 25px;
-                height: 36px;
-                background-position: -97px -24px;
-                margin-right: 8px;
-                /*margin-right: 5px;
-                width: 15px;
-                height: 15px;
-                border-radius: 15px;
-                background: #4ab1ae;
-                color: #fff;
-                font-size: 10px;*/
+                margin-right: 0;
+            }
+            &-group{
+                display: none;
             }
         }
     }

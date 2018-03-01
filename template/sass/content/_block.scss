@@ -38,6 +38,7 @@
                     margin-top: 0;
                 }
                 img{
+                    border-radius: 4px;
                     width: 100%;
                     margin-bottom: 14px;
                 }
@@ -435,6 +436,7 @@
     }
     &__elements_3{
         &-header{
+            text-align: center;
             font-size: 24px;
             margin: 20px 0px;
         }
@@ -504,6 +506,7 @@
         align-items: center;
     }
     &__right_block{
+        width: 100%;
         margin-left: 20px;
         display: flex;
         flex-direction: column;

@@ -40,14 +40,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            max-width: 560px;
+            max-width: 583px;
             width: 100%;
             height: 470px;
             cursor: pointer;
             overflow: hidden;
-            &-prev{
-                width: 60%;
-            }
         }
         &__sticker{
             position: absolute;
