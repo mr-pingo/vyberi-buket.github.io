@@ -594,7 +594,7 @@ function show_all_on_resize() {
             $(this).parents('.element-block_2').innerHeight(height).css({
                 'overflow': 'hidden'
             });
-            if ($(this).parents('.element-block_2').find('.bottom-element-block').length == 0) {
+            if($(this).parents('.element-block_2').find('.bottom-element-block').length == 0) {
                 $(this).parents('.element-block_2').append('<div class="bottom-element-block"><div class="bottom-element-block__group"><span class="bottom-element-block__group-link js-rev">Показать всё</span></div></div>');
                 $(this).parents('.element-block_2').on('click', '.js-rev', function () {
                     $(this).toggleClass('active');
@@ -618,7 +618,7 @@ function show_all_on_resize() {
         } else {
             $(this).parents('.element-block_2').innerHeight();
         }
-        if ($(this).innerHeight() < 300) {
+        if($(this).innerHeight() < 300) {
             $(this).parents('.element-block_2').find('.bottom-element-block').remove();
         } else {
             if ($(this).parents('.element-block_2').find('.bottom-element-block').length == 0) {
@@ -644,6 +644,123 @@ function show_all_on_resize() {
             }
         }
     });
+    $('.block-comment').each(function(){
+        var height_text = '70';
+        var height2_text = '100%';
+        if($(this).find('.js-hide-text').innerHeight() > height_text){
+            $(this).find('.js-hide-text').innerHeight(height_text).css({
+                'overflow': 'hidden'
+            });
+            if($(this).find('.bottom-element-block').length == 0) {
+                $(this).find('.block-comment__text').append('<div class="bottom-element-block"><div class="bottom-element-block__group"><span class="bottom-element-block__group-link js-rev">Показать всё</span></div></div>');
+                $(this).find('.block-comment__text').on('click', '.js-rev', function () {
+                    $(this).toggleClass('active');
+                    if ($(this).hasClass('active')) {
+                        $(this).html('Скрыть всё').parents('.js-hide-text').css({
+                            'margin-bottom': '30px'
+                        }).innerHeight('100%');
+                        $(this).parents('.bottom-element-block').css({
+                            'background': 'none'
+                        });
+                    } else {
+                        $(this).html('Показать всё').parents('.js-hide-text').css({
+                            'margin-bottom': '0px'
+                        }).innerHeight(height_text);
+                        $(this).parents('.bottom-element-block').css({
+                            'background': 'url(../../images/bg-rev.png) repeat-x', //при интеграции поменять тут ссылку
+                            'background-position': '0px -30px'
+                        });
+                    }
+                });
+            }
+        }else {
+            if($(this).find('.block-comment__text').innerHeight() < 70){
+                $(this).find('.bottom-element-block').remove();
+                $(this).find('.js-hide-text').css({
+                    'height': 'auto',
+                    'overflow': 'visible',
+                    'margin-bottom': '0px'
+                });
+            }else{
+                if($(this).find('.bottom-element-block').length == 0) {
+                    $(this).find('.block-comment__text').append('<div class="bottom-element-block"><div class="bottom-element-block__group"><span class="bottom-element-block__group-link js-rev">Показать всё</span></div></div>');
+                    $(this).find('.block-comment__text').on('click', '.js-rev', function () {
+                        $(this).toggleClass('active');
+                        if ($(this).hasClass('active')) {
+                            $(this).html('Скрыть всё').parents('.js-hide-text').css({
+                                'margin-bottom': '30px'
+                            }).innerHeight('100%');
+                            $(this).parents('.bottom-element-block').css({
+                                'background': 'none'
+                            });
+                        } else {
+                            $(this).html('Показать всё').parents('.js-hide-text').css({
+                                'margin-bottom': '0px'
+                            }).innerHeight(height_text);
+                            $(this).parents('.bottom-element-block').css({
+                                'background': 'url(../../images/bg-rev.png) repeat-x', //при интеграции поменять тут ссылку
+                                'background-position': '0px -30px'
+                            });
+                        }
+                    });
+                }
+            }
+        }
+    });
+    /*$('.block-comment').each(function(){
+        var height_text = '70';
+        if($(this).find('.block-comment__text').innerHeight() > height_text) {
+            $(this).find('.block-comment__text').innerHeight(height_text).css({
+                'overflow': 'hidden'
+            });
+            if($(this).find('.bottom-element-block').length == 0) {
+                $(this).find('.block-comment__text').append('<div class="bottom-element-block"><div class="bottom-element-block__group"><span class="bottom-element-block__group-link js-rev">Показать всё</span></div></div>');
+                $(this).find('.block-comment__text').on('click', '.js-rev', function () {
+                    $(this).toggleClass('active');
+                    if ($(this).hasClass('active')) {
+                        $(this).html('Скрыть всё').parents('.block-comment__text').css({
+                            'margin-bottom': '30px'
+                        }).innerHeight('100%');
+                        $(this).parents('.bottom-element-block').css({
+                            'background': 'none',
+                        });
+                    } else {
+                        $(this).html('Показать всё').parents('.block-comment__text').css({
+                            'padding-bottom': '30px'
+                        }).innerHeight(height_text);
+                        $(this).parents('.bottom-element-block').css({
+                            'background': 'url(../../images/bg-rev.png) repeat-x', //при интеграции поменять тут ссылку
+                            'background-position': '0px -30px'
+                        });
+                    }
+                });
+            }
+        } else {
+            if($(this).find('.block-comment__text').innerHeight() < 70) {
+            $(this).find('.bottom-element-block').remove();
+            } else {
+                if ($(this).find('.bottom-element-block').length == 0) {
+                    $(this).find('.block-comment__text').append('<div class="bottom-element-block"><div class="bottom-element-block__group"><span class="bottom-element-block__group-link js-rev">Показать всё</span></div></div>');
+                    $(this).find('.block-comment__text').on('click', '.js-rev', function () {
+                        $(this).toggleClass('active');
+                        if ($(this).hasClass('active')) {
+                            $(this).html('Скрыть всё').parents('.block-comment__text').css({
+                                'margin-bottom': '30px'
+                            }).innerHeight('100%');
+                            $(this).parents('.bottom-element-block').css({
+                                'background': 'none',
+                            });
+                        } else {
+                            $(this).html('Показать всё').parents('.block-comment__text').innerHeight(height_text);
+                            $(this).parents('.bottom-element-block').css({
+                                'background': 'url(../../images/bg-rev.png) repeat-x', //при интеграции поменять тут ссылку
+                            });
+                        }
+                    });
+                }
+            }
+        }
+    });*/
 }
 function tab() {
     $('.tab ul li').on('click',function(){

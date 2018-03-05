@@ -82,6 +82,13 @@
         /*.socials{
             margin-top: 0;
         }*/
+        &__wrapper{
+            &__group_2{
+                &__right_block{
+                    margin-right: 0;
+                }
+            }
+        }
     }
     .breadcrumbs{
         width: 100%;
@@ -144,7 +151,15 @@
     }
     .pay-block{
         &:last-child{
-            margin-right: 20px;
+            //margin-right: 20px;
+        }
+    }
+    .info-block_5{
+        &__elements{
+            &:first-child{
+                margin: 0px;
+                margin-top: 33px;
+            }
         }
     }
 }
@@ -2226,6 +2241,11 @@
             margin-right: 0;
         }
     }
+    .pay-block-info_2,
+    .pay-block-info{
+        height: auto;
+        padding: 30px 20px;
+    }
     .lk-table{
         tr{
             td{
@@ -2244,7 +2264,7 @@
             }
         }
     }
-    .pay-block{
+    /*.pay-block{
         width: 200px;
         margin-left: 20px;
         &:nth-child(2n){
@@ -2254,7 +2274,7 @@
             width: 200px;
             height: 200px;
         }
-    }
+    }*/
 }
 @media screen and (max-width: 345px){
     .group-info_5{

@@ -1,6 +1,6 @@
 .block-comment{
     text-align: center;
-    padding: 0px 40px;
+    padding: 0px 20px;
     box-sizing: border-box;
     &__wrap{
         position: relative;
@@ -32,6 +32,20 @@
         font-size: 13px;
         color: #000;
         text-align: center;
+        .bottom-element-block{
+            height: 40px;
+            bottom: 55px;
+            background-position: 0px -30px;
+            &__group{
+                &-link{
+                    margin-top: 16px;
+                    font-size: 12px;
+                    &:before{
+                        top: 13px;
+                    }
+                }
+            }
+        }
     }
     &__rating{
         margin-top: 13px;

@@ -47,6 +47,11 @@
     ul{
         margin: 0;
         padding: 0;
+        li{
+            &:before{
+                background: none;
+            }
+        }
     }
 }
 .ik_select_dropdown {
