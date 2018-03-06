@@ -250,7 +250,7 @@
         </ol>
     </header>
 
-    <div class="content" itemscope itemtype="http://schema.org/Product">
+    <div class="content" itemscope itemtype="http://schema.org/Organization">
         <h1 class="content__name">Контакты</h1>
         <div class="content__wrapper">
             <div class="content__wrapper__group">
@@ -262,7 +262,7 @@
                             </div>
                             <div class="contact-info__right_block">
                                 <span class="contact-info__right_block-header">Интернет магазин</span>
-                                <span class="contact-info__right_block-info">Выбери букет</span>
+                                <span class="contact-info__right_block-info" itemprop="name">Выбери букет</span>
                             </div>
                         </div>
                         <div class="contact-info">
@@ -270,8 +270,8 @@
                                 <i class="icon_tel"></i>
                             </div>
                             <div class="contact-info__right_block">
-                                <span class="contact-info__right_block-header">Контактный телефон в Москве</span>
-                                <span class="contact-info__right_block-info">8-000-000-0000</span>
+                                <div class="contact-info__right_block-header">Контактный телефон в Москве</div>
+                                <span class="contact-info__right_block-info" itemprop="telephone">8-000-000-0000</span>
                             </div>
                         </div>
                         <div class="contact-info">
@@ -287,9 +287,10 @@
                             <div class="contact-info__left_block">
                                 <i class="icon_address"></i>
                             </div>
-                            <div class="contact-info__right_block">
+                            <div class="contact-info__right_block" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
                                 <span class="contact-info__right_block-header">Адрес салона</span>
-                                <span class="contact-info__right_block-info">г. Москва, ул. Московская д.0</span>
+                                <div class="contact-info__right_block-info"><span itemprop="addressLocality">г. Москва</span>, <span itemprop="streetAddress">ул. Московская д.0</span></div>
+                                <span class="hidden" itemprop="postalCode">143350</span>
                             </div>
                         </div>
                         <div class="contact-info">
@@ -298,7 +299,7 @@
                             </div>
                             <div class="contact-info__right_block">
                                 <span class="contact-info__right_block-header">Электронная почта</span>
-                                <a class="contact-info__right_block-link" href="mailTo:">name@yamdex.ru</a>
+                                <a class="contact-info__right_block-link" href="mailTo:" itemprop="email">name@yamdex.ru</a>
                             </div>
                         </div>
                     </div>

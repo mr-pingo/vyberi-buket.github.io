@@ -29,7 +29,8 @@
             }
             &__right_block{
                 width: 100%;
-                margin: 0px 15px;
+                overflow: hidden;
+                margin-left: 15px;
                 .page-navigation{
                     margin-top: 30px;
                     margin-bottom: 0;

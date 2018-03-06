@@ -152,6 +152,10 @@ table:not([class]) tr td {
   height: 52px;
 }
 
+span.hidden {
+  display: none;
+}
+
 .data-markup {
   display: none;
 }
@@ -1258,7 +1262,8 @@ body {
 
 .content__wrapper__group_2__right_block {
   width: 100%;
-  margin: 0px 15px;
+  overflow: hidden;
+  margin-left: 15px;
 }
 
 .content__wrapper__group_2__right_block .page-navigation {
@@ -4030,21 +4035,6 @@ hr.info-block_5__hr {
   text-align: center;
 }
 
-.block-comment__text .bottom-element-block {
-  height: 40px;
-  bottom: 55px;
-  background-position: 0px -30px;
-}
-
-.block-comment__text .bottom-element-block__group-link {
-  margin-top: 16px;
-  font-size: 12px;
-}
-
-.block-comment__text .bottom-element-block__group-link:before {
-  top: 13px;
-}
-
 .block-comment__rating {
   margin-top: 13px;
   margin-bottom: 19px;
@@ -4067,6 +4057,21 @@ hr.info-block_5__hr {
   font-weight: 500;
   font-size: 13px;
   color: #96a3a3;
+}
+
+.block-comment .bottom-element-block {
+  height: 40px;
+  bottom: 55px;
+  background-position: 0px -30px !important;
+}
+
+.block-comment .bottom-element-block__group-link {
+  margin-top: 16px;
+  font-size: 12px;
+}
+
+.block-comment .bottom-element-block__group-link:before {
+  top: 13px;
 }
 
 .block-add-comment {
@@ -5438,6 +5443,8 @@ input[type="checkbox"]:checked + label::before {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  text-decoration: none;
+  color: #5b5a8b;
 }
 
 .section_main__wrapper__list__hidden {
@@ -5618,6 +5625,10 @@ input[type="checkbox"]:checked + label::before {
 
 .lk-table tr td a:hover {
   text-decoration: none;
+}
+
+.lk-table .group {
+  display: block;
 }
 
 .lk-form {
@@ -5863,6 +5874,7 @@ input[type="checkbox"]:checked + label::before {
 .basket-form__elements-img_wrap {
   max-width: 115px;
   max-height: 115px;
+  overflow: hidden;
 }
 
 .basket-form__elements__adaptive {
@@ -7435,6 +7447,7 @@ input[type="checkbox"]:checked + label::before {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 15px;
   margin-bottom: 5px;
 }
 
@@ -7974,6 +7987,7 @@ input[type="checkbox"]:checked + label::before {
 
   .header__wrap .group .group-info__link {
     margin-top: 4px;
+    display: inline-table;
   }
 
   .header__wrap .group .group-info_2 {
@@ -9472,7 +9486,6 @@ input[type="checkbox"]:checked + label::before {
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
     align-items: flex-start;
-    margin-top: 15px;
   }
 
   .filter__wrap__list-choice {
@@ -10573,6 +10586,12 @@ input[type="checkbox"]:checked + label::before {
 
   .lk-table tr td:before {
     max-width: 60px;
+  }
+
+  *::-ms-backdrop,
+  .lk-table .group {
+    max-width: 150px;
+    width: 100%;
   }
 }
 

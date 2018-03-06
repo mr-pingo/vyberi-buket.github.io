@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# product: http://ogp.me/ns/product#">
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:type" content="product" />
-    <meta property="og:url" content="URL адрес карточки товара" />
-    <meta property="og:title" content="название товара из H1" />
-    <meta property="og:image" content="URL адрес картинки товара" />
-    <meta property="og:description" name="description" content="Описание товара из descriptions">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="Url адерс главной">
+    <meta property="og:title" content="Купить цветы с доставкой в Москве и по России">
+    <meta property="og:image" content="URL адрес картинки сайта">
+    <meta property="og:description" name="description" content="Интернет магазина 'Выбери букет' круглосуточно осуществляет доставку цветов по Москве и по России, у нас всегда можно недорого купить свежие цветы и заказать доставку на дом или в офис, время доставки от 1 до 4 часов">
     <meta name="keywords" content="доставка цветов, цветы с доставкой по Москве, купить цветы, заказать доставку цветов, цветы в москве, недорогие цветы Москва">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/gridlex.css">
@@ -20,11 +20,14 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU">
+    </script>
     <script src="js/mobile.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/jquery.arcticmodal-0.3.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/jquery.ikSelect.min.js"></script>
+    <script src="js/ya-map.js"></script>
     <script src="js/main.js"></script>
     <title>Купить цветы с доставкой в Москве и по России</title>
 </head>
@@ -70,7 +73,7 @@
                         <div class="group-info">
                             <span class="group-info__text">Город доставки</span>
                             <i class="group-info__icon"></i>
-                            <span class="group-info__link">Александровск-Сахалинский</span>
+                            <span class="group-info__link js-select-town">Александровск-Сахалинский</span>
                         </div>
                     </div>
                     <div class="header__wrap-group js-header-wrap-group--">
@@ -109,7 +112,8 @@
                             </div>
                             <div class="group-info_4">
                                 <div class="group-info_4__elements">
-                                    <span class="group-info_4__elements-button js-call-back">Обратный звонок</span>
+                                    <span class="group-info_4__elements-button js-call-back">Обратная звонок</span>
+                                    <i class="group-info_4__elements-icon js-call-back" title="Обратный звонок"></i>
                                 </div>
                             </div>
                             <div class="group-info_5">
@@ -117,7 +121,7 @@
                                     <i class="group-info_5__elements-icons">2</i>
                                     <div class="group-info_5__elements-group">
                                         <span class="group-info_5__elements-text">Корзина</span>
-                                        <span class="group-info_5__elements-count">22 500 <i>&#8381;</i></span>
+                                        <span class="group-info_5__elements-count">22 500<i class="rub">Р</i></span>
                                     </div>
                                 </a>
                             </div>
@@ -341,7 +345,11 @@
                                     </div>
                                 </div>
                                 <h2 class="element-block_2__header">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam voluptas sit vitae molestias atque dignissimos.</h2>
-                                <p class="element-block_2__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit culpa impedit soluta repudiandae, molestiae debitis pariatur mollitia maiores voluptatem maxime exercitationem qui earum, quaerat itaque possimus non quos quisquam hic.</p>
+                                <p class="element-block_2__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit culpa impedit soluta repudiandae, molestiae debitis pariatur mollitia maiores voluptatem maxime exercitationem qui earum, quaerat itaque possimus non quos quisquam hic.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit culpa impedit soluta repudiandae, molestiae debitis pariatur mollitia maiores voluptatem maxime exercitationem qui earum, quaerat itaque possimus non quos quisquam hic.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit culpa impedit soluta repudiandae, molestiae debitis pariatur mollitia maiores voluptatem maxime exercitationem qui earum, quaerat itaque possimus non quos quisquam hic.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit culpa impedit soluta repudiandae, molestiae debitis pariatur mollitia maiores voluptatem maxime exercitationem qui earum, quaerat itaque possimus non quos quisquam hic.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit culpa impedit soluta repudiandae, molestiae debitis pariatur mollitia maiores voluptatem maxime exercitationem qui earum</p>
                             </div>
                         </div>
                     </div>
