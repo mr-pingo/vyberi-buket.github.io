@@ -4913,6 +4913,10 @@ input[type="checkbox"]:checked + label::before {
   padding: 0;
 }
 
+.ik_select_list_inner ul li {
+  line-height: normal;
+}
+
 .ik_select_list_inner ul li:before {
   background: none;
 }
