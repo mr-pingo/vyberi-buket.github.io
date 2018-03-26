@@ -1095,7 +1095,14 @@
     }
     *::-ms-backdrop, .basket-form__elements__adaptive :nth-child(3).basket-form__elements-group { width: auto!important;}
     *::-ms-backdrop, .basket-form_2__elements .group :nth-child(2).basket-form_2__elements-group { width: auto!important;}
-    
+}
+@media screen and (max-width: 850px){
+    .footer-icon-tel,
+    .footer-icon-time,
+    .footer-icon-address,
+    .footer-icon-mail{
+        display: none;
+    }
 }
 @media screen and (max-width: 767px){
     h1{
@@ -1364,9 +1371,11 @@
     .footer-address{
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+        &__group{
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
         .group{
             &:first-child{
                 margin-right: 0;

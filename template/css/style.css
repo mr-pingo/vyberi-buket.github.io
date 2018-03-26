@@ -7436,14 +7436,31 @@ input[type="checkbox"]:checked + label::before {
 }
 
 .footer-address__mail {
+  position: relative;
   text-decoration: none;
   font-family: 'Open Sans', sans-serif;
   font-size: 13px;
   color: #000;
 }
 
-.footer-address__mail:hover {
+.footer-address__mail:hover:before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  height: 1px;
   border-bottom: 1px solid #000;
+}
+
+.footer-address__group {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .socials {
@@ -7651,6 +7668,42 @@ input[type="checkbox"]:checked + label::before {
 
 .menu-footer__wrap__list-link:hover {
   color: #4ab1ae;
+}
+
+.footer-icon-tel {
+  margin-right: 10px;
+  display: block;
+  width: 17px;
+  height: 17px;
+  background: url("../../images/sprite.png") no-repeat;
+  background-position: -111px -97px;
+}
+
+.footer-icon-time {
+  margin-right: 10px;
+  display: block;
+  width: 17px;
+  height: 16px;
+  background: url("../../images/sprite.png") no-repeat;
+  background-position: -129px -97px;
+}
+
+.footer-icon-address {
+  margin-right: 10px;
+  display: block;
+  width: 17px;
+  height: 16px;
+  background: url("../../images/sprite.png") no-repeat;
+  background-position: -147px -97px;
+}
+
+.footer-icon-mail {
+  margin-right: 10px;
+  display: block;
+  width: 18px;
+  height: 12px;
+  background: url("../../images/sprite.png") no-repeat;
+  background-position: -111px -115px;
 }
 @media screen and (max-width: 1186px) {
   .header__wrap {
@@ -9001,6 +9054,15 @@ input[type="checkbox"]:checked + label::before {
   }
 }
 
+@media screen and (max-width: 850px) {
+  .footer-icon-tel,
+  .footer-icon-time,
+  .footer-icon-address,
+  .footer-icon-mail {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 767px) {
   h1 {
     font-size: 28px !important;
@@ -9378,6 +9440,9 @@ input[type="checkbox"]:checked + label::before {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+
+  .footer-address__group {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
