@@ -5,36 +5,45 @@ html, body{
     flex-direction: column;
     font-family: 'Open Sans', sans-serif;
 }
-ol{
+ol:not([class]){
     counter-reset: myCounter;
     margin: 0;
     padding: 0;
-    li{
+    li:not([class]){
+        position: relative;
         list-style: none;
+        text-align: justify;
+        line-height: 22px;
+        margin: 5px 0px;
+        padding-left: 32px;
+        &:last-child{
+            margin-bottom: 0;
+        }
         &:before{ 
             counter-increment: myCounter;
             content:counter(myCounter);
             font-family: 'Open Sans', sans-serif;
             font-size: 14px;
+            position: absolute;
             color: #55c3c0;
             background: #fff;
             border: 1px solid #55c3c0;
             border-radius: 50px;
             display: inline-block;
             text-align: center;
-            margin: 5px 10px;
-            margin-left: 0;
+            top: 0px;
+            left: 0;
             line-height: 22px;
             width: 24px;
             height: 24px;
             box-sizing: border-box;
         }
-        ul{
-            padding-left: 55px!important;
-            li{
+        ul:not([class]){
+            li:not([class]){
                 line-height: 25px;
                 list-style: none;
                 position: relative;
+                padding: 0;
                 &:before{ 
                     content: '';
                     position: absolute;
@@ -95,6 +104,9 @@ p:not([class]){
     line-height: 22px;
     text-align: justify;
     color: #000;
+}
+a:not([class]){
+    color: #4ab1ae;
 }
 table:not([class]){
     margin: 10px 0px;

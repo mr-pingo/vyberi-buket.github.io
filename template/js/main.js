@@ -559,6 +559,7 @@ $(document).ready(function () {
             scrollTop: 0
         }, 800);
     });
+    slider();
     show_all_on_resize();
     show_comment();
     tool_tip();
@@ -566,6 +567,56 @@ $(document).ready(function () {
 });
 $(window).on('resize', show_all_on_resize);
 $(window).on('resize', show_comment);
+
+//---------------------------
+// Слайдер в карточке товара
+//---------------------------
+function slider(){
+    var that = $('.gallery-slider.active');
+    if(that.hasClass('active')){
+        var slideCount = that.find('.gallery__mini__img').length;
+        var position = that.find('.gallery__mini-wrapper').position().top;
+        var heightImage = 100;
+        var heightContainer = "-"+(slideCount * heightImage - 300);
+        if(slideCount <= 3){
+            $('.js-gallery-button').hide();
+        }else{
+            $('.js-gallery-button').show();
+            $('.gallery__mini_button_top div').addClass('disabled');
+            $('.gallery__mini_button_bottom').addClass('active');
+        }
+        $(document).on('click', '.gallery__mini_button_bottom.active', function(){
+            $('.gallery__mini_button_top div').removeClass('disabled');
+            $('.gallery__mini_button_top').addClass('active');
+            position = position - heightImage;
+            $('.gallery__mini-wrapper').animate({
+               "top" : position
+            });
+            slider_proverka(position, heightContainer);
+        });
+        $(document).on('click', '.gallery__mini_button_top.active', function(){
+            position = position + heightImage;
+            $('.gallery__mini-wrapper').animate({
+               "top" : position
+            });
+            slider_proverka(position, heightContainer);
+        });
+    }
+}
+function slider_proverka(position, heightContainer){
+    if(position >= 0){
+        $('.gallery__mini_button_top div').addClass('disabled');
+        $('.gallery__mini_button_top').removeClass('active');
+        $('.gallery__mini_button_bottom div').removeClass('disabled');
+        $('.gallery__mini_button_bottom').addClass('active');
+    }
+    if(position <= heightContainer){
+        $('.gallery__mini_button_bottom div').addClass('disabled');
+        $('.gallery__mini_button_bottom').removeClass('active');
+        $('.gallery__mini_button_top div').removeClass('disabled');
+        $('.gallery__mini_button_top').addClass('active');
+    }
+}
 //-------
 //Tooltip
 //-------
@@ -615,7 +666,7 @@ function show_comment(){
                             'padding-bottom': '30px'
                         }).innerHeight(height);
                         $(this).parents('.bottom-element-block').css({
-                            'background': 'url(../images/bg-rev.png) repeat-x', //при интеграции поменять тут ссылку
+                            'background': 'url(./images/bg-rev.png) repeat-x', //при интеграции поменять тут ссылку
                         });
                     }
                 });
@@ -656,7 +707,7 @@ function show_all_on_resize() {
                             'padding-bottom': '30px'
                         }).innerHeight(height);
                         $(this).parents('.bottom-element-block').css({
-                            'background': 'url(../images/bg-rev.png) repeat-x', //при интеграции поменять тут ссылку
+                            'background': 'url(./images/bg-rev.png) repeat-x', //при интеграции поменять тут ссылку
                         });
                     }
                 });

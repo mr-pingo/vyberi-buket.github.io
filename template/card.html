@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="css/themes/simple.css">
     <link rel="stylesheet" type="text/css" href="css/jquery.arcticmodal-0.3.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/fonts.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -252,17 +252,72 @@
             <div class="content__left-block">
                 <div class="js-description">
                     <div class="gallery">
-                        <div class="group">
+                        <div class="group gallery-slider active">
+                            <div class="gallery__mini_button_top js-gallery-button">
+                                <div class="gallery__mini_button_top__wrapper"></div>
+                            </div>
                             <div class="gallery__mini">
-                                <div class="gallery__mini__img js-gallery active">
-                                    <img class="gallery__mini__img-prev" src="./images/infoblock-img/byket.jpg" alt="">
+                                <div class="gallery__mini-wrapper">
+                                    <div class="gallery__mini__img js-gallery-slide js-gallery active">
+                                        <img class="gallery__mini__img-prev" src="./images/infoblock-img/byket.jpg" alt="">
+                                    </div>
+                                    <div class="gallery__mini__img js-gallery-slide js-gallery">
+                                        <img class="gallery__mini__img-prev" src="./images/infoblock-img/mini.jpg" alt="">
+                                    </div>
+                                    <div class="gallery__mini__img js-gallery-slide js-gallery">
+                                        <img class="gallery__mini__img-prev" src="./images/infoblock-img/mini.jpg" alt="">
+                                    </div>
+                                    <div class="gallery__mini__img js-gallery-slide js-gallery">
+                                        <img class="gallery__mini__img-prev" src="./images/infoblock-img/mini.jpg" alt="">
+                                    </div>
+                                    <div class="gallery__mini__img js-gallery-slide js-gallery">
+                                        <img class="gallery__mini__img-prev" src="./images/infoblock-img/byket.jpg" alt="">
+                                    </div>
                                 </div>
-                                <div class="gallery__mini__img js-gallery">
-                                    <img class="gallery__mini__img-prev" src="./images/infoblock-img/mini.jpg" alt="">
+                            </div>
+                            <div class="gallery__mini_button_bottom js-gallery-button active">
+                                <div class="gallery__mini_button_bottom__wrapper"></div>
+                            </div>
+                            <div class="gallery__btn">
+                                <div class="gallery__btn-img js-btn-popup-block_1"></div>
+                                <div class="gallery__btn__window js-popup-block_1">
+                                    <ul class="popup-block">
+                                        <li class="popup-block__list">Орхидея ванда
+                                            <span class="popup-block__list-text">- 7 шт.</span>
+                                        </li>
+                                        <li class="popup-block__list">Лизиантус
+                                            <span class="popup-block__list-text">- 7 шт.</span>
+                                        </li>
+                                        <li class="popup-block__list">Хризантема кустовая сталион
+                                            <span class="popup-block__list-text">- 7 шт.</span>
+                                        </li>
+                                        <li class="popup-block__list">Альстромерии
+                                            <span class="popup-block__list-text">- 6 шт.</span>
+                                        </li>
+                                    </ul>
+                                    <span class="popup-block__list-text">Статица, Фисташка, Аспарагус сетакус, Лента</span>
                                 </div>
-                                <div class="gallery__mini__img js-gallery">
-                                    <img class="gallery__mini__img-prev" src="./images/infoblock-img/mini.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="group gallery-slider">
+                            <div class="gallery__mini_button_top js-gallery-button">
+                                <div class="gallery__mini_button_top__wrapper"></div>
+                            </div>
+                            <div class="gallery__mini">
+                                <div class="gallery__mini-wrapper">
+                                    <div class="gallery__mini__img js-gallery-slide js-gallery active">
+                                        <img class="gallery__mini__img-prev" src="./images/infoblock-img/byket.jpg" alt="">
+                                    </div>
+                                    <div class="gallery__mini__img js-gallery-slide js-gallery">
+                                        <img class="gallery__mini__img-prev" src="./images/infoblock-img/mini.jpg" alt="">
+                                    </div>
+                                    <div class="gallery__mini__img js-gallery-slide js-gallery">
+                                        <img class="gallery__mini__img-prev" src="./images/infoblock-img/mini.jpg" alt="">
+                                    </div>
                                 </div>
+                            </div>
+                            <div class="gallery__mini_button_bottom js-gallery-button active">
+                                <div class="gallery__mini_button_bottom__wrapper"></div>
                             </div>
                             <div class="gallery__btn">
                                 <div class="gallery__btn-img js-btn-popup-block_1"></div>
@@ -405,7 +460,7 @@
                                         <div class="order-info__group__window-close"></div>
                                         <div class="order-info__group__window__wrap">
                                             <div class="group">
-                                                <span class="order-info__group__window__wrap-header">Электронные платежные системы</span>
+                                                <span class="order-info__group__window__wrap-header">Платежные системы</span>
                                                 <ul class="order-info__group__window__wrap__ul">
                                                     <li class="order-info__group__window__wrap__ul-list">С телефона</li>
                                                     <li class="order-info__group__window__wrap__ul-list">PayPal / Cards, Qiwi-кошелек</li>
@@ -431,6 +486,9 @@
                                                     <li class="order-info__group__window__wrap__ul-list">Терминалы</li>
                                                 </ul>
                                             </div>
+                                        </div>
+                                        <div class="order-info__group__window__wrap">
+                                            <div class="order-info__group__window__wrap-text">И еще более 100 способов оплаты. Оплата происходит мгновенно, а все платежи для Вас без комиссии.</div>
                                         </div>
                                     </div>
                                 </div>

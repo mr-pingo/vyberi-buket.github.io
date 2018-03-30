@@ -1805,7 +1805,8 @@
         display: none;
     }
     .sale-form_text{
-        display: inline-table;
+        display: block;
+        width: max-content;
     }
     .mini-form{
         padding: 20px 0px;
@@ -2086,6 +2087,18 @@
         }
     }
     *::-ms-backdrop, .reviews-block__elements__right_block {width: 100%!important;}
+    .info-block_6{
+        &__elements_3{
+            &__group{
+                &__el{
+                    flex-direction: column;
+                    &-left_block{
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
 }
 @media screen and (max-width: 480px){
     .grid-block{

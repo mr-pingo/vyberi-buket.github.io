@@ -2,12 +2,14 @@
     display: flex;
     align-items: center;
     margin:30px auto;
+    padding: 0;
     max-width: 1170px;
     width: 100%;   
     font-family: 'Open Sans', sans-serif;
     font-size: 13px;
     &__list{
         line-height: 24px;
+        list-style: none;
         &:before{
             content: '';
             display: none;

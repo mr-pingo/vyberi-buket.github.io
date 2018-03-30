@@ -207,6 +207,12 @@
             }
             &__wrap{
                 display: flex;
+                border-bottom: 1px solid #708484;
+                margin-bottom: 10px;
+                &:last-child{
+                    border-bottom: 0;
+                    margin-bottom: 0;
+                }
                 &-header{
                     display: block;
                     height: 25px;
@@ -215,11 +221,16 @@
                     font-size: 13px;
                     color: #5b5a8b;
                 }
+                &-text{
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight: 500;
+                    font-size: 13px;
+                    color: #708484;
+                }
                 &__ul{
                     display: block;
                     padding: 0;
                     margin: 0;
-                    margin-top: 20px;
                     &-list{
                         list-style: none;
                         font-family: 'Open Sans', sans-serif;
