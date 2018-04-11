@@ -16,6 +16,7 @@ ol:not([class]){
         line-height: 22px;
         margin: 5px 0px;
         padding-left: 32px;
+        font-size: 14px;
         &:last-child{
             margin-bottom: 0;
         }
@@ -38,17 +39,19 @@ ol:not([class]){
             height: 24px;
             box-sizing: border-box;
         }
-        ul:not([class]){
+        ol:not([class]){
+            margin-left: 20px;
             li:not([class]){
                 line-height: 25px;
                 list-style: none;
+                font-size: 14px;
                 position: relative;
                 padding: 0;
                 &:before{ 
                     content: '';
                     position: absolute;
                     left: -20px;
-                    top: 4px;
+                    top: 9px;
                     border: none;
                     background: url(../../images/sprite.png) no-repeat;
                     background-position: -15px 0px;
@@ -66,6 +69,7 @@ ul:not([class]){
         line-height: 25px;
         list-style: none;
         position: relative;
+        font-size: 14px;
         &:before{ 
             content: '';
             position: absolute;

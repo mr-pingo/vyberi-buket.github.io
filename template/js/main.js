@@ -481,8 +481,8 @@ $(document).ready(function () {
     };
     $.datepicker.setDefaults($.datepicker.regional['ru']);
     $("#datepicker").datepicker({
-        showOn: "button",
-        buttonImage: "./images/calendar.png",
+        //showOn: "button",
+        //buttonImage: "./images/calendar.png",
         buttonImageOnly: true,
         buttonText: "Select date"
     });
