@@ -4676,7 +4676,7 @@ hr.info-block_5__hr {
 }
 
 .gallery__full__img-prev {
-  max-width: 90%;
+  width: 100%;
 }
 
 .gallery__full__sticker {
@@ -10242,10 +10242,6 @@ input[type="checkbox"]:checked + label::before {
   }
 
   .page-navigation__link_hidden {
-    display: none;
-  }
-
-  .page-navigation__last-link:last-child {
     display: none;
   }
 
