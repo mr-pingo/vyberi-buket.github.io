@@ -46,20 +46,6 @@
         font-size: 13px;
         color: #96a3a3;
     }
-    .bottom-element-block{
-        height: 40px;
-        bottom: 55px;
-        background-position: 0px -30px!important;
-        &__group{
-            &-link{
-                margin-top: 16px;
-                font-size: 12px;
-                &:before{
-                    top: 13px;
-                }
-            }
-        }
-    }
 }
 .block-add-comment{
     width: 100%;

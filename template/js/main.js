@@ -682,7 +682,27 @@ function show_comment(){
     });
 }
 function show_all_on_resize() {
-    $('.element-block_2__group_el').each(function () {
+    $('.element-block_2').each(function(){
+        var height = '300';
+        if($(this).children('.element-block_2__group_el').innerHeight() >= height){
+            $(this).find('.element-block_2__button').addClass('active');
+        }else{
+            $(this).find('.element-block_2__button').removeClass('active');
+        }
+    });
+    $('.js-open-reviews').on('click', function(){
+       $(this).toggleClass('active');
+        if($(this).hasClass('active')){
+            $(this).text('Скрыть всё');
+            $(this).parents('.element-block_2').addClass('active');
+            $(this).parents('.element-block_2__button__wrapper').addClass('active');
+        }else{
+            $(this).text('Показать еще');
+            $(this).parents('.element-block_2').removeClass('active');
+            $(this).parents('.element-block_2__button__wrapper').removeClass('active');
+        }
+    });
+    /*$('.element-block_2__group_el').each(function () {
         var height = '300';
         if ($(this).parents('.element-block_2').innerHeight() > height) {
             if (!$(this).parents('.element-block_2').find('.js-rev').hasClass('active')) {
@@ -720,7 +740,7 @@ function show_all_on_resize() {
                 $(this).parents('.element-block_2').append('<div class="bottom-element-block"><div class="bottom-element-block__group"><span class="bottom-element-block__group-link js-rev">Показать всё</span></div></div>');
             }
         }
-    });
+    });*/
 }
 function tab() {
     $('.tab ul li').on('click', function () {

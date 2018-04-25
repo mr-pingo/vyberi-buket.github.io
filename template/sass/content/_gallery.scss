@@ -130,7 +130,7 @@
             padding: 30px;
             box-sizing: border-box;
             &-prev{
-                width: 100%;
+                max-width: 100%;
             }
         }
         &__sticker{

@@ -20,14 +20,11 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU">
-    </script>
     <script src="js/mobile.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/jquery.arcticmodal-0.3.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/jquery.ikSelect.min.js"></script>
-    <script src="js/ya-map.js"></script>
     <script src="js/main.js"></script>
     <title>Купить цветы с доставкой в Москве и по России</title>
 </head>
@@ -112,7 +109,7 @@
                             </div>
                             <div class="group-info_4">
                                 <div class="group-info_4__elements">
-                                    <span class="group-info_4__elements-button js-call-back">Обратная звонок</span>
+                                    <span class="group-info_4__elements-button js-call-back">Обратный звонок</span>
                                     <i class="group-info_4__elements-icon js-call-back" title="Обратный звонок"></i>
                                 </div>
                             </div>
@@ -121,7 +118,7 @@
                                     <i class="group-info_5__elements-icons">2</i>
                                     <div class="group-info_5__elements-group">
                                         <span class="group-info_5__elements-text">Корзина</span>
-                                        <span class="group-info_5__elements-count">22 500<i class="rub">Р</i></span>
+                                        <span class="group-info_5__elements-count">22 500<i class="rub">Р<span class="rub__cur">руб.</span></i></span>
                                     </div>
                                 </a>
                             </div>
@@ -132,12 +129,6 @@
             <nav class="main-menu js-main-menu--">
                 <div class="main-menu__body js-main-menu-wrap-- js-open-menu">
                     <ul class="main-menu__wrap">
-                        <li class="main-menu__wrap__list">
-                            <a class="main-menu__wrap__list-link" href="">Осень</a>
-                        </li>
-                        <li class="main-menu__wrap__list">
-                            <i class="main-menu__wrap__list-dot"></i>
-                        </li>
                         <li class="main-menu__wrap__list">
                             <a class="main-menu__wrap__list-link" href="">День рождения</a>
                         </li>
@@ -223,31 +214,47 @@
                     <div class="search__group">
                         <input class="search__poly" type="text" placeholder="Поиск">
                         <div class="search__wrap">
-                            <input class="search__wrap-button" type="submit" value="">
+                            <input class="search__wrap-button_hidden" id="search" type="submit" value="">
+                            <label for="search" class="search__wrap-button"></label>
                         </div>
                     </div>
                 </form>
             </nav>
             <hr class="info-block_5__hr js-hr--">
         </div>
-        <ol class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
-            <li class="breadcrumbs__list" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                <a class="breadcrumbs__list__link" itemprop="item" href=""> 
-                        <span class="breadcrumbs__list__link-text" itemprop="name">Главная</span>
-                    </a>
-                <meta itemprop="position" content="1" />
-            </li>
-            <li class="breadcrumbs__list" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                <a class="breadcrumbs__list__link" itemprop="item" href=""> 
-                        <span class="breadcrumbs__list__link-text" itemprop="name">Каталог товаров</span>
-                    </a>
-                <meta itemprop="position" content="2" />
-            </li>
-            <li class="breadcrumbs__list" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                <span class="breadcrumbs__list__link-text active" itemprop="name">Необыкновенные бабочки экстра</span>
-                <meta itemprop="position" content="3" />
-            </li>
-        </ol>
+        <div class="slider">
+            <div class="swiper-container swiper-container_1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./images/slide.png" alt="">
+                        <div class="slider-info">
+                            <div class="slider-info__name">Lorem ipsum</div>
+                            <div class="slider-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, ipsum.</div>
+                            <a class="slider-info__button" href="">Узнать подробнее</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/slide.png" alt="">
+                        <div class="slider-info">
+                            <div class="slider-info__name">Lorem ipsum</div>
+                            <div class="slider-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, ipsum.</div>
+                            <a class="slider-info__button" href="">Узнать подробнее</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/slide.png" alt="">
+                        <div class="slider-info">
+                            <div class="slider-info__name">Lorem ipsum</div>
+                            <div class="slider-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, ipsum.</div>
+                            <a class="slider-info__button" href="">Узнать подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next slider1-next"></div>
+                <div class="swiper-button-prev slider1-prev"></div>
+            </div>
+        </div>
     </header>
 
     <div class="content">
@@ -304,6 +311,11 @@
                                 <p class="element-block_2__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit culpa impedit soluta repudiandae, molestiae debitis pariatur mollitia maiores voluptatem maxime exercitationem qui earum, quaerat itaque possimus non quos quisquam hic. Eos voluptatum reiciendis sed asperiores error omnis distinctio, natus ea animi quo, iure voluptas perspiciatis! Praesentium explicabo sequi ratione. Doloribus, possimus. Cumque officia, dolorum similique impedit nihil excepturi quidem repellendus illum iste natus consequuntur blanditiis, atque, nesciunt vel inventore porro molestias quo. Cumque accusantium, odit sunt nulla iure laudantium ipsam, quisquam modi enim asperiores nihil voluptate veritatis! Praesentium explicabo sequi ratione. Doloribus, possimus. Cumque officia, dolorum similique impedit nihil excepturi quidem repellendus illum iste natus consequuntur blanditiis, atque, nesciunt vel inventore porro molestias quo. Cumque accusantium, odit sunt nulla iure laudantium ipsam, quisquam modi enim asperiores nihil voluptate veritatis!</p>
                             </div>
                         </div>
+                        <div class="element-block_2__button">
+                            <div class="element-block_2__button__wrapper">
+                                <div class="element-block_2__button__wrapper-text js-open-reviews">Показать еще</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -350,6 +362,11 @@
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit culpa impedit soluta repudiandae, molestiae debitis pariatur mollitia maiores voluptatem maxime exercitationem qui earum, quaerat itaque possimus non quos quisquam hic.
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit culpa impedit soluta repudiandae, molestiae debitis pariatur mollitia maiores voluptatem maxime exercitationem qui earum, quaerat itaque possimus non quos quisquam hic.
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit culpa impedit soluta repudiandae, molestiae debitis pariatur mollitia maiores voluptatem maxime exercitationem qui earum</p>
+                            </div>
+                            <div class="element-block_2__button">
+                                <div class="element-block_2__button__wrapper">
+                                    <div class="element-block_2__button__wrapper-text js-open-reviews">Показать еще</div>
+                                </div>
                             </div>
                         </div>
                     </div>

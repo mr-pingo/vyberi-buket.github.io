@@ -152,11 +152,78 @@
     position: relative;
     width: 100%;
     min-height: 380px;
+    max-height: 380px;
+    overflow: hidden;
     padding: 35px;
     border: 1px solid #d4dede;
     border-radius: 4px;
     box-sizing: border-box;
     background: #fff;
+    &.active{
+        max-height: 100%;
+    }
+    &__button{
+        display: none;
+        &.active{
+            display: block;
+        }
+        &__wrapper{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 86px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url(../../images/bg-rev.png) repeat-x;
+            &.active{
+                background: none;
+            }
+            &-text{
+                margin: auto;
+                margin-top: 50px;
+                font-size: 14px;
+                cursor: pointer;
+                position: relative;
+                &:before{
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    top: 15px;
+                    display: inline-block;
+                    border-bottom: 1px dashed #000;
+                }
+                &.active{
+                    &:after{
+                        content: '';
+                        width: 11px;
+                        height: 7px;
+                        position: absolute;
+                        top: 6px;
+                        right: -20px;
+                        background: url(../../images/sprite.png) no-repeat;
+                        background-position: -81px -43px;                
+                    }
+                }
+                &:after{
+                    content: '';
+                    width: 11px;
+                    height: 7px;
+                    position: absolute;
+                    top: 6px;
+                    right: -20px;
+                    background: url(../../images/sprite.png) no-repeat;
+                    background-position: -81px -35px;                
+                }
+                &:hover{
+                    &:before{
+                        border-bottom: 0;
+                    }
+                }
+            }   
+        }
+    }
     &__el{
         margin-top: 30px;
         &:first-child{
