@@ -564,6 +564,23 @@ $(document).ready(function () {
     show_comment();
     tool_tip();
     tab();
+    
+    $('.js-open-reviews').on('click', function(){
+       $(this).toggleClass('active');
+        if($(this).hasClass('active')){
+            $(this).text('Скрыть всё');
+            $(this).parents('.element-block_2').addClass('active');
+            $(this).parents('.hide-text').find('.block-comment__text').addClass('active');
+            $(this).parents('.element-block_2__button__wrapper').addClass('active');
+            $(this).parents('.hide-text__button__wrapper').addClass('active');
+        }else{
+            $(this).text('Показать еще');
+            $(this).parents('.element-block_2').removeClass('active');
+            $(this).parents('.hide-text').find('.block-comment__text').removeClass('active');
+            $(this).parents('.element-block_2__button__wrapper').removeClass('active');
+            $(this).parents('.hide-text__button__wrapper').removeClass('active');
+        }
+    });
 });
 $(window).on('resize', show_all_on_resize);
 $(window).on('resize', show_comment);
@@ -641,7 +658,7 @@ function tool_tip() {
 //Размер блока
 //------------
 function show_comment(){
-    $('.block-comment__text').each(function(){
+    /*$('.block-comment__text').each(function(){
         var height = '71';
         if ($(this).innerHeight() > height) {
             if (!$(this).parents('.js-hide-text').find('.js-rev').hasClass('active')) {
@@ -679,6 +696,9 @@ function show_comment(){
                 $(this).parents('.js-hide-text').append('<div class="bottom-element-block"><div class="bottom-element-block__group"><span class="bottom-element-block__group-link js-rev">Показать всё</span></div></div>');
             }
         }
+    });*/
+    $('.js-hide-text').each(function(){
+       var height = '71'; 
     });
 }
 function show_all_on_resize() {
@@ -690,57 +710,6 @@ function show_all_on_resize() {
             $(this).find('.element-block_2__button').removeClass('active');
         }
     });
-    $('.js-open-reviews').on('click', function(){
-       $(this).toggleClass('active');
-        if($(this).hasClass('active')){
-            $(this).text('Скрыть всё');
-            $(this).parents('.element-block_2').addClass('active');
-            $(this).parents('.element-block_2__button__wrapper').addClass('active');
-        }else{
-            $(this).text('Показать еще');
-            $(this).parents('.element-block_2').removeClass('active');
-            $(this).parents('.element-block_2__button__wrapper').removeClass('active');
-        }
-    });
-    /*$('.element-block_2__group_el').each(function () {
-        var height = '300';
-        if ($(this).parents('.element-block_2').innerHeight() > height) {
-            if (!$(this).parents('.element-block_2').find('.js-rev').hasClass('active')) {
-                $(this).parents('.element-block_2').innerHeight(height).css({
-                    'overflow': 'hidden'
-                });
-            }
-            if ($(this).parents('.element-block_2').find('.bottom-element-block').length == 0) {
-                $(this).parents('.element-block_2').append('<div class="bottom-element-block"><div class="bottom-element-block__group"><span class="bottom-element-block__group-link js-rev">Показать всё</span></div></div>');
-                $(this).parents('.element-block_2').on('click', '.js-rev', function () {
-                    $(this).toggleClass('active');
-                    if ($(this).hasClass('active')) {
-                        $(this).html('Скрыть всё').parents('.element-block_2').css({
-                            'padding-bottom': '50px',
-                            'height': 'auto'
-                        });
-                        $(this).parents('.bottom-element-block').css({
-                            'background': 'none',
-                        });
-                    } else {
-                        $(this).html('Показать всё').parents('.element-block_2').css({
-                            'padding-bottom': '30px'
-                        }).innerHeight(height);
-                        $(this).parents('.bottom-element-block').css({
-                            'background': 'url(./images/bg-rev.png) repeat-x', //при интеграции поменять тут ссылку
-                        });
-                    }
-                });
-            }
-        }
-        if ($(this).innerHeight() < height) {
-            $(this).parents('.element-block_2').find('.bottom-element-block').remove();
-        } else {
-            if ($(this).parents('.element-block_2').find('.bottom-element-block').length == 0) {
-                $(this).parents('.element-block_2').append('<div class="bottom-element-block"><div class="bottom-element-block__group"><span class="bottom-element-block__group-link js-rev">Показать всё</span></div></div>');
-            }
-        }
-    });*/
 }
 function tab() {
     $('.tab ul li').on('click', function () {

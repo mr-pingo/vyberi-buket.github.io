@@ -4140,12 +4140,19 @@ hr.info-block_5__hr {
 
 .block-comment__text {
   display: block;
+  max-height: 70px;
+  overflow: hidden;
   margin: 0px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 500;
   font-size: 13px;
   color: #000;
   text-align: center;
+}
+
+.block-comment__text.active {
+  max-height: 100%;
+  overflow: visible;
 }
 
 .block-comment__rating {
@@ -4170,6 +4177,83 @@ hr.info-block_5__hr {
   font-weight: 500;
   font-size: 13px;
   color: #96a3a3;
+}
+
+.hide-text {
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.hide-text__button.active {
+  display: block;
+}
+
+.hide-text__button__wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: url("../../images/bg-rev.png") repeat-x;
+}
+
+.hide-text__button__wrapper.active {
+  background: none;
+}
+
+.hide-text__button__wrapper-text {
+  margin: auto;
+  margin-top: 40px;
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+}
+
+.hide-text__button__wrapper-text:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  top: 15px;
+  display: inline-block;
+  border-bottom: 1px dashed #000;
+}
+
+.hide-text__button__wrapper-text.active:after {
+  content: '';
+  width: 11px;
+  height: 7px;
+  position: absolute;
+  top: 6px;
+  right: -20px;
+  background: url("../../images/sprite.png") no-repeat;
+  background-position: -81px -43px;
+}
+
+.hide-text__button__wrapper-text:after {
+  content: '';
+  width: 11px;
+  height: 7px;
+  position: absolute;
+  top: 6px;
+  right: -20px;
+  background: url("../../images/sprite.png") no-repeat;
+  background-position: -81px -35px;
+}
+
+.hide-text__button__wrapper-text:hover:before {
+  border-bottom: 0;
 }
 
 .block-add-comment {
@@ -9519,6 +9603,11 @@ input[type="checkbox"]:checked + label::before {
   .search__wrap-button {
     width: 40px;
     height: 40px;
+  }
+
+  .search__wrap-button:before {
+    top: 0px;
+    left: 0px;
   }
 
   .search__group {
