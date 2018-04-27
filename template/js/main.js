@@ -570,13 +570,13 @@ $(document).ready(function () {
         if($(this).hasClass('active')){
             $(this).text('Скрыть всё');
             $(this).parents('.element-block_2').addClass('active');
-            $(this).parents('.hide-text').find('.block-comment__text').addClass('active');
+            $(this).parents('.hide-text').addClass('active');
             $(this).parents('.element-block_2__button__wrapper').addClass('active');
             $(this).parents('.hide-text__button__wrapper').addClass('active');
         }else{
             $(this).text('Показать еще');
             $(this).parents('.element-block_2').removeClass('active');
-            $(this).parents('.hide-text').find('.block-comment__text').removeClass('active');
+            $(this).parents('.hide-text').removeClass('active');
             $(this).parents('.element-block_2__button__wrapper').removeClass('active');
             $(this).parents('.hide-text__button__wrapper').removeClass('active');
         }
@@ -658,47 +658,13 @@ function tool_tip() {
 //Размер блока
 //------------
 function show_comment(){
-    /*$('.block-comment__text').each(function(){
-        var height = '71';
-        if ($(this).innerHeight() > height) {
-            if (!$(this).parents('.js-hide-text').find('.js-rev').hasClass('active')) {
-                $(this).parents('.js-hide-text').innerHeight(height).css({
-                    'overflow': 'hidden'
-                });
-            }
-            if ($(this).parents('.js-hide-text').find('.bottom-element-block').length == 0) {
-                $(this).parents('.js-hide-text').append('<div class="bottom-element-block"><div class="bottom-element-block__group"><span class="bottom-element-block__group-link js-rev">Показать всё</span></div></div>');
-                $(this).parents('.js-hide-text').on('click', '.js-rev', function () {
-                    $(this).toggleClass('active');
-                    if ($(this).hasClass('active')) {
-                        $(this).html('Скрыть всё').parents('.js-hide-text').css({
-                            'padding-bottom': '25px',
-                            'height': 'auto'
-                        });
-                        $(this).parents('.bottom-element-block').css({
-                            'background': 'none',
-                        });
-                    } else {
-                        $(this).html('Показать всё').parents('.js-hide-text').css({
-                            'padding-bottom': '30px'
-                        }).innerHeight(height);
-                        $(this).parents('.bottom-element-block').css({
-                            'background': 'url(./images/bg-rev.png) repeat-x', //при интеграции поменять тут ссылку
-                        });
-                    }
-                });
-            }
+    $('.hide-text').each(function(){
+        var height = '80';
+        if($(this).innerHeight() > height){
+            $(this).find('.hide-text__button').addClass('active');
+        }else{
+            $(this).find('.hide-text__button').removeClass('active');
         }
-        if ($(this).innerHeight() <= height) {
-            $(this).parents('.js-hide-text').find('.bottom-element-block').remove();
-        } else {
-            if ($(this).parents('.js-hide-text').find('.bottom-element-block').length == 0) {
-                $(this).parents('.js-hide-text').append('<div class="bottom-element-block"><div class="bottom-element-block__group"><span class="bottom-element-block__group-link js-rev">Показать всё</span></div></div>');
-            }
-        }
-    });*/
-    $('.js-hide-text').each(function(){
-       var height = '71'; 
     });
 }
 function show_all_on_resize() {

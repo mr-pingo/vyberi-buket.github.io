@@ -4140,19 +4140,12 @@ hr.info-block_5__hr {
 
 .block-comment__text {
   display: block;
-  max-height: 70px;
-  overflow: hidden;
   margin: 0px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 500;
   font-size: 13px;
   color: #000;
   text-align: center;
-}
-
-.block-comment__text.active {
-  max-height: 100%;
-  overflow: visible;
 }
 
 .block-comment__rating {
@@ -4182,6 +4175,17 @@ hr.info-block_5__hr {
 .hide-text {
   position: relative;
   padding-bottom: 20px;
+  max-height: 70px;
+  overflow: hidden;
+}
+
+.hide-text.active {
+  max-height: 100%;
+  overflow: visible;
+}
+
+.hide-text__button {
+  display: none;
 }
 
 .hide-text__button.active {
@@ -4215,7 +4219,7 @@ hr.info-block_5__hr {
 
 .hide-text__button__wrapper-text {
   margin: auto;
-  margin-top: 40px;
+  margin-top: 30px;
   font-size: 14px;
   cursor: pointer;
   position: relative;
@@ -4228,6 +4232,10 @@ hr.info-block_5__hr {
   top: 15px;
   display: inline-block;
   border-bottom: 1px dashed #000;
+}
+
+.hide-text__button__wrapper-text.active {
+  margin-top: 36px;
 }
 
 .hide-text__button__wrapper-text.active:after {
