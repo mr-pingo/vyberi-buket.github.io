@@ -45,6 +45,8 @@ function changes(screen){
                 $(this).ikSelect('reset');
             });
         });
+        $('.js-menu-button').parent().removeClass('active');
+        $('.js-menu-button').parent().find('.main-menu__wrap__list__ul').removeClass('active');
     }else{
         //----------------------Главная
         $('.js-top-links--').prependTo('.js-header-wrap--');
@@ -65,6 +67,8 @@ function changes(screen){
             $('.select-opt').remove();
             $('.js-select').ikSelect('reset');
         });
+        $('.js-menu-button').parent().removeClass('active');
+        $('.js-menu-button').parent().find('.main-menu__wrap__list__ul').removeClass('active');
     }
 }
 function changes2(screen2){
@@ -97,6 +101,9 @@ function changes2(screen2){
                 $('body').find('.js-open-menu').toggle();
             });
         }
+        
+        $('.js-menu-button').parent().removeClass('active');
+        $('.js-menu-button').parent().find('.main-menu__wrap__list__ul').removeClass('active');
     }else if(laptop.matches){
         $('.js-top-links--').appendTo($('.js-top-menu--'));
         $('.js-logo--').insertAfter($('.js-header-wrap .header__wrap__img'));
@@ -123,6 +130,9 @@ function changes2(screen2){
             $('.select-opt').remove();
             $('.js-select').ikSelect('reset');
         });
+        
+        $('.js-menu-button').parent().removeClass('active');
+        $('.js-menu-button').parent().find('.main-menu__wrap__list__ul').removeClass('active');
     }else{
         $('.js-call-back').prependTo('.group-info_3');
         $('.js-number-basket--').appendTo($('.js-header-wrap--'));
@@ -142,5 +152,8 @@ function changes2(screen2){
         $('.js-footer-img--').appendTo($('.bottom-menu__group'));
         $('.js-socials--').appendTo($('.js-footer-el--'));
         $('.js-open-menu').css({'display' : 'block'});
+        
+        $('.js-menu-button').parent().removeClass('active');
+        $('.js-menu-button').parent().find('.main-menu__wrap__list__ul').removeClass('active');
     }
 }

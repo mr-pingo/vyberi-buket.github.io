@@ -581,6 +581,10 @@ $(document).ready(function () {
             $(this).parents('.hide-text__button__wrapper').removeClass('active');
         }
     });
+    $('.js-menu-button').on('click', function(){
+        $(this).parent().toggleClass('active');
+        $(this).parent().find('.main-menu__wrap__list__ul').toggleClass('active');
+    });
 });
 $(window).on('resize', show_all_on_resize);
 $(window).on('resize', show_comment);

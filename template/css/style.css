@@ -868,6 +868,7 @@ body {
 }
 
 .main-menu__wrap__list {
+  position: relative;
   list-style: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -888,6 +889,73 @@ body {
   height: 4px;
   background: none;
   right: -2px;
+  z-index: 99;
+}
+
+.main-menu__wrap__list:hover {
+  background: #48b0ad;
+}
+
+.main-menu__wrap__list.active {
+  display: block;
+}
+
+.main-menu__wrap__list__ul {
+  display: none;
+  position: absolute;
+  width: 220px;
+  top: 50px;
+  left: 0px;
+  padding: 0;
+  background: #4ab1ae;
+}
+
+.main-menu__wrap__list__ul.active {
+  display: block;
+  top: 0;
+  width: 100%;
+  position: relative;
+}
+
+.main-menu__wrap__list__ul li {
+  list-style: none;
+  border-bottom: 1px solid #55c3c0;
+}
+
+.main-menu__wrap__list__ul li:last-child {
+  border-bottom: 0;
+}
+
+.main-menu__wrap__list__ul li:first-child {
+  border-top: 1px solid #55c3c0;
+}
+
+.main-menu__wrap__list__ul li a {
+  padding: 0px 22px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 40px;
+  width: 100%;
+  text-decoration: none;
+  color: #fff;
+  font-size: 11px;
+}
+
+.main-menu__wrap__list-button {
+  display: none;
+  width: 20px;
+  height: 20px;
+  background: url("../../images/down.png") no-repeat;
+  background-position: center;
+  position: absolute;
+  right: 0;
+  top: 15px;
   z-index: 99;
 }
 
@@ -6003,7 +6071,7 @@ input[type="checkbox"]:checked + label::before {
   text-align: center;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  height: 52px;
+  min-height: 52px;
 }
 
 .lk-table tr td:nth-child(2) {
@@ -8078,7 +8146,8 @@ input[type="checkbox"]:checked + label::before {
 .footer-icon-address {
   margin-right: 10px;
   display: block;
-  width: 17px;
+  min-width: 17px;
+  max-width: 17px;
   height: 16px;
   background: url("../../images/sprite.png") no-repeat;
   background-position: -147px -97px;
@@ -9459,6 +9528,12 @@ input[type="checkbox"]:checked + label::before {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .main-menu__wrap__list:hover .main-menu__wrap__list__ul {
+    display: block;
+  }
+}
+
 @media screen and (max-width: 767px) {
   h1 {
     font-size: 28px !important;
@@ -9588,6 +9663,10 @@ input[type="checkbox"]:checked + label::before {
     background: #aae1e0;
     right: -2px;
     z-index: 99;
+  }
+
+  .main-menu__wrap__list-button {
+    display: block;
   }
 
   .main-menu__wrap__list-dot {

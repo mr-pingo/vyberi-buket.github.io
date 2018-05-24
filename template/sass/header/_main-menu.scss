@@ -13,6 +13,7 @@
         margin: 0;
         padding: 0;
         &__list{
+            position: relative;
             list-style: none;
             display: flex;
             align-items: center;
@@ -29,6 +30,58 @@
                         z-index: 99;
                     }
                 }
+            }
+            &:hover{
+                background: #48b0ad;
+            }
+            &.active{
+                display: block;
+            }
+            &__ul{
+                display: none;
+                position: absolute;
+                width: 220px;
+                top: 50px;
+                left: 0px;
+                padding: 0;
+                background: #4ab1ae;
+                &.active{
+                    display: block;
+                    top: 0;
+                    width: 100%;
+                    position: relative;
+                }
+                li{
+                    list-style: none;
+                    border-bottom: 1px solid #55c3c0;
+                    &:last-child{
+                        border-bottom: 0;
+                    }
+                    &:first-child{
+                        border-top: 1px solid #55c3c0;
+                    }
+                    a{
+                        padding: 0px 22px;
+                        display: flex;
+                        align-items: center;
+                        height: 40px;
+                        width: 100%;
+                        text-decoration: none;
+                        color: #fff;
+                        font-size: 11px;
+                    }
+                }
+            }
+            &-button{
+                display: none;
+                width: 20px;
+                height: 20px;
+                background: url(../../images/down.png)no-repeat;
+                background-position: center;
+                position: absolute;
+                right: 0;
+                top: 15px;
+                z-index: 99;
             }
             &-dot{
                 border-radius: 4px;
